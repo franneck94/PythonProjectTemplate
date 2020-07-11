@@ -16,7 +16,3 @@ Sphinx==3.1.2
 Pygments==2.6.1
 numpydoc==1.1.0
 sphinx_rtd_theme==0.4.3
-
-# Miscellaneous
-Paver==1.2.1
-colorama==0.2.7

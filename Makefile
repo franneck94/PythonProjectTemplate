@@ -23,7 +23,6 @@ help:
 	@echo " * doc          		- Document code (pydoc)."
 	@echo " * clean        		- Cleanup (e.g. pyc files)."
 	@echo " * code-pylint  		- Check code pylint."
-	@echo " * code-flake8  		- Check code flake8."
 	@echo " * code-mypy    		- Check code mypy"
 	@echo " * code-lint    		- Check code lints (pylint, flake8, mypy)."
 	@echo " * code-isort   		- Sort the import statements."
@@ -40,9 +39,7 @@ doc:
 	@$(BUILD_DOC)
 
 clean:
-	@$(RM) $(call FixPath,$(SRC_CORE)/*.pyc)
 	@$(RM) $(call FixPath,$(SRC_CORE)/__pycache__)
-	@$(RM) $(call FixPath,$(SRC_TEST)/*.pyc)
 	@$(RM) $(call FixPath,$(SRC_TEST)/__pycache__)
 
 code-pylint: 
