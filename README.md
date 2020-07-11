@@ -25,7 +25,7 @@ This is a template for Python projects. What you get:
 ├── Makefile
 ├── requirements.txt
 ├── requirements-dev.txt
-└── documentation
+└── docs
 │   └── build_docs.bat
 │   └── build_docs.sh
 ├── fastvector

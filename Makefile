@@ -1,25 +1,24 @@
 SRC_APP=app
 SRC_CORE=fastvector
 SRC_TEST=tests
-SRC_DOC=documentation
+SRC_DOC=docs
 
 ifeq ($(OS), Windows_NT)
 	PYTHON=python
 	PIP=pip
 	RM=del /Q
 	FixPath=$(subst /,\,$1)
-	BUILD_DOC=sphinx-apidoc -o source/ ./fastvector/ && $(SRC_DOC)\make.bat html
+	BUILD_DOC=sphinx-apidoc -o ./$(SRC_DOC)/source/ ./fastvector/ && $(SRC_DOC)\make.bat html
 else
 	PYTHON=python3
 	PIP=pip3
 	RM=rm -f
 	FixPath=$1
-	BUILD_DOC=sphinx-apidoc -o source/ ./fastvector/ && ./$(SRC_DOC)/make.sh
+	BUILD_DOC=sphinx-apidoc -o ./$(SRC_DOC)/source/ ./fastvector/ && ./$(SRC_DOC)/make.sh
 endif
 
 help:
 	@echo "Some available commands:"
-	@echo " * run          		- Run code."
 	@echo " * test         		- Run unit tests and test coverage."
 	@echo " * doc          		- Document code (pydoc)."
 	@echo " * clean        		- Cleanup (e.g. pyc files)."
@@ -32,9 +31,6 @@ help:
 	@echo " * code-format   	- Format code (isort, autopep8)."
 	@echo " * deps-install 		- Install dependencies (see requirements.txt)."
 	@echo " * deps-dev-install 	- Install dev. dependencies (see requirements-dev.txt)."
-
-run:
-	@$(PYTHON) $(SRC_APP)/main.py
 
 test:
 	@pytest --cov=./$(SRC_TEST)/

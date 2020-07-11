@@ -1,1 +1,1 @@
-from .vector import VectorND
+from .vector import Vector2D

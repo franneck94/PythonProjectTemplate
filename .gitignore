@@ -68,8 +68,8 @@ instance/
 .webassets-cache
 # Scrapy stuff:
 .scrapy
-# Sphinx documentation
-documentation/_build/
+# Sphinx docs
+docs/_build/
 # PyBuilder
 target/
 # Jupyter Notebook
@@ -106,7 +106,7 @@ venv.bak/
 .spyproject
 # Rope project settings
 .ropeproject
-# mkdocs documentation
+# mkdocs docs
 /site
 # mypy
 .mypy_cache/
