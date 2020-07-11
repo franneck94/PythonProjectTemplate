@@ -32,7 +32,7 @@ help:
 	@echo " * deps-dev-install 	- Install dev. dependencies (see requirements-dev.txt)."
 
 test:
-	@pytest --cov=./$(SRC_TEST)/
+	@pytest --cov=$(SRC_CORE) $(SRC_TEST)
 	@codecov
 
 doc:
