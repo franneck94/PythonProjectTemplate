@@ -7,20 +7,22 @@ import numbers
 from math import sqrt
 from functools import total_ordering
 
-@total_ordering 
+
+@total_ordering
 class Vector2D:
     """Vector2D class to perform simple vector operations.
     """
+
     def __init__(self, x: SupportsFloat = 0, y: SupportsFloat = 0):
         """Creates a vector instance with the given x and y values.
-        
+
         Parameters
         ----------
         x : number
             x-Coordinate, by default 0
         y : number
             y-Coordinate, by default 0
-        
+
         Raises
         ------
         TypeError
@@ -34,7 +36,7 @@ class Vector2D:
 
     def __call__(self) -> str:
         """Callable for the vector instance to return its representation.
-        
+
         Returns
         -------
         str
@@ -45,7 +47,7 @@ class Vector2D:
 
     def __repr__(self) -> str:
         """The vector instance representation.
-        
+
         Returns
         -------
         str
@@ -55,7 +57,7 @@ class Vector2D:
 
     def __str__(self) -> str:
         """The vector instance as a string.
-        
+
         Returns
         -------
         str
@@ -65,7 +67,7 @@ class Vector2D:
 
     def __bool__(self) -> bool:
         """Returns the truth value of the vector instance.
-        
+
         Returns
         -------
         bool
@@ -76,7 +78,7 @@ class Vector2D:
 
     def __abs__(self) -> float:
         """Returns the length (magnitude) of the vector instance
-        
+
         Returns
         -------
         float
@@ -86,28 +88,29 @@ class Vector2D:
 
     def check_vector_types(self, vector2: Vector2D):
         """Checks if the self and vector2 are an instance of the Vector2D class.
-        
+
         Parameters
         ----------
         vector2 : Vector2D
             Other vector (right of the operator).
-        
+
         Raises
         ------
         TypeError
             If self, or vector2 are not an instance of the Vector2D class.
         """
         if not isinstance(self, Vector2D) or not isinstance(vector2, Vector2D):
-            raise TypeError('You have to pass in two instances of the vector class!')
+            raise TypeError(
+                'You have to pass in two instances of the vector class!')
 
     def __eq__(self, other_vector: Any) -> bool:
         """Check if the vector instances have the same values.
-        
+
         Parameters
         ----------
         other_vector : Vector2D
             Other vector instance (right-hand-side of the operator)
-        
+
         Returns
         -------
         bool
@@ -122,12 +125,12 @@ class Vector2D:
 
     def __lt__(self, other_vector: Vector2D) -> bool:
         """Check if the self instance is less than the other vector instance.
-        
+
         Parameters
         ----------
         other_vector : Vector2D
             Other vector instance (right-hand-side of the operator)
-        
+
         Returns
         -------
         bool
@@ -142,12 +145,12 @@ class Vector2D:
 
     def __add__(self, other_vector: Vector2D) -> Vector2D:
         """Returns the additon vector of the self and the other vector instance.
-        
+
         Parameters
         ----------
         other_vector : Vector2D
             Other vector instance (right-hand-side of the operator)
-        
+
         Returns
         -------
         Vector2D
@@ -160,12 +163,12 @@ class Vector2D:
 
     def __sub__(self, other_vector: Vector2D) -> Vector2D:
         """Returns the subtraction vector of the self and the other vector instance.
-        
+
         Parameters
         ----------
         other_vector : Vector2D
             Other vector instance (right-hand-side of the operator)
-        
+
         Returns
         -------
         Vector2D
@@ -178,12 +181,12 @@ class Vector2D:
 
     def __mul__(self, other: Union[Vector2D, SupportsFloat]) -> Union[Vector2D, SupportsFloat]:
         """Returns the multiplication of the self vector and the other vector(or number) instance.
-        
+
         Parameters
         ----------
         other : Vector2D or number
             Other vector instance or scaler value (right-hand-side of the operator)
-        
+
         Returns
         -------
         Vector2D
@@ -194,16 +197,17 @@ class Vector2D:
         elif isinstance(other, numbers.Real):
             return Vector2D(self.x * other, self.y * other)
         else:
-            raise TypeError('You must pass in a vector instance or an int/float number!')
+            raise TypeError(
+                'You must pass in a vector instance or an int/float number!')
 
     def __truediv__(self, other: SupportsFloat) -> Vector2D:
         """Returns the multiplication of the self vector and the other vector(or number) instance.
-        
+
         Parameters
         ----------
         other : Vector2D or number
             Other vector instance or scaler value (right-hand-side of the operator)
-        
+
         Returns
         -------
         Vector2D
