@@ -4,6 +4,7 @@ import unittest
 
 import fastvector
 
+
 class VectorTests(unittest.TestCase):
     def setUp(self):
         self.v1 = fastvector.VectorND(0, 0)

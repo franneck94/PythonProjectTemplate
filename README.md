@@ -20,6 +20,7 @@ This is a template for Python projects. What you get:
 ``` text
 ├── setup.py
 └── documentation
+│   └── Makefile
 ├── fastvector
 │   └── __init__.py
 │   └── vector.py

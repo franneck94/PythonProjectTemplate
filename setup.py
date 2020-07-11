@@ -2,6 +2,7 @@
 # Option 2: python setup.py bdist_wheel & pip install ./fastvector-0.1.0-py3-none-any.whl
 from setuptools import setup
 
+
 def get_readme():
     with open('README.md') as f:
         return f.read()
@@ -34,6 +35,7 @@ ISRELEASED = True
 VERSION = '%d.%d.%d' % (MAJOR, MINOR, MICRO)
 
 PYTHON_MIN_VERSION = '3.7'
+PYTHON_MAX_VERSION = '3.8'
 SCIPY_MIN_VERSION = '1.1.0'
 NUMPY_MIN_VERSION = '1.14.0'
 
@@ -42,7 +44,8 @@ metadata = dict(
     version=VERSION,
     long_description=README,
     packages=['fastvector'],
-    python_requires='>={}'.format(PYTHON_MIN_VERSION),
+    python_requires=['>={}'.format(PYTHON_MIN_VERSION),
+                    '<){}'.format(PYTHON_MAX_VERSION)],
     install_requires=['numpy>={}'.format(NUMPY_MIN_VERSION),
                       'scipy>={}'.format(SCIPY_MIN_VERSION),],
     author=AUTHOR,
