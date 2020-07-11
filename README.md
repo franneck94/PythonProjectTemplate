@@ -9,6 +9,9 @@
 
 This is a template for Python projects. What you get:
 
+-   Source code, test code and application code seperated in different directories
+-   Dependencies listed in requirements files
+-   Different tasks seperated by [Make](https://www.gnu.org/software/make/) tasks.
 -   External libraries installed and managed by [Pip](https://pypi.org/project/pip/) or [Conda](https://anaconda.com/)
 -   Setup for tests using [Pytest](https://docs.pytest.org/en/stable/)
 -   Continuous testing with [Travis-CI](https://travis-ci.org/)
@@ -19,6 +22,9 @@ This is a template for Python projects. What you get:
 ## Structure
 ``` text
 ├── setup.py
+├── Makefile
+├── requirements.txt
+├── requirements-dev.txt
 └── documentation
 │   └── Makefile
 ├── fastvector
