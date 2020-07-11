@@ -37,7 +37,7 @@ run:
 	@$(PYTHON) $(SRC_APP)/main.py
 
 test:
-	@py.test --cov-report=xml --cov=fastvector $(SRC_TEST)/
+	@pytest --cov=./$(SRC_TEST)/
 	@codecov
 
 doc:
