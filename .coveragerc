@@ -17,11 +17,7 @@ exclude_lines =
     if __name__ == .__main__.:
 
 [paths]
-source =
-    fastvector/
-    tests/
+source = fastvector/*
 
 [coverage:run]
-omit =
-    setup.py
-
+omit = setup.py

@@ -8,11 +8,13 @@ ifeq ($(OS), Windows_NT)
 	PIP=pip
 	RM=del /Q
 	FixPath=$(subst /,\,$1)
+	BUILD_DOC=sphinx-apidoc -o source/ ./fastvector/ && $(SRC_DOC)\make.bat html
 else
 	PYTHON=python3
 	PIP=pip3
 	RM=rm -f
 	FixPath=$1
+	BUILD_DOC=sphinx-apidoc -o source/ ./fastvector/ && ./$(SRC_DOC)/make.sh
 endif
 
 help:
@@ -35,11 +37,11 @@ run:
 	@$(PYTHON) $(SRC_APP)/main.py
 
 test:
-	@coverage run --source . -m $(SRC_TEST).test_vector
-	@coverage report
+	@py.test --cov-report=xml --cov=fastvector $(SRC_TEST)/
+	@codecov
 
 doc:
-	@build_docs.bat
+	@$(BUILD_DOC)
 
 clean:
 	@$(RM) $(call FixPath,$(SRC_CORE)/*.pyc)
@@ -56,10 +58,7 @@ code-mypy:
 code-lint: code-pylint code-mypy
 
 code-isort:
-	cd $(SRC_CORE)
-	@isort --recursive .
-	cd $(SRC_TEST)
-	@isort --recursive .
+	@isort --recursive $(SRC_TEST)
 
 code-pep8:
 	@autopep8 -i -r $(SRC_CORE)
