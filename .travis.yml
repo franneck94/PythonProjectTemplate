@@ -7,6 +7,6 @@ install:
   - pip install -r requirements-dev.txt
 # command to run tests
 script:
-  - make test code-style code-lint
+  - make test
 after_success:
   - coveralls
