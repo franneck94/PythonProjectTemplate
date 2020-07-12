@@ -52,6 +52,7 @@ metadata = dict(
     description=DESCRIPTION,
     classifiers=[CLASSIFIERS],
     license=LICENSE,
+    include_package_data=True
 )
 
 def setup_package():
