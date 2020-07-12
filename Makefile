@@ -8,13 +8,13 @@ ifeq ($(OS), Windows_NT)
 	PIP=pip
 	RM=del /Q
 	FixPath=$(subst /,\,$1)
-	BUILD_DOC=sphinx-apidoc -o ./$(SRC_DOC)/source/ ./fastvector/ && $(SRC_DOC)\make.bat html
+	BUILD_DOC=cd $(SRC_DOC) && build_docs.bat
 else
 	PYTHON=python3
 	PIP=pip3
 	RM=rm -f
 	FixPath=$1
-	BUILD_DOC=sphinx-apidoc -o ./$(SRC_DOC)/source/ ./fastvector/ && ./$(SRC_DOC)/make.sh
+	BUILD_DOC=cd $(SRC_DOC) && ./build_docs.sh
 endif
 
 help:

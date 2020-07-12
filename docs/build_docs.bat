@@ -1,2 +1,2 @@
 call sphinx-apidoc -o source/ ../fastvector/
-call make.bat html
+call sphinx-build -b html ./source/ ./build/
