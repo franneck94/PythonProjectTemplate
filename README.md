@@ -9,31 +9,35 @@
 
 This is a template for Python projects. What you get:
 
--   Source code, test code and application code seperated in different directories
--   Dependencies listed in requirements files
+-   Source code and test code is seperated in different directories.
 -   Different tasks seperated by [Make](https://www.gnu.org/software/make/) tasks.
--   External libraries installed and managed by [Pip](https://pypi.org/project/pip/) or [Conda](https://anaconda.com/)
--   Setup for tests using [Pytest](https://docs.pytest.org/en/stable/)
--   Continuous testing with [Travis-CI](https://travis-ci.org/)
--   Code coverage reports, including automatic upload to [Codecov](https://codecov.io)
--   Code documentation with [Sphinx](https://www.sphinx-doc.org/en/master/)
--   Optional: Use of the [VSCode](https://code.visualstudio.com/) IDE with useful extensions, like the Python and UnitTest extensions
+-   External libraries installed and managed by [Pip](https://pypi.org/project/pip/).
+-   To be tested envs are defined in a [Tox](https://tox.readthedocs.io/en/latest/) file.
+-   Setup for tests using [Pytest](https://docs.pytest.org/en/stable/).
+-   Continuous testing with [Travis-CI](https://travis-ci.org/).
+-   Code coverage reports, including automatic upload to [Codecov](https://codecov.io).
+-   Code documentation with [Sphinx](https://www.sphinx-doc.org/en/master/).
+-   Optional: Use of [VSCode](https://code.visualstudio.com/) with the Python and UnitTest extension.
 
 ## Structure
 ``` text
-├── setup.py
+├── .travis.yml
 ├── Makefile
 ├── requirements.txt
-├── requirements-dev.txt
+├── setup.py
+├── tox.ini
 └── docs
-│   └── build_docs.bat
-│   └── build_docs.sh
+│   └── build
+│   │   └── html
+│   └── source
+│   │   └── conf.py
 ├── fastvector
 │   └── __init__.py
 │   └── vector.py
-└── tests
-    ├── test_vector.py
+├── tests
+│   ├── __init__.py
+│   └── __init__.py
 ```
 
-Sources of the package go in [fastvector/](fastvector/) and 
-tests go in [tests/](tests/).
+The name of the example package is called fastvector.
+Sources of the package go in [fastvector/](fastvector/) and tests go in [tests/](tests/).
