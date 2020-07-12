@@ -24,7 +24,7 @@ jobs:
         pip install -r requirements-test.txt
     - name: test
       run: |
-        make test
+        python -m pytest ./tests/
 
   build-linux:
     runs-on: ubuntu-20.04
@@ -59,4 +59,4 @@ jobs:
         pip3 install -r requirements-test.txt
     - name: test
       run: |
-        make test
+        python3 -m pytest ./tests/
