@@ -20,4 +20,6 @@ exclude_lines =
 source = fastvector/*
 
 [coverage:run]
+branch = True
+parallel = True
 omit = setup.py

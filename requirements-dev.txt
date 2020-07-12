@@ -1,11 +1,8 @@
 # Runtime requirements
 --requirement requirements.txt
 
-# Testing
-pytest==5.4.3
-codecov==2.1.7
-pytest-cov==2.10.0
-tox==3.16.1
+# Testing  requirements
+--requirement requirements-test.txt
 
 # Linting
 pylint==2.5.3
