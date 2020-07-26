@@ -3,6 +3,7 @@
 [![Release](https://img.shields.io/github/v/release/franneck94/cpp-project-template)](https://travis-ci.org/github/franneck94/Cpp-Project-Template)
 [![Project Status: Active.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Travis CI](https://travis-ci.org/franneck94/Python-Project-Template.svg?branch=master)](https://travis-ci.org/github/franneck94/Python-Project-Template)
+[![AppVeyor](https://ci.appveyor.com/api/projects/status/j7h91yfpk66itofy?svg=true)](https://ci.appveyor.com/project/franneck94/python-project-template)
 [![codecov](https://codecov.io/gh/franneck94/python-project-template/branch/master/graph/badge.svg)](https://codecov.io/gh/franneck94/python-project-template)
 
 # Template For Python Projects 

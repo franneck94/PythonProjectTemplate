@@ -19,8 +19,7 @@ endif
 
 help:
 	@echo "Some available commands:"
-	@echo " * test              - Run unit tests ."
-	@echo " * test_and_coverage - Run unit tests and test coverage."
+	@echo " * test         		- Run unit tests and test coverage."
 	@echo " * doc          		- Document code (pydoc)."
 	@echo " * clean        		- Cleanup (e.g. pyc files)."
 	@echo " * code-pylint  		- Check code pylint."
@@ -33,11 +32,7 @@ help:
 	@echo " * deps-dev-install 	- Install dev. dependencies (see requirements-dev.txt)."
 
 test:
-	@pytest $(SRC_TEST)
-
-test_and_coverage:
 	@pytest --cov=$(SRC_CORE) $(SRC_TEST)
-	@codecov
 
 doc:
 	@$(BUILD_DOC)

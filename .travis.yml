@@ -9,16 +9,19 @@ jobs:
       python: 3.8
       env: TOXENV=py38
     - os: osx
-      language: generic
+      language: shell
       env: TOXENV=py37
     - os: osx
-      language: generic
+      language: shell
       env: TOXENV=py38
 
 install:
-  - pip3 install -r requirements-dev.txt
+  - pip3 install tox
 
-script: make test_and_coverage
+script: python3 -m tox
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   email:
