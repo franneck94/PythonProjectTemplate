@@ -10,18 +10,20 @@ jobs:
       env: TOXENV=py38
     - os: osx
       python: 3.7
+      osx_image: xcode8.3
       env: TOXENV=py37
     - os: osx
       python: 3.8
+      osx_image: xcode9.4
       env: TOXENV=py38
 
 install:
-  - pip install tox
+  - pip3 install -r requirements-dev.txt
 
-script: tox
+script: make test
 
 after_success:
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then python -m codecov ; fi
+  - bash <(curl -s https://codecov.io/bash) -f coverage_out.info.cleaned
 
 notifications:
   email:
