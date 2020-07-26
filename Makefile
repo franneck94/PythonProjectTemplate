@@ -37,7 +37,6 @@ test:
 
 test_ci:
 	@pytest --cov=$(SRC_CORE) $(SRC_TEST)
-	@bash <(curl -s https://codecov.io/bash)
 
 doc:
 	@$(BUILD_DOC)
