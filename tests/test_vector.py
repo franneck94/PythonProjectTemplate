@@ -30,6 +30,11 @@ class VectorTests(unittest.TestCase):
         self.assertLess(result, self.v3)
         # Test greater
         self.assertGreater(self.v3, result)
+
+    def test_call(self):
+        result = self.v1()
+        expected_result = repr(self.v1)
+        self.assertEqual(result, expected_result)
     
     def test_abs(self):
         """ Tests the abs value.

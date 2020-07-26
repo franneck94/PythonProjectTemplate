@@ -6,13 +6,9 @@ environment:
   - TOXENV: py37
   - TOXENV: py38
 
-build: off
-
-before_build:
-  - choco install make
-
 install:
-- pip install tox
+  - choco install make
+  - pip install tox
 
 test_script:
-- tox
+  - tox

@@ -16,12 +16,9 @@ jobs:
       env: TOXENV=py38
 
 install:
-  - pip3 install -r requirements-dev.txt
+  - pip install tox
 
-script: make test
-
-after_success:
-  - bash <(curl -s https://codecov.io/bash) -f coverage_out.info.cleaned
+script: tox
 
 notifications:
   email:
