@@ -42,7 +42,6 @@ class Vector2D:
         str
             The representation of the vector instance.
         """
-        print("Calling the __call__ function!")
         return self.__repr__()
 
     def __repr__(self) -> str:
