@@ -16,9 +16,9 @@ jobs:
       env: TOXENV=py38
 
 install:
-  - pip install tox
+  - pip3 install tox
 
-script: python -m tox
+script: python3 -m tox
 
 notifications:
   email:
