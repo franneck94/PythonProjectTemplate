@@ -10,12 +10,17 @@ jobs:
       env: TOXENV=py38
     - os: osx
       osx_image: xcode9.4
-      language: generic
-      env: PYENV_VERSION=3.7-dev TOXENV=py37
+      addons:
+        homebrew:
+          packages: python3.7
+      env: TOXENV=py37
     - os: osx
       osx_image: xcode11
       language: generic
-      env: PYENV_VERSION=3.8-dev TOXENV=py38
+      addons:
+        homebrew:
+          packages: python3.8
+      env: TOXENV=py38
 
 install:
   - pip install tox
