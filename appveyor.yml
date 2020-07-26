@@ -7,7 +7,7 @@ build: off
 
 install:
   - choco install make
-  - pip install tox
+  - pip install -r requirements-dev.txt
 
 test_script:
-  - tox
+  - make test
