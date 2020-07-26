@@ -10,9 +10,9 @@ jobs:
       env: TOXENV=py38
 
 install:
-  - pip3 install -r requirements-dev.txt
+  - pip3 install tox
 
-script: make test
+script: tox
 
 notifications:
   email:

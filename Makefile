@@ -32,8 +32,12 @@ help:
 	@echo " * deps-dev-install 	- Install dev. dependencies (see requirements-dev.txt)."
 
 test:
+ifeq ($(OS), Windows_NT)
+	@pytest
+else
 	@pytest --cov=$(SRC_CORE) $(SRC_TEST)
 	@codecov
+endif
 
 doc:
 	@$(BUILD_DOC)
