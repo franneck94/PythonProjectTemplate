@@ -33,8 +33,8 @@ This is a template for Python projects. What you get:
 │   └── __init__.py
 │   └── vector.py
 ├── tests
-│   ├── __init__.py
-│   └── test_vector.py
+    ├── __init__.py
+    └── test_vector.py
 ```
 
 The name of the example package is called fastvector.
