@@ -21,14 +21,11 @@ This is a template for Python projects. What you get:
 
 ## Structure
 ``` text
-├── .travis.yml
 ├── Makefile
-├── requirements.txt
 ├── setup.py
-├── tox.ini
 └── docs
 │   └── build
-│   │   └── html
+│   │   └── html...
 │   └── source
 │   │   └── conf.py
 ├── fastvector
@@ -36,7 +33,7 @@ This is a template for Python projects. What you get:
 │   └── vector.py
 ├── tests
 │   ├── __init__.py
-│   └── __init__.py
+│   └── test_vector.py
 ```
 
 The name of the example package is called fastvector.

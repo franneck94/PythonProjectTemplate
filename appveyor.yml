@@ -1,0 +1,16 @@
+image:
+  - Visual Studio 2019
+
+environment:
+  matrix:
+  - TOXENV: py37
+  - TOXENV: py38
+
+build: off
+
+install:
+- pip install tox
+- pip install -r requirements-dev.txt
+
+test_script:
+- tox
