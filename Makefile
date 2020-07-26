@@ -33,6 +33,7 @@ help:
 
 test:
 	@pytest --cov=$(SRC_CORE) $(SRC_TEST)
+	@codecov
 
 doc:
 	@$(BUILD_DOC)
