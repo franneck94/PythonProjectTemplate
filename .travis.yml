@@ -11,16 +11,16 @@ jobs:
     - os: osx
       osx_image: xcode9.4
       language: generic
-      env: TOXENV=py37
+      env: PYENV_VERSION=3.7-dev TOXENV=py37
     - os: osx
       osx_image: xcode11
       language: generic
-      env: TOXENV=py38
+      env: PYENV_VERSION=3.8-dev TOXENV=py38
 
 install:
-  - pip3 install tox
+  - pip install tox
 
-script: python3 -m tox
+script: tox
 
 notifications:
   email:
