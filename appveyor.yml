@@ -10,7 +10,7 @@ build: off
 
 install:
   - choco install make
-  - pip install tox
+  - C:\Python38-x64\python.exe -m pip install -r requirements-dev.txt
 
 test_script:
-  - tox
+  - C:\Python38-x64\python.exe -m pytest
