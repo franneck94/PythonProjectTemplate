@@ -20,9 +20,6 @@ install:
 
 script: make test_and_coverage
 
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
-
 notifications:
   email:
     on_success: never
