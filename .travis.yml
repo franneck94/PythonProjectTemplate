@@ -18,7 +18,7 @@ jobs:
 install:
   - pip install tox
 
-script: tox
+script: python -m tox
 
 notifications:
   email:
