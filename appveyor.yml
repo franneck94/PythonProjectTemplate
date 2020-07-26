@@ -10,7 +10,6 @@ build: off
 
 install:
 - pip install tox
-- pip install -r requirements-dev.txt
 
 test_script:
 - tox
