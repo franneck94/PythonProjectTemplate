@@ -13,4 +13,4 @@ install:
   - C:\Python38-x64\python.exe -m pip install tox
 
 test_script:
-  - tox
+  - C:\Python38-x64\python.exe -m tox
