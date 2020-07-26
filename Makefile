@@ -35,6 +35,9 @@ test:
 	@pytest --cov=$(SRC_CORE) $(SRC_TEST)
 	@codecov
 
+test_ci:
+	@pytest --cov=$(SRC_CORE) $(SRC_TEST)
+
 doc:
 	@$(BUILD_DOC)
 
