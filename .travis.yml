@@ -12,7 +12,6 @@ jobs:
       python: 3.7
       env: TOXENV=py37
     - os: osx
-      language: generic
       python: 3.8
       env: TOXENV=py38
 
@@ -22,8 +21,7 @@ install:
 script: tox
 
 after_success:
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then codecov ; fi  
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then bash <(curl -s https://codecov.io/bash); fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then python -m codecov ; fi
 
 notifications:
   email:
