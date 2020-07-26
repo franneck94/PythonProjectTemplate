@@ -86,23 +86,6 @@ class Vector2D:
         """
         return sqrt(self.x**2.0 + self.y**2.0)
 
-    def check_vector_types(self, vector2: Vector2D):
-        """Checks if the self and vector2 are an instance of the Vector2D class.
-
-        Parameters
-        ----------
-        vector2 : Vector2D
-            Other vector (right of the operator).
-
-        Raises
-        ------
-        TypeError
-            If self, or vector2 are not an instance of the Vector2D class.
-        """
-        if not isinstance(self, Vector2D) or not isinstance(vector2, Vector2D):
-            raise TypeError(
-                'You have to pass in two instances of the vector class!')
-
     def __eq__(self, other_vector: Any) -> bool:
         """Check if the vector instances have the same values.
 
@@ -117,7 +100,7 @@ class Vector2D:
             True, if the both vector instances have the same values.
             False, else.
         """
-        self.check_vector_types(other_vector)
+        Vector2D.check_vector_types(other_vector)
         is_equal = False
         if self.x == other_vector.x and self.y == other_vector.y:
             is_equal = True
@@ -137,7 +120,7 @@ class Vector2D:
             True, if the self instance is less than the other vector instance.
             False, else.
         """
-        self.check_vector_types(other_vector)
+        Vector2D.check_vector_types(other_vector)
         is_less_than = False
         if abs(self) < abs(other_vector):
             is_less_than = True
@@ -156,7 +139,7 @@ class Vector2D:
         Vector2D
             The additon vector of the self and the other vector instance
         """
-        self.check_vector_types(other_vector)
+        Vector2D.check_vector_types(other_vector)
         x = self.x + other_vector.x
         y = self.y + other_vector.y
         return Vector2D(x, y)
@@ -174,7 +157,7 @@ class Vector2D:
         Vector2D
             The subtraction vector of the self and the other vector instance
         """
-        self.check_vector_types(other_vector)
+        Vector2D.check_vector_types(other_vector)
         x = self.x - other_vector.x
         y = self.y - other_vector.y
         return Vector2D(x, y)
@@ -220,3 +203,20 @@ class Vector2D:
                 raise ValueError('You cannot divide by zero!')
         else:
             raise TypeError('You must pass in an int/float value!')
+
+    @staticmethod
+    def check_vector_types(other: Vector2D):
+        """Checks if the self and vector2 are an instance of the Vector2D class.
+
+        Parameters
+        ----------
+        other : Vector2D
+            Other vector (right of the operator).
+
+        Raises
+        ------
+        TypeError
+            If other is not an instance of the Vector2D class.
+        """
+        if not isinstance(other, Vector2D):
+            raise TypeError('Other is not an instances of the vector class!')

@@ -8,6 +8,9 @@ environment:
 
 build: off
 
+before_build:
+  - choco install make
+
 install:
 - pip install tox
 

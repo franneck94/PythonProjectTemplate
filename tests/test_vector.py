@@ -37,6 +37,23 @@ class VectorTests(unittest.TestCase):
         result = abs(self.v2)
         expected_result = math.sqrt(2.0)
         self.assertAlmostEqual(result, expected_result)
+
+    def test_str(self):
+        """ Tests the abs value.
+        """
+        result = str(self.v1)
+        expected_result = '(0, 0)'
+        self.assertEqual(result, expected_result)
+
+    def test_bool(self):
+        """ Tests the abs value.
+        """
+        result = bool(self.v1)
+        expected_result = False
+        self.assertEqual(result, expected_result)
+        result = bool(self.v2)
+        expected_result = True
+        self.assertEqual(result, expected_result)
     
     def test_add(self):
         """ Tests the addition operator.
@@ -75,6 +92,13 @@ class VectorTests(unittest.TestCase):
         # Invalid division
         self.assertRaises(TypeError, self.v1.__truediv__, "a")
         self.assertRaises(ValueError, self.v1.__truediv__, 0)
+
+    def test_check_vector_types(self):
+        """ Tests the abs value.
+        """
+        self.assertRaises(TypeError, Vector2D.check_vector_types, 1337)
+        self.assertRaises(TypeError, Vector2D.check_vector_types, 13.73)
+        self.assertRaises(TypeError, Vector2D.check_vector_types, "1337")
 
 if __name__ == "__main__":
     unittest.main()
