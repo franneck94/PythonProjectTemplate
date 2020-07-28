@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\Jan\\.conda\\envs\\pyUdemy\\python.exe",
+    "python.pythonPath": "/home/jan2402/anaconda3/bin/python",
     "terminal.integrated.env.windows": 
     {
         "make": "mingw32-make.exe"
