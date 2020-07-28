@@ -42,7 +42,9 @@ INSTALL_REQUIRES = ['numpy>={}'.format(NUMPY_MIN_VERSION),
                     'scipy>={}'.format(SCIPY_MIN_VERSION),]
 
 cython_sourcefiles = ['fastvector/cython_computations.pyx']
-cython_extensions = [Extension(name='cython_computations', sources=cython_sourcefiles)]
+cython_extensions = [Extension(name='fastvector.cython_computations', 
+                               sources=cython_sourcefiles, 
+                               include_dirs='.')]
 
 metadata = dict(
     name=DISTNAME,
