@@ -1,7 +1,6 @@
-# Option 1: python setup.py develop
-# Option 2: python setup.py bdist_wheel & pip install ./fastvector-0.1.0-py3-none-any.whl
+# python setup.py develop
 from setuptools import setup
-
+from Cython.Build import cythonize
 
 def get_readme():
     with open('README.md') as f:
@@ -29,7 +28,7 @@ LICENSE = get_license()
 README = get_readme()
 
 MAJOR = 0
-MINOR = 1
+MINOR = 2
 MICRO = 0
 ISRELEASED = True
 VERSION = '%d.%d.%d' % (MAJOR, MINOR, MICRO)
@@ -44,6 +43,7 @@ metadata = dict(
     version=VERSION,
     long_description=README,
     packages=['fastvector'],
+    ext_modules=cythonize("fastvector/cython_computations.pyx", language_level="3"),
     python_requires='>={}, <={}'.format(PYTHON_MIN_VERSION, PYTHON_MAX_VERSION),
     install_requires=['numpy>={}'.format(NUMPY_MIN_VERSION),
                       'scipy>={}'.format(SCIPY_MIN_VERSION),],
@@ -52,7 +52,6 @@ metadata = dict(
     description=DESCRIPTION,
     classifiers=[CLASSIFIERS],
     license=LICENSE,
-    include_package_data=True
 )
 
 def setup_package():
