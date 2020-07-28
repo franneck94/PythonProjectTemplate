@@ -3,14 +3,12 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
-        "include_dirs": ".",
-        "language": "c",
-        "name": "fastvector.cython_computations",
+        "name": "cython_computations",
         "sources": [
             "fastvector/cython_computations.pyx"
         ]
     },
-    "module_name": "fastvector.cython_computations"
+    "module_name": "cython_computations"
 }
 END: Cython Metadata */
 
@@ -616,8 +614,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__fastvector__cython_computations
-#define __PYX_HAVE_API__fastvector__cython_computations
+#define __PYX_HAVE__cython_computations
+#define __PYX_HAVE_API__cython_computations
 /* Early includes */
 #include "pythread.h"
 #include <string.h>
@@ -1959,7 +1957,7 @@ static PyObject *__pyx_memoryviewslice_assign_item_from_object(struct __pyx_memo
 
 /* Module declarations from 'cython' */
 
-/* Module declarations from 'fastvector.cython_computations' */
+/* Module declarations from 'cython_computations' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
@@ -1971,16 +1969,16 @@ static PyObject *contiguous = 0;
 static PyObject *indirect_contiguous = 0;
 static int __pyx_memoryview_thread_locks_used;
 static PyThread_type_lock __pyx_memoryview_thread_locks[8];
-static PyObject *__pyx_fuse_0__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice, unsigned char, unsigned char, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_fuse_1__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice, char, char, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_fuse_2__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice, short, short, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_fuse_3__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice, unsigned short, unsigned short, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_fuse_4__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice, int, int, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_fuse_5__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice, unsigned int, unsigned int, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_fuse_6__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice, PY_LONG_LONG, PY_LONG_LONG, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_fuse_7__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice, unsigned PY_LONG_LONG, unsigned PY_LONG_LONG, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_fuse_8__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice, float, float, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
-static PyObject *__pyx_fuse_9__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice, double, double, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_fuse_0__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice, unsigned char, unsigned char, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_fuse_1__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice, char, char, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_fuse_2__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice, short, short, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_fuse_3__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice, unsigned short, unsigned short, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_fuse_4__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice, int, int, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_fuse_5__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice, unsigned int, unsigned int, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_fuse_6__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice, PY_LONG_LONG, PY_LONG_LONG, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_fuse_7__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice, unsigned PY_LONG_LONG, unsigned PY_LONG_LONG, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_fuse_8__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice, float, float, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
+static PyObject *__pyx_fuse_9__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice, double, double, __Pyx_memviewslice, int __pyx_skip_dispatch); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
 static void *__pyx_align_pointer(void *, size_t); /*proto*/
 static PyObject *__pyx_memoryview_new(PyObject *, int, int, __Pyx_TypeInfo *); /*proto*/
@@ -2024,11 +2022,11 @@ static __Pyx_TypeInfo __Pyx_TypeInfo_PY_LONG_LONG = { "long long", NULL, sizeof(
 static __Pyx_TypeInfo __Pyx_TypeInfo_unsigned_PY_LONG_LONG = { "unsigned long long", NULL, sizeof(unsigned PY_LONG_LONG), { 0 }, 0, IS_UNSIGNED(unsigned PY_LONG_LONG) ? 'U' : 'I', IS_UNSIGNED(unsigned PY_LONG_LONG), 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_float = { "float", NULL, sizeof(float), { 0 }, 0, 'R', 0, 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "fastvector.cython_computations"
-extern int __pyx_module_is_main_fastvector__cython_computations;
-int __pyx_module_is_main_fastvector__cython_computations = 0;
+#define __Pyx_MODULE_NAME "cython_computations"
+extern int __pyx_module_is_main_cython_computations;
+int __pyx_module_is_main_cython_computations = 0;
 
-/* Implementation of 'fastvector.cython_computations' */
+/* Implementation of 'cython_computations' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_TypeError;
 static PyObject *__pyx_builtin_ValueError;
@@ -2126,6 +2124,7 @@ static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_cython_clip_vector[] = "_cython_clip_vector";
 static const char __pyx_k_strided_and_direct[] = "<strided and direct>";
 static const char __pyx_k_unsigned_long_long[] = "unsigned long long";
+static const char __pyx_k_cython_computations[] = "cython_computations";
 static const char __pyx_k_strided_and_indirect[] = "<strided and indirect>";
 static const char __pyx_k_contiguous_and_direct[] = "<contiguous and direct>";
 static const char __pyx_k_MemoryView_of_r_object[] = "<MemoryView of %r object>";
@@ -2147,7 +2146,6 @@ static const char __pyx_k_pyx_fuse_7_cython_clip_vector[] = "__pyx_fuse_7_cython
 static const char __pyx_k_pyx_fuse_8_cython_clip_vector[] = "__pyx_fuse_8_cython_clip_vector";
 static const char __pyx_k_pyx_fuse_9_cython_clip_vector[] = "__pyx_fuse_9_cython_clip_vector";
 static const char __pyx_k_unable_to_allocate_array_data[] = "unable to allocate array data.";
-static const char __pyx_k_fastvector_cython_computations[] = "fastvector.cython_computations";
 static const char __pyx_k_strided_and_direct_or_indirect[] = "<strided and direct or indirect>";
 static const char __pyx_k_Buffer_view_does_not_expose_stri[] = "Buffer view does not expose strides";
 static const char __pyx_k_Can_only_create_a_buffer_that_is[] = "Can only create a buffer that is contiguous in memory.";
@@ -2204,6 +2202,7 @@ static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_kp_s_contiguous_and_direct;
 static PyObject *__pyx_kp_s_contiguous_and_indirect;
 static PyObject *__pyx_n_s_cython_clip_vector;
+static PyObject *__pyx_n_s_cython_computations;
 static PyObject *__pyx_n_s_defaults;
 static PyObject *__pyx_n_s_dict;
 static PyObject *__pyx_n_s_double;
@@ -2212,7 +2211,6 @@ static PyObject *__pyx_n_s_dtype_is_object;
 static PyObject *__pyx_n_s_encode;
 static PyObject *__pyx_n_s_enumerate;
 static PyObject *__pyx_n_s_error;
-static PyObject *__pyx_n_s_fastvector_cython_computations;
 static PyObject *__pyx_kp_s_fastvector_cython_computations_p;
 static PyObject *__pyx_n_s_flags;
 static PyObject *__pyx_n_s_float;
@@ -2295,18 +2293,18 @@ static PyObject *__pyx_kp_s_unsigned_int;
 static PyObject *__pyx_kp_s_unsigned_long_long;
 static PyObject *__pyx_kp_s_unsigned_short;
 static PyObject *__pyx_n_s_update;
-static PyObject *__pyx_pf_10fastvector_19cython_computations__naive_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_list_in, PyObject *__pyx_v_min_value, PyObject *__pyx_v_max_value, PyObject *__pyx_v_list_out); /* proto */
-static PyObject *__pyx_pf_10fastvector_19cython_computations_2_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_signatures, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs, CYTHON_UNUSED PyObject *__pyx_v_defaults); /* proto */
-static PyObject *__pyx_pf_10fastvector_19cython_computations_4__pyx_fuse_0_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned char __pyx_v_min_value, unsigned char __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
-static PyObject *__pyx_pf_10fastvector_19cython_computations_6__pyx_fuse_1_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, char __pyx_v_min_value, char __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
-static PyObject *__pyx_pf_10fastvector_19cython_computations_8__pyx_fuse_2_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, short __pyx_v_min_value, short __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
-static PyObject *__pyx_pf_10fastvector_19cython_computations_10__pyx_fuse_3_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned short __pyx_v_min_value, unsigned short __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
-static PyObject *__pyx_pf_10fastvector_19cython_computations_12__pyx_fuse_4_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, int __pyx_v_min_value, int __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
-static PyObject *__pyx_pf_10fastvector_19cython_computations_14__pyx_fuse_5_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned int __pyx_v_min_value, unsigned int __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
-static PyObject *__pyx_pf_10fastvector_19cython_computations_16__pyx_fuse_6_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, PY_LONG_LONG __pyx_v_min_value, PY_LONG_LONG __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
-static PyObject *__pyx_pf_10fastvector_19cython_computations_18__pyx_fuse_7_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned PY_LONG_LONG __pyx_v_min_value, unsigned PY_LONG_LONG __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
-static PyObject *__pyx_pf_10fastvector_19cython_computations_20__pyx_fuse_8_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, float __pyx_v_min_value, float __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
-static PyObject *__pyx_pf_10fastvector_19cython_computations_22__pyx_fuse_9_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, double __pyx_v_min_value, double __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
+static PyObject *__pyx_pf_19cython_computations__naive_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_list_in, PyObject *__pyx_v_min_value, PyObject *__pyx_v_max_value, PyObject *__pyx_v_list_out); /* proto */
+static PyObject *__pyx_pf_19cython_computations_2_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_signatures, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs, CYTHON_UNUSED PyObject *__pyx_v_defaults); /* proto */
+static PyObject *__pyx_pf_19cython_computations_4__pyx_fuse_0_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned char __pyx_v_min_value, unsigned char __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
+static PyObject *__pyx_pf_19cython_computations_6__pyx_fuse_1_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, char __pyx_v_min_value, char __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
+static PyObject *__pyx_pf_19cython_computations_8__pyx_fuse_2_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, short __pyx_v_min_value, short __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
+static PyObject *__pyx_pf_19cython_computations_10__pyx_fuse_3_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned short __pyx_v_min_value, unsigned short __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
+static PyObject *__pyx_pf_19cython_computations_12__pyx_fuse_4_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, int __pyx_v_min_value, int __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
+static PyObject *__pyx_pf_19cython_computations_14__pyx_fuse_5_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned int __pyx_v_min_value, unsigned int __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
+static PyObject *__pyx_pf_19cython_computations_16__pyx_fuse_6_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, PY_LONG_LONG __pyx_v_min_value, PY_LONG_LONG __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
+static PyObject *__pyx_pf_19cython_computations_18__pyx_fuse_7_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned PY_LONG_LONG __pyx_v_min_value, unsigned PY_LONG_LONG __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
+static PyObject *__pyx_pf_19cython_computations_20__pyx_fuse_8_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, float __pyx_v_min_value, float __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
+static PyObject *__pyx_pf_19cython_computations_22__pyx_fuse_9_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, double __pyx_v_min_value, double __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -2391,7 +2389,7 @@ static PyObject *__pyx_codeobj__26;
 static PyObject *__pyx_codeobj__33;
 /* Late includes */
 
-/* "fastvector/cython_computations.pyx":15
+/* "cython_computations.pyx":15
  *     double
  * 
  * def _naive_cython_clip_vector(list_in, min_value, max_value, list_out):             # <<<<<<<<<<<<<<
@@ -2400,9 +2398,9 @@ static PyObject *__pyx_codeobj__33;
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10fastvector_19cython_computations_1_naive_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_10fastvector_19cython_computations_1_naive_cython_clip_vector = {"_naive_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_10fastvector_19cython_computations_1_naive_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10fastvector_19cython_computations_1_naive_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_19cython_computations_1_naive_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_19cython_computations_1_naive_cython_clip_vector = {"_naive_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_19cython_computations_1_naive_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_19cython_computations_1_naive_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_list_in = 0;
   PyObject *__pyx_v_min_value = 0;
   PyObject *__pyx_v_max_value = 0;
@@ -2475,18 +2473,18 @@ static PyObject *__pyx_pw_10fastvector_19cython_computations_1_naive_cython_clip
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("_naive_cython_clip_vector", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 15, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("fastvector.cython_computations._naive_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations._naive_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10fastvector_19cython_computations__naive_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
+  __pyx_r = __pyx_pf_19cython_computations__naive_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10fastvector_19cython_computations__naive_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_list_in, PyObject *__pyx_v_min_value, PyObject *__pyx_v_max_value, PyObject *__pyx_v_list_out) {
+static PyObject *__pyx_pf_19cython_computations__naive_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_list_in, PyObject *__pyx_v_min_value, PyObject *__pyx_v_max_value, PyObject *__pyx_v_list_out) {
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -2504,7 +2502,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations__naive_cython_clip_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("_naive_cython_clip_vector", 0);
 
-  /* "fastvector/cython_computations.pyx":16
+  /* "cython_computations.pyx":16
  * 
  * def _naive_cython_clip_vector(list_in, min_value, max_value, list_out):
  *     for i in range(len(list_in)):             # <<<<<<<<<<<<<<
@@ -2516,7 +2514,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations__naive_cython_clip_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "fastvector/cython_computations.pyx":17
+    /* "cython_computations.pyx":17
  * def _naive_cython_clip_vector(list_in, min_value, max_value, list_out):
  *     for i in range(len(list_in)):
  *         list_out[i] = min(max(list_in[i], min_value), max_value)             # <<<<<<<<<<<<<<
@@ -2563,7 +2561,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations__naive_cython_clip_
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
 
-  /* "fastvector/cython_computations.pyx":15
+  /* "cython_computations.pyx":15
  *     double
  * 
  * def _naive_cython_clip_vector(list_in, min_value, max_value, list_out):             # <<<<<<<<<<<<<<
@@ -2580,7 +2578,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations__naive_cython_clip_
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("fastvector.cython_computations._naive_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations._naive_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2588,7 +2586,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations__naive_cython_clip_
   return __pyx_r;
 }
 
-/* "fastvector/cython_computations.pyx":22
+/* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -2597,9 +2595,9 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations__naive_cython_clip_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_10fastvector_19cython_computations_3_cython_clip_vector = {"_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_19cython_computations_3_cython_clip_vector = {"_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_19cython_computations_3_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_signatures = 0;
   PyObject *__pyx_v_args = 0;
   PyObject *__pyx_v_kwargs = 0;
@@ -2672,18 +2670,18 @@ static PyObject *__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vecto
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 22, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fused_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fused_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10fastvector_19cython_computations_2_cython_clip_vector(__pyx_self, __pyx_v_signatures, __pyx_v_args, __pyx_v_kwargs, __pyx_v_defaults);
+  __pyx_r = __pyx_pf_19cython_computations_2_cython_clip_vector(__pyx_self, __pyx_v_signatures, __pyx_v_args, __pyx_v_kwargs, __pyx_v_defaults);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10fastvector_19cython_computations_2_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_signatures, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs, CYTHON_UNUSED PyObject *__pyx_v_defaults) {
+static PyObject *__pyx_pf_19cython_computations_2_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_signatures, PyObject *__pyx_v_args, PyObject *__pyx_v_kwargs, CYTHON_UNUSED PyObject *__pyx_v_defaults) {
   PyObject *__pyx_v_dest_sig = NULL;
   Py_ssize_t __pyx_v_i;
   PyTypeObject *__pyx_v_ndarray = 0;
@@ -3484,7 +3482,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_2_cython_clip_vecto
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
   __Pyx_XDECREF(__pyx_t_14);
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fused_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fused_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_dest_sig);
@@ -3502,9 +3500,9 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_2_cython_clip_vecto
   return __pyx_r;
 }
 
-static PyObject *__pyx_pw_10fastvector_19cython_computations_5__pyx_fuse_0_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_fuse_0__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, unsigned char __pyx_v_min_value, unsigned char __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_19cython_computations_5__pyx_fuse_0_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_fuse_0__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, unsigned char __pyx_v_min_value, unsigned char __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -3518,7 +3516,7 @@ static PyObject *__pyx_fuse_0__pyx_f_10fastvector_19cython_computations__cython_
   unsigned char __pyx_t_8;
   __Pyx_RefNannySetupContext("__pyx_fuse_0_cython_clip_vector", 0);
 
-  /* "fastvector/cython_computations.pyx":23
+  /* "cython_computations.pyx":23
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):             # <<<<<<<<<<<<<<
@@ -3529,7 +3527,7 @@ static PyObject *__pyx_fuse_0__pyx_f_10fastvector_19cython_computations__cython_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "fastvector/cython_computations.pyx":24
+    /* "cython_computations.pyx":24
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):
  *         list_out[i] = min(max(list_in[i], min_value), max_value)             # <<<<<<<<<<<<<<
@@ -3553,7 +3551,7 @@ static PyObject *__pyx_fuse_0__pyx_f_10fastvector_19cython_computations__cython_
     *((unsigned char *) ( /* dim=0 */ (__pyx_v_list_out.data + __pyx_t_6 * __pyx_v_list_out.strides[0]) )) = __pyx_t_8;
   }
 
-  /* "fastvector/cython_computations.pyx":22
+  /* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -3569,9 +3567,9 @@ static PyObject *__pyx_fuse_0__pyx_f_10fastvector_19cython_computations__cython_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10fastvector_19cython_computations_5__pyx_fuse_0_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_fuse_0__pyx_mdef_10fastvector_19cython_computations_5__pyx_fuse_0_cython_clip_vector = {"__pyx_fuse_0_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_10fastvector_19cython_computations_5__pyx_fuse_0_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10fastvector_19cython_computations_5__pyx_fuse_0_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_19cython_computations_5__pyx_fuse_0_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_fuse_0__pyx_mdef_19cython_computations_5__pyx_fuse_0_cython_clip_vector = {"__pyx_fuse_0_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_19cython_computations_5__pyx_fuse_0_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_19cython_computations_5__pyx_fuse_0_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_list_in = { 0, 0, { 0 }, { 0 }, { 0 } };
   unsigned char __pyx_v_min_value;
   unsigned char __pyx_v_max_value;
@@ -3644,18 +3642,18 @@ static PyObject *__pyx_pw_10fastvector_19cython_computations_5__pyx_fuse_0_cytho
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__pyx_fuse_0_cython_clip_vector", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 22, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_0_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_0_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10fastvector_19cython_computations_4__pyx_fuse_0_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
+  __pyx_r = __pyx_pf_19cython_computations_4__pyx_fuse_0_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10fastvector_19cython_computations_4__pyx_fuse_0_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned char __pyx_v_min_value, unsigned char __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
+static PyObject *__pyx_pf_19cython_computations_4__pyx_fuse_0_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned char __pyx_v_min_value, unsigned char __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3666,7 +3664,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_4__pyx_fuse_0_cytho
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_list_in.memview)) { __Pyx_RaiseUnboundLocalError("list_in"); __PYX_ERR(0, 22, __pyx_L1_error) }
   if (unlikely(!__pyx_v_list_out.memview)) { __Pyx_RaiseUnboundLocalError("list_out"); __PYX_ERR(0, 22, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_fuse_0__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __pyx_fuse_0__pyx_f_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3675,7 +3673,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_4__pyx_fuse_0_cytho
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_0_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_0_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_list_in, 1);
@@ -3685,9 +3683,9 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_4__pyx_fuse_0_cytho
   return __pyx_r;
 }
 
-static PyObject *__pyx_pw_10fastvector_19cython_computations_7__pyx_fuse_1_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_fuse_1__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, char __pyx_v_min_value, char __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_19cython_computations_7__pyx_fuse_1_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_fuse_1__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, char __pyx_v_min_value, char __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -3701,7 +3699,7 @@ static PyObject *__pyx_fuse_1__pyx_f_10fastvector_19cython_computations__cython_
   char __pyx_t_8;
   __Pyx_RefNannySetupContext("__pyx_fuse_1_cython_clip_vector", 0);
 
-  /* "fastvector/cython_computations.pyx":23
+  /* "cython_computations.pyx":23
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):             # <<<<<<<<<<<<<<
@@ -3712,7 +3710,7 @@ static PyObject *__pyx_fuse_1__pyx_f_10fastvector_19cython_computations__cython_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "fastvector/cython_computations.pyx":24
+    /* "cython_computations.pyx":24
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):
  *         list_out[i] = min(max(list_in[i], min_value), max_value)             # <<<<<<<<<<<<<<
@@ -3736,7 +3734,7 @@ static PyObject *__pyx_fuse_1__pyx_f_10fastvector_19cython_computations__cython_
     *((char *) ( /* dim=0 */ (__pyx_v_list_out.data + __pyx_t_6 * __pyx_v_list_out.strides[0]) )) = __pyx_t_8;
   }
 
-  /* "fastvector/cython_computations.pyx":22
+  /* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -3752,9 +3750,9 @@ static PyObject *__pyx_fuse_1__pyx_f_10fastvector_19cython_computations__cython_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10fastvector_19cython_computations_7__pyx_fuse_1_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_fuse_1__pyx_mdef_10fastvector_19cython_computations_7__pyx_fuse_1_cython_clip_vector = {"__pyx_fuse_1_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_10fastvector_19cython_computations_7__pyx_fuse_1_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10fastvector_19cython_computations_7__pyx_fuse_1_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_19cython_computations_7__pyx_fuse_1_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_fuse_1__pyx_mdef_19cython_computations_7__pyx_fuse_1_cython_clip_vector = {"__pyx_fuse_1_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_19cython_computations_7__pyx_fuse_1_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_19cython_computations_7__pyx_fuse_1_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_list_in = { 0, 0, { 0 }, { 0 }, { 0 } };
   char __pyx_v_min_value;
   char __pyx_v_max_value;
@@ -3827,18 +3825,18 @@ static PyObject *__pyx_pw_10fastvector_19cython_computations_7__pyx_fuse_1_cytho
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__pyx_fuse_1_cython_clip_vector", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 22, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_1_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_1_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10fastvector_19cython_computations_6__pyx_fuse_1_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
+  __pyx_r = __pyx_pf_19cython_computations_6__pyx_fuse_1_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10fastvector_19cython_computations_6__pyx_fuse_1_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, char __pyx_v_min_value, char __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
+static PyObject *__pyx_pf_19cython_computations_6__pyx_fuse_1_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, char __pyx_v_min_value, char __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3849,7 +3847,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_6__pyx_fuse_1_cytho
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_list_in.memview)) { __Pyx_RaiseUnboundLocalError("list_in"); __PYX_ERR(0, 22, __pyx_L1_error) }
   if (unlikely(!__pyx_v_list_out.memview)) { __Pyx_RaiseUnboundLocalError("list_out"); __PYX_ERR(0, 22, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_fuse_1__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __pyx_fuse_1__pyx_f_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -3858,7 +3856,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_6__pyx_fuse_1_cytho
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_1_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_1_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_list_in, 1);
@@ -3868,9 +3866,9 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_6__pyx_fuse_1_cytho
   return __pyx_r;
 }
 
-static PyObject *__pyx_pw_10fastvector_19cython_computations_9__pyx_fuse_2_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_fuse_2__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, short __pyx_v_min_value, short __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_19cython_computations_9__pyx_fuse_2_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_fuse_2__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, short __pyx_v_min_value, short __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -3884,7 +3882,7 @@ static PyObject *__pyx_fuse_2__pyx_f_10fastvector_19cython_computations__cython_
   short __pyx_t_8;
   __Pyx_RefNannySetupContext("__pyx_fuse_2_cython_clip_vector", 0);
 
-  /* "fastvector/cython_computations.pyx":23
+  /* "cython_computations.pyx":23
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):             # <<<<<<<<<<<<<<
@@ -3895,7 +3893,7 @@ static PyObject *__pyx_fuse_2__pyx_f_10fastvector_19cython_computations__cython_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "fastvector/cython_computations.pyx":24
+    /* "cython_computations.pyx":24
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):
  *         list_out[i] = min(max(list_in[i], min_value), max_value)             # <<<<<<<<<<<<<<
@@ -3919,7 +3917,7 @@ static PyObject *__pyx_fuse_2__pyx_f_10fastvector_19cython_computations__cython_
     *((short *) ( /* dim=0 */ (__pyx_v_list_out.data + __pyx_t_6 * __pyx_v_list_out.strides[0]) )) = __pyx_t_8;
   }
 
-  /* "fastvector/cython_computations.pyx":22
+  /* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -3935,9 +3933,9 @@ static PyObject *__pyx_fuse_2__pyx_f_10fastvector_19cython_computations__cython_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10fastvector_19cython_computations_9__pyx_fuse_2_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_fuse_2__pyx_mdef_10fastvector_19cython_computations_9__pyx_fuse_2_cython_clip_vector = {"__pyx_fuse_2_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_10fastvector_19cython_computations_9__pyx_fuse_2_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10fastvector_19cython_computations_9__pyx_fuse_2_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_19cython_computations_9__pyx_fuse_2_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_fuse_2__pyx_mdef_19cython_computations_9__pyx_fuse_2_cython_clip_vector = {"__pyx_fuse_2_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_19cython_computations_9__pyx_fuse_2_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_19cython_computations_9__pyx_fuse_2_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_list_in = { 0, 0, { 0 }, { 0 }, { 0 } };
   short __pyx_v_min_value;
   short __pyx_v_max_value;
@@ -4010,18 +4008,18 @@ static PyObject *__pyx_pw_10fastvector_19cython_computations_9__pyx_fuse_2_cytho
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__pyx_fuse_2_cython_clip_vector", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 22, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_2_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_2_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10fastvector_19cython_computations_8__pyx_fuse_2_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
+  __pyx_r = __pyx_pf_19cython_computations_8__pyx_fuse_2_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10fastvector_19cython_computations_8__pyx_fuse_2_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, short __pyx_v_min_value, short __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
+static PyObject *__pyx_pf_19cython_computations_8__pyx_fuse_2_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, short __pyx_v_min_value, short __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4032,7 +4030,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_8__pyx_fuse_2_cytho
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_list_in.memview)) { __Pyx_RaiseUnboundLocalError("list_in"); __PYX_ERR(0, 22, __pyx_L1_error) }
   if (unlikely(!__pyx_v_list_out.memview)) { __Pyx_RaiseUnboundLocalError("list_out"); __PYX_ERR(0, 22, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_fuse_2__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __pyx_fuse_2__pyx_f_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4041,7 +4039,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_8__pyx_fuse_2_cytho
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_2_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_2_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_list_in, 1);
@@ -4051,9 +4049,9 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_8__pyx_fuse_2_cytho
   return __pyx_r;
 }
 
-static PyObject *__pyx_pw_10fastvector_19cython_computations_11__pyx_fuse_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_fuse_3__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, unsigned short __pyx_v_min_value, unsigned short __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_19cython_computations_11__pyx_fuse_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_fuse_3__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, unsigned short __pyx_v_min_value, unsigned short __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -4067,7 +4065,7 @@ static PyObject *__pyx_fuse_3__pyx_f_10fastvector_19cython_computations__cython_
   unsigned short __pyx_t_8;
   __Pyx_RefNannySetupContext("__pyx_fuse_3_cython_clip_vector", 0);
 
-  /* "fastvector/cython_computations.pyx":23
+  /* "cython_computations.pyx":23
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):             # <<<<<<<<<<<<<<
@@ -4078,7 +4076,7 @@ static PyObject *__pyx_fuse_3__pyx_f_10fastvector_19cython_computations__cython_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "fastvector/cython_computations.pyx":24
+    /* "cython_computations.pyx":24
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):
  *         list_out[i] = min(max(list_in[i], min_value), max_value)             # <<<<<<<<<<<<<<
@@ -4102,7 +4100,7 @@ static PyObject *__pyx_fuse_3__pyx_f_10fastvector_19cython_computations__cython_
     *((unsigned short *) ( /* dim=0 */ (__pyx_v_list_out.data + __pyx_t_6 * __pyx_v_list_out.strides[0]) )) = __pyx_t_8;
   }
 
-  /* "fastvector/cython_computations.pyx":22
+  /* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -4118,9 +4116,9 @@ static PyObject *__pyx_fuse_3__pyx_f_10fastvector_19cython_computations__cython_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10fastvector_19cython_computations_11__pyx_fuse_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_fuse_3__pyx_mdef_10fastvector_19cython_computations_11__pyx_fuse_3_cython_clip_vector = {"__pyx_fuse_3_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_10fastvector_19cython_computations_11__pyx_fuse_3_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10fastvector_19cython_computations_11__pyx_fuse_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_19cython_computations_11__pyx_fuse_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_fuse_3__pyx_mdef_19cython_computations_11__pyx_fuse_3_cython_clip_vector = {"__pyx_fuse_3_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_19cython_computations_11__pyx_fuse_3_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_19cython_computations_11__pyx_fuse_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_list_in = { 0, 0, { 0 }, { 0 }, { 0 } };
   unsigned short __pyx_v_min_value;
   unsigned short __pyx_v_max_value;
@@ -4193,18 +4191,18 @@ static PyObject *__pyx_pw_10fastvector_19cython_computations_11__pyx_fuse_3_cyth
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__pyx_fuse_3_cython_clip_vector", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 22, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_3_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_3_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10fastvector_19cython_computations_10__pyx_fuse_3_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
+  __pyx_r = __pyx_pf_19cython_computations_10__pyx_fuse_3_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10fastvector_19cython_computations_10__pyx_fuse_3_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned short __pyx_v_min_value, unsigned short __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
+static PyObject *__pyx_pf_19cython_computations_10__pyx_fuse_3_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned short __pyx_v_min_value, unsigned short __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4215,7 +4213,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_10__pyx_fuse_3_cyth
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_list_in.memview)) { __Pyx_RaiseUnboundLocalError("list_in"); __PYX_ERR(0, 22, __pyx_L1_error) }
   if (unlikely(!__pyx_v_list_out.memview)) { __Pyx_RaiseUnboundLocalError("list_out"); __PYX_ERR(0, 22, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_fuse_3__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __pyx_fuse_3__pyx_f_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4224,7 +4222,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_10__pyx_fuse_3_cyth
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_3_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_3_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_list_in, 1);
@@ -4234,9 +4232,9 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_10__pyx_fuse_3_cyth
   return __pyx_r;
 }
 
-static PyObject *__pyx_pw_10fastvector_19cython_computations_13__pyx_fuse_4_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_fuse_4__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, int __pyx_v_min_value, int __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_19cython_computations_13__pyx_fuse_4_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_fuse_4__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, int __pyx_v_min_value, int __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -4250,7 +4248,7 @@ static PyObject *__pyx_fuse_4__pyx_f_10fastvector_19cython_computations__cython_
   int __pyx_t_8;
   __Pyx_RefNannySetupContext("__pyx_fuse_4_cython_clip_vector", 0);
 
-  /* "fastvector/cython_computations.pyx":23
+  /* "cython_computations.pyx":23
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):             # <<<<<<<<<<<<<<
@@ -4261,7 +4259,7 @@ static PyObject *__pyx_fuse_4__pyx_f_10fastvector_19cython_computations__cython_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "fastvector/cython_computations.pyx":24
+    /* "cython_computations.pyx":24
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):
  *         list_out[i] = min(max(list_in[i], min_value), max_value)             # <<<<<<<<<<<<<<
@@ -4285,7 +4283,7 @@ static PyObject *__pyx_fuse_4__pyx_f_10fastvector_19cython_computations__cython_
     *((int *) ( /* dim=0 */ (__pyx_v_list_out.data + __pyx_t_6 * __pyx_v_list_out.strides[0]) )) = __pyx_t_8;
   }
 
-  /* "fastvector/cython_computations.pyx":22
+  /* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -4301,9 +4299,9 @@ static PyObject *__pyx_fuse_4__pyx_f_10fastvector_19cython_computations__cython_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10fastvector_19cython_computations_13__pyx_fuse_4_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_fuse_4__pyx_mdef_10fastvector_19cython_computations_13__pyx_fuse_4_cython_clip_vector = {"__pyx_fuse_4_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_10fastvector_19cython_computations_13__pyx_fuse_4_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10fastvector_19cython_computations_13__pyx_fuse_4_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_19cython_computations_13__pyx_fuse_4_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_fuse_4__pyx_mdef_19cython_computations_13__pyx_fuse_4_cython_clip_vector = {"__pyx_fuse_4_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_19cython_computations_13__pyx_fuse_4_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_19cython_computations_13__pyx_fuse_4_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_list_in = { 0, 0, { 0 }, { 0 }, { 0 } };
   int __pyx_v_min_value;
   int __pyx_v_max_value;
@@ -4376,18 +4374,18 @@ static PyObject *__pyx_pw_10fastvector_19cython_computations_13__pyx_fuse_4_cyth
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__pyx_fuse_4_cython_clip_vector", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 22, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_4_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_4_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10fastvector_19cython_computations_12__pyx_fuse_4_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
+  __pyx_r = __pyx_pf_19cython_computations_12__pyx_fuse_4_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10fastvector_19cython_computations_12__pyx_fuse_4_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, int __pyx_v_min_value, int __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
+static PyObject *__pyx_pf_19cython_computations_12__pyx_fuse_4_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, int __pyx_v_min_value, int __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4398,7 +4396,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_12__pyx_fuse_4_cyth
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_list_in.memview)) { __Pyx_RaiseUnboundLocalError("list_in"); __PYX_ERR(0, 22, __pyx_L1_error) }
   if (unlikely(!__pyx_v_list_out.memview)) { __Pyx_RaiseUnboundLocalError("list_out"); __PYX_ERR(0, 22, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_fuse_4__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __pyx_fuse_4__pyx_f_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4407,7 +4405,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_12__pyx_fuse_4_cyth
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_4_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_4_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_list_in, 1);
@@ -4417,9 +4415,9 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_12__pyx_fuse_4_cyth
   return __pyx_r;
 }
 
-static PyObject *__pyx_pw_10fastvector_19cython_computations_15__pyx_fuse_5_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_fuse_5__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, unsigned int __pyx_v_min_value, unsigned int __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_19cython_computations_15__pyx_fuse_5_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_fuse_5__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, unsigned int __pyx_v_min_value, unsigned int __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -4433,7 +4431,7 @@ static PyObject *__pyx_fuse_5__pyx_f_10fastvector_19cython_computations__cython_
   unsigned int __pyx_t_8;
   __Pyx_RefNannySetupContext("__pyx_fuse_5_cython_clip_vector", 0);
 
-  /* "fastvector/cython_computations.pyx":23
+  /* "cython_computations.pyx":23
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):             # <<<<<<<<<<<<<<
@@ -4444,7 +4442,7 @@ static PyObject *__pyx_fuse_5__pyx_f_10fastvector_19cython_computations__cython_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "fastvector/cython_computations.pyx":24
+    /* "cython_computations.pyx":24
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):
  *         list_out[i] = min(max(list_in[i], min_value), max_value)             # <<<<<<<<<<<<<<
@@ -4468,7 +4466,7 @@ static PyObject *__pyx_fuse_5__pyx_f_10fastvector_19cython_computations__cython_
     *((unsigned int *) ( /* dim=0 */ (__pyx_v_list_out.data + __pyx_t_6 * __pyx_v_list_out.strides[0]) )) = __pyx_t_8;
   }
 
-  /* "fastvector/cython_computations.pyx":22
+  /* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -4484,9 +4482,9 @@ static PyObject *__pyx_fuse_5__pyx_f_10fastvector_19cython_computations__cython_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10fastvector_19cython_computations_15__pyx_fuse_5_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_fuse_5__pyx_mdef_10fastvector_19cython_computations_15__pyx_fuse_5_cython_clip_vector = {"__pyx_fuse_5_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_10fastvector_19cython_computations_15__pyx_fuse_5_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10fastvector_19cython_computations_15__pyx_fuse_5_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_19cython_computations_15__pyx_fuse_5_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_fuse_5__pyx_mdef_19cython_computations_15__pyx_fuse_5_cython_clip_vector = {"__pyx_fuse_5_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_19cython_computations_15__pyx_fuse_5_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_19cython_computations_15__pyx_fuse_5_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_list_in = { 0, 0, { 0 }, { 0 }, { 0 } };
   unsigned int __pyx_v_min_value;
   unsigned int __pyx_v_max_value;
@@ -4559,18 +4557,18 @@ static PyObject *__pyx_pw_10fastvector_19cython_computations_15__pyx_fuse_5_cyth
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__pyx_fuse_5_cython_clip_vector", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 22, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_5_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_5_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10fastvector_19cython_computations_14__pyx_fuse_5_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
+  __pyx_r = __pyx_pf_19cython_computations_14__pyx_fuse_5_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10fastvector_19cython_computations_14__pyx_fuse_5_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned int __pyx_v_min_value, unsigned int __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
+static PyObject *__pyx_pf_19cython_computations_14__pyx_fuse_5_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned int __pyx_v_min_value, unsigned int __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4581,7 +4579,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_14__pyx_fuse_5_cyth
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_list_in.memview)) { __Pyx_RaiseUnboundLocalError("list_in"); __PYX_ERR(0, 22, __pyx_L1_error) }
   if (unlikely(!__pyx_v_list_out.memview)) { __Pyx_RaiseUnboundLocalError("list_out"); __PYX_ERR(0, 22, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_fuse_5__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __pyx_fuse_5__pyx_f_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4590,7 +4588,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_14__pyx_fuse_5_cyth
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_5_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_5_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_list_in, 1);
@@ -4600,9 +4598,9 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_14__pyx_fuse_5_cyth
   return __pyx_r;
 }
 
-static PyObject *__pyx_pw_10fastvector_19cython_computations_17__pyx_fuse_6_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_fuse_6__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, PY_LONG_LONG __pyx_v_min_value, PY_LONG_LONG __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_19cython_computations_17__pyx_fuse_6_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_fuse_6__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, PY_LONG_LONG __pyx_v_min_value, PY_LONG_LONG __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -4616,7 +4614,7 @@ static PyObject *__pyx_fuse_6__pyx_f_10fastvector_19cython_computations__cython_
   PY_LONG_LONG __pyx_t_8;
   __Pyx_RefNannySetupContext("__pyx_fuse_6_cython_clip_vector", 0);
 
-  /* "fastvector/cython_computations.pyx":23
+  /* "cython_computations.pyx":23
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):             # <<<<<<<<<<<<<<
@@ -4627,7 +4625,7 @@ static PyObject *__pyx_fuse_6__pyx_f_10fastvector_19cython_computations__cython_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "fastvector/cython_computations.pyx":24
+    /* "cython_computations.pyx":24
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):
  *         list_out[i] = min(max(list_in[i], min_value), max_value)             # <<<<<<<<<<<<<<
@@ -4651,7 +4649,7 @@ static PyObject *__pyx_fuse_6__pyx_f_10fastvector_19cython_computations__cython_
     *((PY_LONG_LONG *) ( /* dim=0 */ (__pyx_v_list_out.data + __pyx_t_6 * __pyx_v_list_out.strides[0]) )) = __pyx_t_8;
   }
 
-  /* "fastvector/cython_computations.pyx":22
+  /* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -4667,9 +4665,9 @@ static PyObject *__pyx_fuse_6__pyx_f_10fastvector_19cython_computations__cython_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10fastvector_19cython_computations_17__pyx_fuse_6_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_fuse_6__pyx_mdef_10fastvector_19cython_computations_17__pyx_fuse_6_cython_clip_vector = {"__pyx_fuse_6_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_10fastvector_19cython_computations_17__pyx_fuse_6_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10fastvector_19cython_computations_17__pyx_fuse_6_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_19cython_computations_17__pyx_fuse_6_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_fuse_6__pyx_mdef_19cython_computations_17__pyx_fuse_6_cython_clip_vector = {"__pyx_fuse_6_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_19cython_computations_17__pyx_fuse_6_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_19cython_computations_17__pyx_fuse_6_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_list_in = { 0, 0, { 0 }, { 0 }, { 0 } };
   PY_LONG_LONG __pyx_v_min_value;
   PY_LONG_LONG __pyx_v_max_value;
@@ -4742,18 +4740,18 @@ static PyObject *__pyx_pw_10fastvector_19cython_computations_17__pyx_fuse_6_cyth
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__pyx_fuse_6_cython_clip_vector", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 22, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_6_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_6_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10fastvector_19cython_computations_16__pyx_fuse_6_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
+  __pyx_r = __pyx_pf_19cython_computations_16__pyx_fuse_6_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10fastvector_19cython_computations_16__pyx_fuse_6_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, PY_LONG_LONG __pyx_v_min_value, PY_LONG_LONG __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
+static PyObject *__pyx_pf_19cython_computations_16__pyx_fuse_6_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, PY_LONG_LONG __pyx_v_min_value, PY_LONG_LONG __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4764,7 +4762,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_16__pyx_fuse_6_cyth
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_list_in.memview)) { __Pyx_RaiseUnboundLocalError("list_in"); __PYX_ERR(0, 22, __pyx_L1_error) }
   if (unlikely(!__pyx_v_list_out.memview)) { __Pyx_RaiseUnboundLocalError("list_out"); __PYX_ERR(0, 22, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_fuse_6__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __pyx_fuse_6__pyx_f_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4773,7 +4771,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_16__pyx_fuse_6_cyth
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_6_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_6_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_list_in, 1);
@@ -4783,9 +4781,9 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_16__pyx_fuse_6_cyth
   return __pyx_r;
 }
 
-static PyObject *__pyx_pw_10fastvector_19cython_computations_19__pyx_fuse_7_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_fuse_7__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, unsigned PY_LONG_LONG __pyx_v_min_value, unsigned PY_LONG_LONG __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_19cython_computations_19__pyx_fuse_7_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_fuse_7__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, unsigned PY_LONG_LONG __pyx_v_min_value, unsigned PY_LONG_LONG __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -4799,7 +4797,7 @@ static PyObject *__pyx_fuse_7__pyx_f_10fastvector_19cython_computations__cython_
   unsigned PY_LONG_LONG __pyx_t_8;
   __Pyx_RefNannySetupContext("__pyx_fuse_7_cython_clip_vector", 0);
 
-  /* "fastvector/cython_computations.pyx":23
+  /* "cython_computations.pyx":23
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):             # <<<<<<<<<<<<<<
@@ -4810,7 +4808,7 @@ static PyObject *__pyx_fuse_7__pyx_f_10fastvector_19cython_computations__cython_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "fastvector/cython_computations.pyx":24
+    /* "cython_computations.pyx":24
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):
  *         list_out[i] = min(max(list_in[i], min_value), max_value)             # <<<<<<<<<<<<<<
@@ -4834,7 +4832,7 @@ static PyObject *__pyx_fuse_7__pyx_f_10fastvector_19cython_computations__cython_
     *((unsigned PY_LONG_LONG *) ( /* dim=0 */ (__pyx_v_list_out.data + __pyx_t_6 * __pyx_v_list_out.strides[0]) )) = __pyx_t_8;
   }
 
-  /* "fastvector/cython_computations.pyx":22
+  /* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -4850,9 +4848,9 @@ static PyObject *__pyx_fuse_7__pyx_f_10fastvector_19cython_computations__cython_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10fastvector_19cython_computations_19__pyx_fuse_7_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_fuse_7__pyx_mdef_10fastvector_19cython_computations_19__pyx_fuse_7_cython_clip_vector = {"__pyx_fuse_7_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_10fastvector_19cython_computations_19__pyx_fuse_7_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10fastvector_19cython_computations_19__pyx_fuse_7_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_19cython_computations_19__pyx_fuse_7_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_fuse_7__pyx_mdef_19cython_computations_19__pyx_fuse_7_cython_clip_vector = {"__pyx_fuse_7_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_19cython_computations_19__pyx_fuse_7_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_19cython_computations_19__pyx_fuse_7_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_list_in = { 0, 0, { 0 }, { 0 }, { 0 } };
   unsigned PY_LONG_LONG __pyx_v_min_value;
   unsigned PY_LONG_LONG __pyx_v_max_value;
@@ -4925,18 +4923,18 @@ static PyObject *__pyx_pw_10fastvector_19cython_computations_19__pyx_fuse_7_cyth
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__pyx_fuse_7_cython_clip_vector", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 22, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_7_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_7_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10fastvector_19cython_computations_18__pyx_fuse_7_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
+  __pyx_r = __pyx_pf_19cython_computations_18__pyx_fuse_7_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10fastvector_19cython_computations_18__pyx_fuse_7_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned PY_LONG_LONG __pyx_v_min_value, unsigned PY_LONG_LONG __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
+static PyObject *__pyx_pf_19cython_computations_18__pyx_fuse_7_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, unsigned PY_LONG_LONG __pyx_v_min_value, unsigned PY_LONG_LONG __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4947,7 +4945,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_18__pyx_fuse_7_cyth
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_list_in.memview)) { __Pyx_RaiseUnboundLocalError("list_in"); __PYX_ERR(0, 22, __pyx_L1_error) }
   if (unlikely(!__pyx_v_list_out.memview)) { __Pyx_RaiseUnboundLocalError("list_out"); __PYX_ERR(0, 22, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_fuse_7__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __pyx_fuse_7__pyx_f_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4956,7 +4954,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_18__pyx_fuse_7_cyth
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_7_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_7_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_list_in, 1);
@@ -4966,9 +4964,9 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_18__pyx_fuse_7_cyth
   return __pyx_r;
 }
 
-static PyObject *__pyx_pw_10fastvector_19cython_computations_21__pyx_fuse_8_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_fuse_8__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, float __pyx_v_min_value, float __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_19cython_computations_21__pyx_fuse_8_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_fuse_8__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, float __pyx_v_min_value, float __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -4982,7 +4980,7 @@ static PyObject *__pyx_fuse_8__pyx_f_10fastvector_19cython_computations__cython_
   float __pyx_t_8;
   __Pyx_RefNannySetupContext("__pyx_fuse_8_cython_clip_vector", 0);
 
-  /* "fastvector/cython_computations.pyx":23
+  /* "cython_computations.pyx":23
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):             # <<<<<<<<<<<<<<
@@ -4993,7 +4991,7 @@ static PyObject *__pyx_fuse_8__pyx_f_10fastvector_19cython_computations__cython_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "fastvector/cython_computations.pyx":24
+    /* "cython_computations.pyx":24
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):
  *         list_out[i] = min(max(list_in[i], min_value), max_value)             # <<<<<<<<<<<<<<
@@ -5017,7 +5015,7 @@ static PyObject *__pyx_fuse_8__pyx_f_10fastvector_19cython_computations__cython_
     *((float *) ( /* dim=0 */ (__pyx_v_list_out.data + __pyx_t_6 * __pyx_v_list_out.strides[0]) )) = __pyx_t_8;
   }
 
-  /* "fastvector/cython_computations.pyx":22
+  /* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -5033,9 +5031,9 @@ static PyObject *__pyx_fuse_8__pyx_f_10fastvector_19cython_computations__cython_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10fastvector_19cython_computations_21__pyx_fuse_8_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_fuse_8__pyx_mdef_10fastvector_19cython_computations_21__pyx_fuse_8_cython_clip_vector = {"__pyx_fuse_8_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_10fastvector_19cython_computations_21__pyx_fuse_8_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10fastvector_19cython_computations_21__pyx_fuse_8_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_19cython_computations_21__pyx_fuse_8_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_fuse_8__pyx_mdef_19cython_computations_21__pyx_fuse_8_cython_clip_vector = {"__pyx_fuse_8_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_19cython_computations_21__pyx_fuse_8_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_19cython_computations_21__pyx_fuse_8_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_list_in = { 0, 0, { 0 }, { 0 }, { 0 } };
   float __pyx_v_min_value;
   float __pyx_v_max_value;
@@ -5108,18 +5106,18 @@ static PyObject *__pyx_pw_10fastvector_19cython_computations_21__pyx_fuse_8_cyth
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__pyx_fuse_8_cython_clip_vector", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 22, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_8_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_8_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10fastvector_19cython_computations_20__pyx_fuse_8_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
+  __pyx_r = __pyx_pf_19cython_computations_20__pyx_fuse_8_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10fastvector_19cython_computations_20__pyx_fuse_8_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, float __pyx_v_min_value, float __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
+static PyObject *__pyx_pf_19cython_computations_20__pyx_fuse_8_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, float __pyx_v_min_value, float __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5130,7 +5128,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_20__pyx_fuse_8_cyth
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_list_in.memview)) { __Pyx_RaiseUnboundLocalError("list_in"); __PYX_ERR(0, 22, __pyx_L1_error) }
   if (unlikely(!__pyx_v_list_out.memview)) { __Pyx_RaiseUnboundLocalError("list_out"); __PYX_ERR(0, 22, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_fuse_8__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __pyx_fuse_8__pyx_f_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5139,7 +5137,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_20__pyx_fuse_8_cyth
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_8_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_8_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_list_in, 1);
@@ -5149,9 +5147,9 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_20__pyx_fuse_8_cyth
   return __pyx_r;
 }
 
-static PyObject *__pyx_pw_10fastvector_19cython_computations_23__pyx_fuse_9_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_10fastvector_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_fuse_9__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, double __pyx_v_min_value, double __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
+static PyObject *__pyx_pw_19cython_computations_23__pyx_fuse_9_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_19cython_computations_3_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_fuse_9__pyx_f_19cython_computations__cython_clip_vector(__Pyx_memviewslice __pyx_v_list_in, double __pyx_v_min_value, double __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out, CYTHON_UNUSED int __pyx_skip_dispatch) {
   Py_ssize_t __pyx_v_i;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -5165,7 +5163,7 @@ static PyObject *__pyx_fuse_9__pyx_f_10fastvector_19cython_computations__cython_
   double __pyx_t_8;
   __Pyx_RefNannySetupContext("__pyx_fuse_9_cython_clip_vector", 0);
 
-  /* "fastvector/cython_computations.pyx":23
+  /* "cython_computations.pyx":23
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):             # <<<<<<<<<<<<<<
@@ -5176,7 +5174,7 @@ static PyObject *__pyx_fuse_9__pyx_f_10fastvector_19cython_computations__cython_
   for (__pyx_t_3 = 0; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_i = __pyx_t_3;
 
-    /* "fastvector/cython_computations.pyx":24
+    /* "cython_computations.pyx":24
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):
  *     for i in range(len(list_in)):
  *         list_out[i] = min(max(list_in[i], min_value), max_value)             # <<<<<<<<<<<<<<
@@ -5200,7 +5198,7 @@ static PyObject *__pyx_fuse_9__pyx_f_10fastvector_19cython_computations__cython_
     *((double *) ( /* dim=0 */ (__pyx_v_list_out.data + __pyx_t_6 * __pyx_v_list_out.strides[0]) )) = __pyx_t_8;
   }
 
-  /* "fastvector/cython_computations.pyx":22
+  /* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -5216,9 +5214,9 @@ static PyObject *__pyx_fuse_9__pyx_f_10fastvector_19cython_computations__cython_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10fastvector_19cython_computations_23__pyx_fuse_9_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_fuse_9__pyx_mdef_10fastvector_19cython_computations_23__pyx_fuse_9_cython_clip_vector = {"__pyx_fuse_9_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_10fastvector_19cython_computations_23__pyx_fuse_9_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10fastvector_19cython_computations_23__pyx_fuse_9_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_19cython_computations_23__pyx_fuse_9_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_fuse_9__pyx_mdef_19cython_computations_23__pyx_fuse_9_cython_clip_vector = {"__pyx_fuse_9_cython_clip_vector", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_19cython_computations_23__pyx_fuse_9_cython_clip_vector, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_19cython_computations_23__pyx_fuse_9_cython_clip_vector(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   __Pyx_memviewslice __pyx_v_list_in = { 0, 0, { 0 }, { 0 }, { 0 } };
   double __pyx_v_min_value;
   double __pyx_v_max_value;
@@ -5291,18 +5289,18 @@ static PyObject *__pyx_pw_10fastvector_19cython_computations_23__pyx_fuse_9_cyth
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__pyx_fuse_9_cython_clip_vector", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 22, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_9_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_9_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10fastvector_19cython_computations_22__pyx_fuse_9_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
+  __pyx_r = __pyx_pf_19cython_computations_22__pyx_fuse_9_cython_clip_vector(__pyx_self, __pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10fastvector_19cython_computations_22__pyx_fuse_9_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, double __pyx_v_min_value, double __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
+static PyObject *__pyx_pf_19cython_computations_22__pyx_fuse_9_cython_clip_vector(CYTHON_UNUSED PyObject *__pyx_self, __Pyx_memviewslice __pyx_v_list_in, double __pyx_v_min_value, double __pyx_v_max_value, __Pyx_memviewslice __pyx_v_list_out) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5313,7 +5311,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_22__pyx_fuse_9_cyth
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(!__pyx_v_list_in.memview)) { __Pyx_RaiseUnboundLocalError("list_in"); __PYX_ERR(0, 22, __pyx_L1_error) }
   if (unlikely(!__pyx_v_list_out.memview)) { __Pyx_RaiseUnboundLocalError("list_out"); __PYX_ERR(0, 22, __pyx_L1_error) }
-  __pyx_t_1 = __pyx_fuse_9__pyx_f_10fastvector_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_1 = __pyx_fuse_9__pyx_f_19cython_computations__cython_clip_vector(__pyx_v_list_in, __pyx_v_min_value, __pyx_v_max_value, __pyx_v_list_out, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5322,7 +5320,7 @@ static PyObject *__pyx_pf_10fastvector_19cython_computations_22__pyx_fuse_9_cyth
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("fastvector.cython_computations.__pyx_fuse_9_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("cython_computations.__pyx_fuse_9_cython_clip_vector", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_list_in, 1);
@@ -18472,7 +18470,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "fastvector.cython_computations.array", /*tp_name*/
+  "cython_computations.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -18591,7 +18589,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "fastvector.cython_computations.Enum", /*tp_name*/
+  "cython_computations.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -18852,7 +18850,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "fastvector.cython_computations.memoryview", /*tp_name*/
+  "cython_computations.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -18990,7 +18988,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "fastvector.cython_computations._memoryviewslice", /*tp_name*/
+  "cython_computations._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -19150,6 +19148,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_contiguous_and_direct, __pyx_k_contiguous_and_direct, sizeof(__pyx_k_contiguous_and_direct), 0, 0, 1, 0},
   {&__pyx_kp_s_contiguous_and_indirect, __pyx_k_contiguous_and_indirect, sizeof(__pyx_k_contiguous_and_indirect), 0, 0, 1, 0},
   {&__pyx_n_s_cython_clip_vector, __pyx_k_cython_clip_vector, sizeof(__pyx_k_cython_clip_vector), 0, 0, 1, 1},
+  {&__pyx_n_s_cython_computations, __pyx_k_cython_computations, sizeof(__pyx_k_cython_computations), 0, 0, 1, 1},
   {&__pyx_n_s_defaults, __pyx_k_defaults, sizeof(__pyx_k_defaults), 0, 0, 1, 1},
   {&__pyx_n_s_dict, __pyx_k_dict, sizeof(__pyx_k_dict), 0, 0, 1, 1},
   {&__pyx_n_s_double, __pyx_k_double, sizeof(__pyx_k_double), 0, 0, 1, 1},
@@ -19158,7 +19157,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_encode, __pyx_k_encode, sizeof(__pyx_k_encode), 0, 0, 1, 1},
   {&__pyx_n_s_enumerate, __pyx_k_enumerate, sizeof(__pyx_k_enumerate), 0, 0, 1, 1},
   {&__pyx_n_s_error, __pyx_k_error, sizeof(__pyx_k_error), 0, 0, 1, 1},
-  {&__pyx_n_s_fastvector_cython_computations, __pyx_k_fastvector_cython_computations, sizeof(__pyx_k_fastvector_cython_computations), 0, 0, 1, 1},
   {&__pyx_kp_s_fastvector_cython_computations_p, __pyx_k_fastvector_cython_computations_p, sizeof(__pyx_k_fastvector_cython_computations_p), 0, 0, 1, 0},
   {&__pyx_n_s_flags, __pyx_k_flags, sizeof(__pyx_k_flags), 0, 0, 1, 1},
   {&__pyx_n_s_float, __pyx_k_float, sizeof(__pyx_k_float), 0, 0, 1, 1},
@@ -19261,7 +19259,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "fastvector/cython_computations.pyx":22
+  /* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -19467,7 +19465,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
 
-  /* "fastvector/cython_computations.pyx":15
+  /* "cython_computations.pyx":15
  *     double
  * 
  * def _naive_cython_clip_vector(list_in, min_value, max_value, list_out):             # <<<<<<<<<<<<<<
@@ -19479,7 +19477,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__23);
   __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(4, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_fastvector_cython_computations_p, __pyx_n_s_naive_cython_clip_vector, 15, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 15, __pyx_L1_error)
 
-  /* "fastvector/cython_computations.pyx":22
+  /* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -19876,14 +19874,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_fastvector__cython_computations) {
+  if (__pyx_module_is_main_cython_computations) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "fastvector.cython_computations")) {
-      if (unlikely(PyDict_SetItemString(modules, "fastvector.cython_computations", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "cython_computations")) {
+      if (unlikely(PyDict_SetItemString(modules, "cython_computations", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -19904,19 +19902,19 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "fastvector/cython_computations.pyx":15
+  /* "cython_computations.pyx":15
  *     double
  * 
  * def _naive_cython_clip_vector(list_in, min_value, max_value, list_out):             # <<<<<<<<<<<<<<
  *     for i in range(len(list_in)):
  *         list_out[i] = min(max(list_in[i], min_value), max_value)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_10fastvector_19cython_computations_1_naive_cython_clip_vector, NULL, __pyx_n_s_fastvector_cython_computations); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_19cython_computations_1_naive_cython_clip_vector, NULL, __pyx_n_s_cython_computations); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_naive_cython_clip_vector, __pyx_t_1) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "fastvector/cython_computations.pyx":22
+  /* "cython_computations.pyx":22
  * @cython.wraparound(False) # Deactivate negative indexing
  * # cpef: def + cdef (python + c/c++)
  * cpdef _cython_clip_vector(vector_type[:] list_in, vector_type min_value, vector_type max_value, vector_type[:] list_out):             # <<<<<<<<<<<<<<
@@ -19925,57 +19923,57 @@ if (!__Pyx_RefNanny) {
  */
   __pyx_t_1 = __Pyx_PyDict_NewPresized(10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_0__pyx_mdef_10fastvector_19cython_computations_5__pyx_fuse_0_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_0_cython_clip_vector, NULL, __pyx_n_s_fastvector_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_0__pyx_mdef_19cython_computations_5__pyx_fuse_0_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_0_cython_clip_vector, NULL, __pyx_n_s_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
   if (PyDict_SetItem(__pyx_t_1, __pyx_kp_s_unsigned_char, __pyx_t_2) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_1__pyx_mdef_10fastvector_19cython_computations_7__pyx_fuse_1_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_1_cython_clip_vector, NULL, __pyx_n_s_fastvector_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_1__pyx_mdef_19cython_computations_7__pyx_fuse_1_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_1_cython_clip_vector, NULL, __pyx_n_s_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_char, __pyx_t_2) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_2__pyx_mdef_10fastvector_19cython_computations_9__pyx_fuse_2_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_2_cython_clip_vector, NULL, __pyx_n_s_fastvector_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_2__pyx_mdef_19cython_computations_9__pyx_fuse_2_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_2_cython_clip_vector, NULL, __pyx_n_s_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_short, __pyx_t_2) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_3__pyx_mdef_10fastvector_19cython_computations_11__pyx_fuse_3_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_3_cython_clip_vector, NULL, __pyx_n_s_fastvector_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_3__pyx_mdef_19cython_computations_11__pyx_fuse_3_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_3_cython_clip_vector, NULL, __pyx_n_s_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
   if (PyDict_SetItem(__pyx_t_1, __pyx_kp_s_unsigned_short, __pyx_t_2) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_4__pyx_mdef_10fastvector_19cython_computations_13__pyx_fuse_4_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_4_cython_clip_vector, NULL, __pyx_n_s_fastvector_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_4__pyx_mdef_19cython_computations_13__pyx_fuse_4_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_4_cython_clip_vector, NULL, __pyx_n_s_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_int, __pyx_t_2) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_5__pyx_mdef_10fastvector_19cython_computations_15__pyx_fuse_5_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_5_cython_clip_vector, NULL, __pyx_n_s_fastvector_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_5__pyx_mdef_19cython_computations_15__pyx_fuse_5_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_5_cython_clip_vector, NULL, __pyx_n_s_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
   if (PyDict_SetItem(__pyx_t_1, __pyx_kp_s_unsigned_int, __pyx_t_2) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_6__pyx_mdef_10fastvector_19cython_computations_17__pyx_fuse_6_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_6_cython_clip_vector, NULL, __pyx_n_s_fastvector_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_6__pyx_mdef_19cython_computations_17__pyx_fuse_6_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_6_cython_clip_vector, NULL, __pyx_n_s_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
   if (PyDict_SetItem(__pyx_t_1, __pyx_kp_s_long_long, __pyx_t_2) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_7__pyx_mdef_10fastvector_19cython_computations_19__pyx_fuse_7_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_7_cython_clip_vector, NULL, __pyx_n_s_fastvector_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_7__pyx_mdef_19cython_computations_19__pyx_fuse_7_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_7_cython_clip_vector, NULL, __pyx_n_s_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
   if (PyDict_SetItem(__pyx_t_1, __pyx_kp_s_unsigned_long_long, __pyx_t_2) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_8__pyx_mdef_10fastvector_19cython_computations_21__pyx_fuse_8_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_8_cython_clip_vector, NULL, __pyx_n_s_fastvector_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_8__pyx_mdef_19cython_computations_21__pyx_fuse_8_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_8_cython_clip_vector, NULL, __pyx_n_s_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_float, __pyx_t_2) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_9__pyx_mdef_10fastvector_19cython_computations_23__pyx_fuse_9_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_9_cython_clip_vector, NULL, __pyx_n_s_fastvector_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_fuse_9__pyx_mdef_19cython_computations_23__pyx_fuse_9_cython_clip_vector, 0, __pyx_n_s_pyx_fuse_9_cython_clip_vector, NULL, __pyx_n_s_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_double, __pyx_t_2) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_mdef_10fastvector_19cython_computations_3_cython_clip_vector, 0, __pyx_n_s_cython_clip_vector, NULL, __pyx_n_s_fastvector_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __pyx_FusedFunction_New(&__pyx_mdef_19cython_computations_3_cython_clip_vector, 0, __pyx_n_s_cython_clip_vector, NULL, __pyx_n_s_cython_computations, __pyx_d, ((PyObject *)__pyx_codeobj__26)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_2, __pyx_empty_tuple);
   ((__pyx_FusedFunctionObject *) __pyx_t_2)->__signatures__ = __pyx_t_1;
@@ -19984,7 +19982,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_cython_clip_vector, __pyx_t_2) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "fastvector/cython_computations.pyx":1
+  /* "cython_computations.pyx":1
  * cimport cython             # <<<<<<<<<<<<<<
  * 
  * ctypedef fused vector_type:
@@ -20155,11 +20153,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init fastvector.cython_computations", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init cython_computations", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init fastvector.cython_computations");
+    PyErr_SetString(PyExc_ImportError, "init cython_computations");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

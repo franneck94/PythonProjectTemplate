@@ -1,5 +1,6 @@
-from setuptools import setup
+from setuptools import setup, Extension
 from Cython.Build import cythonize
+from Cython.Distutils import build_ext
 
 def get_readme():
     with open('README.md') as f:
@@ -45,15 +46,16 @@ metadata = dict(
     version=VERSION,
     long_description=README,
     packages=[DISTNAME],
-    ext_modules=cythonize([f'{DISTNAME}/*.pyx']),
+    ext_modules=cythonize([Extension('cython_computations', sources=['fastvector/cython_computations.pyx'])]),
+    include_dirs=['.', 'fastvector'],
+    package_data={'': [f'{DISTNAME}/*.pyx', f'{DISTNAME}/*.pxd']},
     python_requires='>={}, <={}'.format(PYTHON_MIN_VERSION, PYTHON_MAX_VERSION),
     install_requires=INSTALL_REQUIRES,
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     description=DESCRIPTION,
     classifiers=[CLASSIFIERS],
-    license=LICENSE,
-    package_data={'': [f'{DISTNAME}/*.pyx', f'{DISTNAME}/*.pxd']}
+    license=LICENSE
 )
 
 def setup_package():
