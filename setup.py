@@ -1,5 +1,5 @@
 # python setup.py develop
-from setuptools import setup
+from setuptools import setup, Extension
 from Cython.Build import cythonize
 
 def get_readme():
@@ -38,15 +38,20 @@ PYTHON_MAX_VERSION = '3.8'
 SCIPY_MIN_VERSION = '1.1.0'
 NUMPY_MIN_VERSION = '1.14.0'
 
+INSTALL_REQUIRES = ['numpy>={}'.format(NUMPY_MIN_VERSION),
+                    'scipy>={}'.format(SCIPY_MIN_VERSION),]
+
+cython_sourcefiles = ['fastvector/cython_computations.pyx']
+cython_extensions = [Extension(name='cython_computations', sources=cython_sourcefiles)]
+
 metadata = dict(
     name=DISTNAME,
     version=VERSION,
     long_description=README,
-    packages=['fastvector'],
-    ext_modules=cythonize("fastvector/cython_computations.pyx", language_level="3"),
+    packages=[DISTNAME],
+    ext_modules=cythonize(cython_extensions),
     python_requires='>={}, <={}'.format(PYTHON_MIN_VERSION, PYTHON_MAX_VERSION),
-    install_requires=['numpy>={}'.format(NUMPY_MIN_VERSION),
-                      'scipy>={}'.format(SCIPY_MIN_VERSION),],
+    install_requires=INSTALL_REQUIRES,
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     description=DESCRIPTION,

@@ -1,9 +1,7 @@
 include *.txt
 include .coveragerc
-include .isort.cfg
 include LICENSE
 include Makefile
-include tox.ini
 recursive-include docs *.bat
 recursive-include docs *.sh
 recursive-include docs Makefile
