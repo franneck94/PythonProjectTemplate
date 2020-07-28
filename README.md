@@ -3,7 +3,6 @@
 [![Release](https://img.shields.io/github/v/release/franneck94/cpp-project-template)](https://travis-ci.org/github/franneck94/Cpp-Project-Template)
 [![Project Status: Active.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Travis CI](https://travis-ci.org/franneck94/Python-Project-Template.svg?branch=master)](https://travis-ci.org/github/franneck94/Python-Project-Template)
-[![AppVeyor](https://ci.appveyor.com/api/projects/status/j7h91yfpk66itofy?svg=true)](https://ci.appveyor.com/project/franneck94/python-project-template)
 [![codecov](https://codecov.io/gh/franneck94/python-project-template/branch/master/graph/badge.svg)](https://codecov.io/gh/franneck94/python-project-template)
 
 # Template For Python Projects 
@@ -13,11 +12,11 @@ This is a template for Python projects. What you get:
 -   Source code and test code is seperated in different directories.
 -   Different tasks seperated by [Make](https://www.gnu.org/software/make/) tasks.
 -   External libraries installed and managed by [Pip](https://pypi.org/project/pip/).
--   To be tested envs are defined in a [Tox](https://tox.readthedocs.io/en/latest/) file.
 -   Setup for tests using [Pytest](https://docs.pytest.org/en/stable/).
 -   Continuous testing with [Travis-CI](https://travis-ci.org/).
 -   Code coverage reports, including automatic upload to [Codecov](https://codecov.io).
 -   Code documentation with [Sphinx](https://www.sphinx-doc.org/en/master/).
+-   Example of own Python package with the use of [Cython](https://cython.org/)
 -   Optional: Use of [VSCode](https://code.visualstudio.com/) with the Python and UnitTest extension.
 
 ## Structure
@@ -31,9 +30,11 @@ This is a template for Python projects. What you get:
 │   │   └── conf.py
 ├── fastvector
 │   └── __init__.py
-│   └── vector.py
+│   ├── vector.py
+│   └── computations.py
 ├── tests
     ├── __init__.py
+    ├── test_computations.py
     └── test_vector.py
 ```
 
