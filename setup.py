@@ -1,5 +1,4 @@
-# python setup.py develop
-from setuptools import setup, Extension
+from setuptools import setup
 from Cython.Build import cythonize
 
 def get_readme():
@@ -41,17 +40,12 @@ NUMPY_MIN_VERSION = '1.14.0'
 INSTALL_REQUIRES = ['numpy>={}'.format(NUMPY_MIN_VERSION),
                     'scipy>={}'.format(SCIPY_MIN_VERSION),]
 
-cython_sourcefiles = ['fastvector/cython_computations.pyx']
-cython_extensions = [Extension(name='fastvector.cython_computations', 
-                               sources=cython_sourcefiles, 
-                               include_dirs='.')]
-
 metadata = dict(
     name=DISTNAME,
     version=VERSION,
     long_description=README,
     packages=[DISTNAME],
-    ext_modules=cythonize(cython_extensions),
+    ext_modules=cythonize([f'{DISTNAME}/*.pyx']),
     python_requires='>={}, <={}'.format(PYTHON_MIN_VERSION, PYTHON_MAX_VERSION),
     install_requires=INSTALL_REQUIRES,
     author=AUTHOR,
@@ -59,6 +53,7 @@ metadata = dict(
     description=DESCRIPTION,
     classifiers=[CLASSIFIERS],
     license=LICENSE,
+    package_data={'': [f'{DISTNAME}/*.pyx', f'{DISTNAME}/*.pxd']}
 )
 
 def setup_package():

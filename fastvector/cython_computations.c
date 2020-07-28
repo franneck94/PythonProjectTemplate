@@ -3,6 +3,8 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {
+        "include_dirs": ".",
+        "language": "c",
         "name": "fastvector.cython_computations",
         "sources": [
             "fastvector/cython_computations.pyx"
@@ -21,7 +23,7 @@ END: Cython Metadata */
 #else
 #define CYTHON_ABI "0_29_21"
 #define CYTHON_HEX_VERSION 0x001D15F0
-#define CYTHON_FUTURE_DIVISION 1
+#define CYTHON_FUTURE_DIVISION 0
 #include <stddef.h>
 #ifndef offsetof
   #define offsetof(type, member) ( (size_t) & ((type*)0) -> member )
