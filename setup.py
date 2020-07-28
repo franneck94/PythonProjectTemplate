@@ -48,7 +48,7 @@ metadata = dict(
     name=DISTNAME,
     version=VERSION,
     long_description=README,
-    packages=[DISTNAME],
+    packages=['fastvector'],
     ext_modules=cythonize(CYTHON_EXTENSION, language_level='3'),
     python_requires='>={}, <={}'.format(PYTHON_MIN_VERSION, PYTHON_MAX_VERSION),
     install_requires=INSTALL_REQUIRES,
