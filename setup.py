@@ -1,6 +1,6 @@
-from setuptools import setup, Extension
 from Cython.Build import cythonize
-from Cython.Distutils import build_ext
+from setuptools import Extension, setup
+
 
 def get_readme():
     with open('README.md') as f:
@@ -41,14 +41,15 @@ NUMPY_MIN_VERSION = '1.14.0'
 INSTALL_REQUIRES = ['numpy>={}'.format(NUMPY_MIN_VERSION),
                     'scipy>={}'.format(SCIPY_MIN_VERSION),]
 
+CYTHON_EXTENSION = [Extension(name='fastvector.cython_computations', 
+                              sources=['fastvector/cython_computations.pyx'])]
+
 metadata = dict(
     name=DISTNAME,
     version=VERSION,
     long_description=README,
     packages=[DISTNAME],
-    ext_modules=cythonize([Extension('cython_computations', sources=['fastvector/cython_computations.pyx'])]),
-    include_dirs=['.', 'fastvector'],
-    package_data={'': [f'{DISTNAME}/*.pyx', f'{DISTNAME}/*.pxd']},
+    ext_modules=cythonize(CYTHON_EXTENSION, language_level='3'),
     python_requires='>={}, <={}'.format(PYTHON_MIN_VERSION, PYTHON_MAX_VERSION),
     install_requires=INSTALL_REQUIRES,
     author=AUTHOR,
