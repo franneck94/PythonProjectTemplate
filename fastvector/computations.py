@@ -6,9 +6,7 @@ from .dtypes import Number
 from .vector import VectorND
 
 
-def python_clip_vector(
-    vector_in: VectorND, min_value: Number, max_value: Number, vector_out: VectorND,
-):
+def python_clip_vector(vector_in: VectorND, min_value: Number, max_value: Number, vector_out: VectorND):
     """Clip the vector values by plain python code.
 
     Parameters
@@ -37,9 +35,7 @@ def python_clip_vector(
         vector_out[i] = min(max(vector_in[i], min_value), max_value)
 
 
-def cython_clip_vector(
-    vector_in: VectorND, min_value: Number, max_value: Number, vector_out: VectorND,
-):
+def cython_clip_vector(vector_in: VectorND, min_value: Number, max_value: Number, vector_out: VectorND):
     """Clip the vector values by optimized cython code.
 
     Parameters
@@ -69,9 +65,7 @@ def cython_clip_vector(
     python_clip_vector(vector_in, min_value, max_value, vector_out)
 
 
-def naive_cython_clip_vector(
-    vector_in: VectorND, min_value: Number, max_value: Number, vector_out: VectorND,
-):
+def naive_cython_clip_vector(vector_in: VectorND, min_value: Number, max_value: Number, vector_out: VectorND):
     """Clip the vector values by naive cython code.
 
     Parameters
@@ -96,4 +90,6 @@ def naive_cython_clip_vector(
     VectorND.check_numeric_argument(max_value)
     if min_value > max_value:
         raise ValueError("min_value must be <= max_value")
-    _naive_cython_clip_vector(vector_in.values, min_value, max_value, vector_out.values)
+    _naive_cython_clip_vector(
+        vector_in.values, min_value, max_value, vector_out.values,
+    )

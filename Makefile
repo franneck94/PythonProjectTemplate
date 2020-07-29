@@ -36,11 +36,11 @@ install:
 	@$(PYTHON) setup.py install
 
 test:
-	@pytest $(SRC_TEST)
+	@$(PYTHON) -m pytest $(SRC_TEST)
 
 test-coverage:
-	@pytest --cov=$(SRC_CORE) $(SRC_TEST)
-	@codecov
+	@$(PYTHON) -m pytest --cov=$(SRC_CORE) $(SRC_TEST)
+	@$(PYTHON) -m codecov
 
 doc:
 	@$(BUILD_DOC)
@@ -50,18 +50,18 @@ clean:
 	@$(RM) $(call FixPath,$(SRC_TEST)/__pycache__)
 
 code-pylint:
-	@pylint $(SRC_CORE)
+	@$(PYTHON) -m pylint $(SRC_CORE)
 
 code-mypy:
-	@mypy $(SRC_CORE)
+	@$(PYTHON) -m mypy $(SRC_CORE)
 
 code-lint: code-pylint code-mypy
 
 code-isort:
-	@isort --recursive $(SRC_TEST)
+	@$(PYTHON) -m isort --recursive $(SRC_TEST)
 
 code-pep8:
-	@autopep8 -i -r $(SRC_CORE)
+	@$(PYTHON) -m autopep8 -i -r $(SRC_CORE)
 
 code-format: code-isort code-pep8
 

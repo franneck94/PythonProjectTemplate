@@ -4,11 +4,11 @@ from __future__ import annotations
 
 import array
 import numbers
-from math import sqrt
-from typing import Union, Any
 from functools import total_ordering
+from math import sqrt
+from typing import Any, Union
 
-from .dtypes import float64, Number
+from .dtypes import Number, float64
 
 
 @total_ordering
@@ -40,7 +40,8 @@ class VectorND:
             self.values = array.array(dtype, values)
         else:
             raise TypeError(
-                'You must pass in an list of numbers, or numbers as a args tuple!')
+                'You must pass in an list of numbers, or numbers as a args tuple!',
+            )
 
     def __call__(self) -> str:
         """Callable for the vector instance to return its representation.
@@ -191,8 +192,10 @@ class VectorND:
             The additon vector of the self and the other vector instance
         """
         self.check_vector_types(other_vector)
-        add_result = [self_val + other_val for self_val,
-                      other_val in zip(self.values, other_vector.values)]
+        add_result = [
+            self_val + other_val for self_val,
+            other_val in zip(self.values, other_vector.values)
+        ]
         return VectorND(add_result)
 
     def __sub__(self, other_vector: VectorND) -> VectorND:
@@ -209,8 +212,10 @@ class VectorND:
             The subtraction vector of the self and the other vector instance
         """
         self.check_vector_types(other_vector)
-        sub_result = [self_val - other_val for self_val,
-                      other_val in zip(self.values, other_vector.values)]
+        sub_result = [
+            self_val - other_val for self_val,
+            other_val in zip(self.values, other_vector.values)
+        ]
         return VectorND(sub_result)
 
     def __mul__(self, other: Union[VectorND, Number]) -> Union[VectorND, Number]:
@@ -227,14 +232,17 @@ class VectorND:
             The multiplication of the self vector and the other vector(or number) instance
         """
         if isinstance(other, VectorND):
-            vector_dot = sum([self_val * other_val for self_val,
-                              other_val in zip(self.values, other.values)])
+            vector_dot = sum([
+                self_val * other_val for self_val,
+                other_val in zip(self.values, other.values)
+            ])
             return vector_dot
         if isinstance(other, numbers.Real):
             vector_mul = [val * other for val in self.values]
             return VectorND(vector_mul)
         raise TypeError(
-            'You must pass in a vector instance or an int/float number!')
+            'You must pass in a vector instance or an int/float number!',
+        )
 
     def __truediv__(self, other: Number) -> VectorND:
         """Returns the multiplication of the self vector and the other vector(or number) instance.
@@ -254,8 +262,7 @@ class VectorND:
                 vector_div = [val / other for val in self.values]
                 return VectorND(vector_div)
             raise ValueError('You cannot divide by zero!')
-        else:
-            raise TypeError('You must pass in an int/float value!')
+        raise TypeError('You must pass in an int/float value!')
 
     @staticmethod
     def check_numeric_argument(argument: Number):
@@ -278,4 +285,5 @@ class VectorND:
         """
         if not isinstance(vector, VectorND):
             raise TypeError(
-                'You have to pass in two instances of the vector class!')
+                'You have to pass in two instances of the vector class!',
+            )

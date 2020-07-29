@@ -4,15 +4,4 @@ repos:
     hooks:
     - id: end-of-file-fixer
     - id: trailing-whitespace
-- repo: https://github.com/pre-commit/mirrors-isort
-  rev: v5.1.4
-  hooks:
-  - id: isort
-- repo: https://github.com/asottile/add-trailing-comma
-  rev: v2.0.1
-  hooks:
-  - id: add-trailing-comma
-- repo: https://github.com/pre-commit/pygrep-hooks
-  rev: v1.5.1
-  hooks:
-  - id: rst-backticks
+    - id: check-docstring-first
