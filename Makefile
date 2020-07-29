@@ -2,6 +2,7 @@ SRC_APP=app
 SRC_CORE=fastvector
 SRC_TEST=tests
 SRC_DOC=docs
+SRC_BENCH=benchmarks
 
 ifeq ($(OS), Windows_NT)
 	PYTHON=python
@@ -41,6 +42,9 @@ test:
 test-coverage:
 	@$(PYTHON) -m pytest --cov=$(SRC_CORE) $(SRC_TEST)
 	@$(PYTHON) -m codecov
+
+benchmark:
+	@$(PYTHON) -m py.test --benchmark-columns=mean,stddev,median,rounds,iterations --benchmark-sort=mean $(SRC_BENCH)
 
 doc:
 	@$(BUILD_DOC)

@@ -7,3 +7,4 @@ codecov==2.1.7
 pytest-cov==2.10.0
 tox==3.16.1
 pre-commit==2.6.0
+pytest-benchmark==3.2.3

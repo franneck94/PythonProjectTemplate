@@ -5,7 +5,7 @@
 [![Travis CI](https://travis-ci.org/franneck94/Python-Project-Template.svg?branch=master)](https://travis-ci.org/github/franneck94/Python-Project-Template)
 [![codecov](https://codecov.io/gh/franneck94/python-project-template/branch/master/graph/badge.svg)](https://codecov.io/gh/franneck94/python-project-template)
 
-# Template For Python Projects 
+# Template For Python Projects
 
 This is a template for Python projects. What you get:
 
@@ -13,6 +13,7 @@ This is a template for Python projects. What you get:
 -   Different tasks seperated by [Make](https://www.gnu.org/software/make/) tasks.
 -   External libraries installed and managed by [Pip](https://pypi.org/project/pip/).
 -   Setup for tests using [Pytest](https://docs.pytest.org/en/stable/).
+-   Bechmark tests using [Pytest-Benchmark](https://github.com/ionelmc/pytest-benchmark)
 -   Continuous testing with [Travis-CI](https://travis-ci.org/).
 -   Code coverage reports, including automatic upload to [Codecov](https://codecov.io).
 -   Code documentation with [Sphinx](https://www.sphinx-doc.org/en/master/).
@@ -23,7 +24,10 @@ This is a template for Python projects. What you get:
 ``` text
 ├── Makefile
 ├── setup.py
-└── docs
+├── tests
+│   ├── __init__.py
+│   └── test_benchmark_computations.py
+├── docs
 │   └── build
 │   │   └── html...
 │   └── source
@@ -32,11 +36,11 @@ This is a template for Python projects. What you get:
 │   └── __init__.py
 │   ├── vector.py
 │   └── computations.py
-├── tests
+└── tests
     ├── __init__.py
     ├── test_computations.py
     └── test_vector.py
 ```
 
 The name of the example package is called fastvector.
-Sources of the package go in [fastvector/](fastvector/) and tests go in [tests/](tests/).
+Sources of the package go in [fastvector/](fastvector/),tests go in [tests/](tests/) and benchmarks go in [benchmarks/](benchmarks/).
