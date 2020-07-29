@@ -6,9 +6,9 @@ python:
 
 install:
   - pip install -r requirements-dev.txt
-  - python setup.py develop 
+  - python setup.py develop
 
-script: make test
+script: make test-coverage
 
 notifications:
   email:
