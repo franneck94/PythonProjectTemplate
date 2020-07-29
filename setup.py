@@ -1,7 +1,6 @@
 from Cython.Build import cythonize
 from setuptools import Extension, setup
 
-
 def get_readme():
     with open("README.md") as f:
         return f.read()
@@ -10,7 +9,6 @@ def get_readme():
 def get_license():
     with open("LICENSE") as f:
         return f.read()
-
 
 CLASSIFIERS = """\
 License :: OSI Approved
@@ -30,8 +28,8 @@ LICENSE = get_license()
 README = get_readme()
 
 MAJOR = 0
-MINOR = 2
-MICRO = 3
+MINOR = 3
+MICRO = 0
 ISRELEASED = True
 VERSION = "%d.%d.%d" % (MAJOR, MINOR, MICRO)
 
@@ -46,10 +44,8 @@ INSTALL_REQUIRES = [
 ]
 
 CYTHON_EXTENSION = [
-    Extension(
-        name="fastvector.cython_computations",
-        sources=["fastvector/cython_computations.pyx"],
-    ),
+    Extension(name="fastvector.cython_computations",
+              sources=["fastvector/cython_computations.pyx"]),
 ]
 
 metadata = dict(
@@ -64,13 +60,11 @@ metadata = dict(
     author_email=AUTHOR_EMAIL,
     description=DESCRIPTION,
     classifiers=[CLASSIFIERS],
-    license=LICENSE,
+    license=LICENSE
 )
-
 
 def setup_package():
     setup(**metadata)
-
 
 if __name__ == "__main__":
     setup_package()
