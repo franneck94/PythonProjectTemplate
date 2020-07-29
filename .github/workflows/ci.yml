@@ -22,6 +22,7 @@ jobs:
     - name: install
       run: |
         pip install -r requirements-test.txt
+        python setup.py develop
     - name: test
       run: |
         python -m pytest ./tests/
@@ -40,6 +41,7 @@ jobs:
       run: |
         pip3 install setuptools
         pip3 install -r requirements-test.txt
+        python3 setup.py develop
     - name: test
       run: |
         python3 -m pytest ./tests/
@@ -57,6 +59,7 @@ jobs:
     - name: install
       run: |
         pip3 install -r requirements-test.txt
+        python3 setup.py develop
     - name: test
       run: |
         python3 -m pytest ./tests/

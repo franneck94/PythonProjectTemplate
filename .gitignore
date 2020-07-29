@@ -2,6 +2,9 @@ data/
 logs/
 models/
 .vscode/
+settings.json
+launch.json
+tasks.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

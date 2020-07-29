@@ -29,7 +29,7 @@ README = get_readme()
 
 MAJOR = 0
 MINOR = 2
-MICRO = 0
+MICRO = 2
 ISRELEASED = True
 VERSION = '%d.%d.%d' % (MAJOR, MINOR, MICRO)
 
@@ -48,7 +48,7 @@ metadata = dict(
     name=DISTNAME,
     version=VERSION,
     long_description=README,
-    packages=['fastvector'],
+    packages=['fastvector', 'tests'],
     ext_modules=cythonize(CYTHON_EXTENSION, language_level='3'),
     python_requires='>={}, <={}'.format(PYTHON_MIN_VERSION, PYTHON_MAX_VERSION),
     install_requires=INSTALL_REQUIRES,
