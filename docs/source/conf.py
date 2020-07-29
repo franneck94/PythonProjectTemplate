@@ -14,6 +14,8 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('../../fastvector/'))
 
+import fastvector
+
 # -- Project information -----------------------------------------------------
 
 project = 'FastVector'
@@ -21,7 +23,7 @@ copyright = '2020, Jan Schaffranek'
 author = 'Jan Schaffranek'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.0'
+release = fastvector.__version__
 
 
 # -- General configuration ---------------------------------------------------
