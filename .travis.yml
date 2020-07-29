@@ -6,7 +6,7 @@ python:
 
 install:
   - pip install -r requirements-dev.txt
-  - python setup.py develop
+  - python setup.py develop 
 
 script: make test
 
