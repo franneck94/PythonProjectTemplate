@@ -32,6 +32,9 @@ help:
 	@echo " * deps-install 		- Install dependencies (see requirements.txt)."
 	@echo " * deps-dev-install 	- Install dev. dependencies (see requirements-dev.txt)."
 
+install:
+	@$(PYTHON) setup.py install
+
 test:
 	@pytest $(SRC_TEST)
 
