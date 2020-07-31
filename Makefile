@@ -1,3 +1,4 @@
+
 SRC_APP=app
 SRC_CORE=fastvector
 SRC_TEST=tests
@@ -26,10 +27,8 @@ help:
 	@echo " * clean        		- Cleanup (e.g. pyc files)."
 	@echo " * code-pylint  		- Check code pylint."
 	@echo " * code-mypy    		- Check code mypy"
-	@echo " * code-lint    		- Check code lints (pylint, flake8, mypy)."
 	@echo " * code-isort   		- Sort the import statements."
 	@echo " * code-autopep8 	- Auto format the code for pep8."
-	@echo " * code-format   	- Format code (isort, autopep8)."
 	@echo " * deps-install 		- Install dependencies (see requirements.txt)."
 	@echo " * deps-dev-install 	- Install dev. dependencies (see requirements-dev.txt)."
 
@@ -59,15 +58,11 @@ code-pylint:
 code-mypy:
 	@$(PYTHON) -m mypy $(SRC_CORE)
 
-code-lint: code-pylint code-mypy
-
 code-isort:
-	@$(PYTHON) -m isort --recursive $(SRC_TEST)
+	@$(PYTHON) -m isort --recursive $(SRC_CORE)
 
 code-pep8:
 	@$(PYTHON) -m autopep8 -i -r $(SRC_CORE)
-
-code-format: code-isort code-pep8
 
 deps-install:
 	@$(PIP) install -r requirements.txt
