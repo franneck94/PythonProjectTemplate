@@ -3,7 +3,10 @@
 # A comma-separated list of package or module names from where C extensions may
 # be loaded. Extensions are loading into the active Python interpreter and may
 # run arbitrary code.
-extension-pkg-whitelist=
+extension-pkg-whitelist=numpy,pandas,keras,tensorflow,sciypy,sklearn
+
+# Specify a score threshold to be exceeded before program exits with error.
+fail-under=10
 
 # Add files or directories to the blacklist. They should be base names, not
 # paths.
@@ -32,9 +35,6 @@ load-plugins=
 
 # Pickle collected data for later comparisons.
 persistent=yes
-
-# Specify a configuration file.
-#rcfile=
 
 # When enabled, pylint would attempt to guess common misconfiguration and emit
 # user-friendly hints instead of false-positive error messages.
@@ -139,15 +139,12 @@ disable=print-statement,
         deprecated-sys-function,
         exception-escape,
         comprehension-escape,
-        trailing-whitespace,
+        # user-defined
         invalid-name,
-        missing-function-docstring,
-        missing-module-docstring,
-        missing-class-docstring,
-        line-too-long,
-        no-name-in-module,
+        missing-docstring,
         consider-using-enumerate,
         unnecessary-comprehension,
+        wrong-import-position,
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -217,6 +214,10 @@ bad-names=foo,
           tutu,
           tata
 
+# Bad variable names regexes, separated by a comma. If names match any regex,
+# they will always be refused
+bad-names-rgxs=
+
 # Naming style matching correct class attribute names.
 class-attribute-naming-style=any
 
@@ -250,12 +251,12 @@ function-naming-style=snake_case
 #function-rgx=
 
 # Good variable names which should always be accepted, separated by a comma.
-good-names=i,
-           j,
-           k,
-           ex,
-           Run,
-           _
+good-names=
+
+# Good variable names regexes, separated by a comma. If names match any regex,
+# they will always be accepted
+# Accept single letter variable names (i,j,k,l,m,n,x,y,z,...)
+good-names-rgxs=[a-zA-Z]
 
 # Include a hint for the correct naming format with invalid-name.
 include-naming-hint=no
@@ -318,10 +319,10 @@ indent-after-paren=4
 indent-string='    '
 
 # Maximum number of characters on a single line.
-max-line-length=100
+max-line-length=120
 
 # Maximum number of lines in a module.
-max-module-lines=1000
+max-module-lines=2000
 
 # List of optional constructs for which whitespace checking is disabled. `dict-
 # separator` is used to allow tabulation in dicts, etc.: {1  : 1,\n222: 2}.
@@ -341,8 +342,8 @@ single-line-if-stmt=no
 
 [LOGGING]
 
-# Format style used to check logging format string. `old` means using %
-# formatting, `new` is for `{}` formatting,and `fstr` is for f-strings.
+# The type of string formatting that logging methods do. `old` means using %
+# formatting, `new` is for `{}` formatting.
 logging-format-style=old
 
 # Logging modules to check that the string format arguments are in logging
@@ -356,6 +357,9 @@ logging-modules=logging
 notes=FIXME,
       XXX,
       TODO
+
+# Regular expression of note tags to take in consideration.
+#notes-rgx=
 
 
 [SIMILARITIES]
@@ -395,9 +399,12 @@ spelling-store-unknown-words=no
 
 [STRING]
 
-# This flag controls whether the implicit-str-concat-in-sequence should
-# generate a warning on implicit string concatenation in sequences defined over
-# several lines.
+# This flag controls whether inconsistent-quotes generates a warning when the
+# character used as a quote delimiter is used inconsistently within a module.
+check-quote-consistency=no
+
+# This flag controls whether the implicit-str-concat should generate a warning
+# on implicit string concatenation in sequences defined over several lines.
 check-str-concat-over-line-jumps=no
 
 
@@ -512,25 +519,25 @@ valid-metaclass-classmethod-first-arg=cls
 [DESIGN]
 
 # Maximum number of arguments for function / method.
-max-args=5
+max-args=15
 
 # Maximum number of attributes for a class (see R0902).
-max-attributes=7
+max-attributes=15
 
 # Maximum number of boolean expressions in an if statement (see R0916).
 max-bool-expr=5
 
 # Maximum number of branch for function / method body.
-max-branches=12
+max-branches=15
 
 # Maximum number of locals for function / method body.
-max-locals=15
+max-locals=25
 
 # Maximum number of parents for a class (see R0901).
 max-parents=7
 
 # Maximum number of public methods for a class (see R0904).
-max-public-methods=20
+max-public-methods=25
 
 # Maximum number of return / yield for function / method body.
 max-returns=6
@@ -576,7 +583,7 @@ int-import-graph=
 known-standard-library=
 
 # Force import order to recognize a module as part of a third party library.
-known-third-party=enchant
+known-third-party=enchant,pandas,numpy
 
 # Couples of modules and preferred modules, separated by a comma.
 preferred-modules=

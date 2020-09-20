@@ -3,9 +3,11 @@
 import unittest
 
 from fastvector import VectorND
-from fastvector.computations import (cython_clip_vector,
-                                     naive_cython_clip_vector,
-                                     python_clip_vector)
+from fastvector.computations import (
+    cython_clip_vector,
+    naive_cython_clip_vector,
+    python_clip_vector
+)
 
 
 class ComputationsTests(unittest.TestCase):
@@ -33,6 +35,7 @@ class ComputationsTests(unittest.TestCase):
         expected_result = self.v2
         self.assertEqual(result, expected_result)
         self.assertRaises(ValueError, cython_clip_vector, self.v1, 1, -1, result)
-   
+
+
 if __name__ == '__main__':
     unittest.main()

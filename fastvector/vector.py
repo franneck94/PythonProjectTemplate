@@ -16,7 +16,7 @@ class VectorND:
     """VectorND class to perform simple vector operations.
     """
 
-    def __init__(self, *args, dtype=float64):
+    def __init__(self, *args: Any, dtype: Any = float64):
         """Creates a vector instance with the given x and y values.
 
         Parameters
@@ -83,7 +83,7 @@ class VectorND:
         """
         return len(self.values)
 
-    def __getitem__(self, idx) -> Number:
+    def __getitem__(self, idx: int) -> Number:
         """Returns the vector item at index idx.
 
         Parameters
@@ -265,12 +265,12 @@ class VectorND:
         raise TypeError('You must pass in an int/float value!')
 
     @staticmethod
-    def check_numeric_argument(argument: Number):
+    def check_numeric_argument(argument: Number) -> None:
         if not isinstance(argument, numbers.Real):
             raise TypeError('You must pass in an int/float value!')
 
     @staticmethod
-    def check_vector_types(vector: VectorND):
+    def check_vector_types(vector: VectorND) -> None:
         """Checks if the vector is an instance of the VectorND class.
 
         Parameters

@@ -1,11 +1,12 @@
 """Own implementation of a vector computations.
 """
-from .cython_computations import _naive_cython_clip_vector, _cython_clip_vector
+# pylint: disable=E0611
+from .cython_computations import _cython_clip_vector, _naive_cython_clip_vector
 from .dtypes import Number
 from .vector import VectorND
 
 
-def python_clip_vector(vector_in: VectorND, min_value: Number, max_value: Number, vector_out: VectorND):
+def python_clip_vector(vector_in: VectorND, min_value: Number, max_value: Number, vector_out: VectorND) -> None:
     """Clip the vector values by plain python code.
 
     Parameters
@@ -33,7 +34,8 @@ def python_clip_vector(vector_in: VectorND, min_value: Number, max_value: Number
     for i in range(len(vector_in)):
         vector_out[i] = min(max(vector_in[i], min_value), max_value)
 
-def naive_cython_clip_vector(vector_in: VectorND, min_value: Number, max_value: Number, vector_out: VectorND):
+
+def naive_cython_clip_vector(vector_in: VectorND, min_value: Number, max_value: Number, vector_out: VectorND) -> None:
     """Clip the vector values by naive cython code.
 
     Parameters
@@ -61,7 +63,7 @@ def naive_cython_clip_vector(vector_in: VectorND, min_value: Number, max_value: 
     _naive_cython_clip_vector(vector_in.values, min_value, max_value, vector_out.values)
 
 
-def cython_clip_vector(vector_in: VectorND, min_value: Number, max_value: Number, vector_out: VectorND):
+def cython_clip_vector(vector_in: VectorND, min_value: Number, max_value: Number, vector_out: VectorND) -> None:
     """Clip the vector values by optimized cython code.
 
     Parameters

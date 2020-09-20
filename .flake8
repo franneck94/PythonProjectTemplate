@@ -1,0 +1,9 @@
+[flake8]
+exclude=.git,__pycache__,docs,old,build,dist
+max-complexity=10
+max-line-length=120
+# E261: at least two spaces before inline comment
+# E266: too many leading ‘#’ for block comment
+# W504: line break after binary operator
+# E402: module level import not at top of file
+ignore=E261,E266,W504,E402

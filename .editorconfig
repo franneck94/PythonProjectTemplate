@@ -3,7 +3,7 @@
 root = true
 # defaults
 [*]
-insert_final_newline = true     
+insert_final_newline = true
 
 # 4 space indentation
 [*.{cfg,ini,py,rst}]

@@ -1,14 +1,16 @@
-from Cython.Build import cythonize
+from Cython.Build import cythonize  # pylint: disable=E0401
 from setuptools import Extension, setup
 
-def get_readme():
+
+def get_readme() -> str:
     with open("README.md") as f:
         return f.read()
 
 
-def get_license():
+def get_license() -> str:
     with open("LICENSE") as f:
         return f.read()
+
 
 CLASSIFIERS = """\
 License :: OSI Approved
@@ -35,17 +37,21 @@ ISRELEASED = True
 
 PYTHON_MIN_VERSION = "3.7"
 PYTHON_MAX_VERSION = "3.8"
-SCIPY_MIN_VERSION = "1.1.0"
-NUMPY_MIN_VERSION = "1.14.0"
+SCIPY_VERSION = "1.1.0"
+NUMPY_VERSION = "1.14.0"
+CYTHON_VERSION = "0.29.21"
 
 INSTALL_REQUIRES = [
-    "numpy>={}".format(NUMPY_MIN_VERSION),
-    "scipy>={}".format(SCIPY_MIN_VERSION),
+    "numpy=={}".format(NUMPY_VERSION),
+    "scipy=={}".format(SCIPY_VERSION),
+    "Cython=={}".format(CYTHON_VERSION),
 ]
 
 CYTHON_EXTENSION = [
-    Extension(name="fastvector.cython_computations",
-              sources=["fastvector/cython_computations.pyx"]),
+    Extension(
+        name="fastvector.cython_computations",
+        sources=["fastvector/cython_computations.pyx"],
+    ),
 ]
 
 metadata = dict(
@@ -60,11 +66,13 @@ metadata = dict(
     author_email=AUTHOR_EMAIL,
     description=DESCRIPTION,
     classifiers=[CLASSIFIERS],
-    license=LICENSE
+    license=LICENSE,
 )
 
-def setup_package():
+
+def setup_package() -> None:
     setup(**metadata)
+
 
 if __name__ == "__main__":
     setup_package()

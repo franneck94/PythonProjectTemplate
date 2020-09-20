@@ -19,7 +19,7 @@ class VectorTests(unittest.TestCase):
         self.assertRaises(TypeError, VectorND, "B", 1)
         self.assertRaises(TypeError, VectorND, "B", 1)
         self.assertRaises(TypeError, VectorND)
-    
+
     def test_comparison(self):
         # Test equality
         self.assertNotEqual(self.v1, self.v2)
@@ -35,7 +35,7 @@ class VectorTests(unittest.TestCase):
         result = self.v1()
         expected_result = repr(self.v1)
         self.assertEqual(result, expected_result)
-    
+
     def test_abs(self):
         result = abs(self.v2)
         expected_result = math.sqrt(2.0)
@@ -46,10 +46,10 @@ class VectorTests(unittest.TestCase):
         expected_result = '(array(\'d\', [0.0, 0.0]))'
         self.assertEqual(result, expected_result)
 
-    def test_len(self):
+    def test_len(self) -> None:
         result = VectorND([3, 4])
         self.assertEqual(len(result), len(self.v1))
-    
+
     def test_item_get_set(self):
         result = VectorND([1, 2, 3])
         result[0] = -1
@@ -58,7 +58,7 @@ class VectorTests(unittest.TestCase):
         self.assertEqual(result[0], expected_result[0])
         self.assertRaises(IndexError, VectorND.__getitem__, result, -1)
         self.assertRaises(IndexError, VectorND.__setitem__, result, -1, 1337)
-    
+
     def test_bool(self):
         result = bool(self.v1)
         expected_result = False
@@ -66,7 +66,7 @@ class VectorTests(unittest.TestCase):
         result = bool(self.v2)
         expected_result = True
         self.assertEqual(result, expected_result)
-    
+
     def test_add(self):
         result = self.v1 + self.v2
         expected_result = VectorND(-1, 1)

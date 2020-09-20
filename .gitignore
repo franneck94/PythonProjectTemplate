@@ -5,6 +5,7 @@ models/
 settings.json
 launch.json
 tasks.json
+.benchmarks/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

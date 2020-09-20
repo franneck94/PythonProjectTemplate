@@ -1,5 +1,3 @@
-
-SRC_APP=app
 SRC_CORE=fastvector
 SRC_TEST=tests
 SRC_DOC=docs
@@ -12,6 +10,10 @@ ifeq ($(OS), Windows_NT)
 	FixPath=$(subst /,\,$1)
 	BUILD_DOC=cd $(SRC_DOC) && build_docs.bat
 else
+	# If you use anaconda, you can set
+	# Python=python
+	# PIP=pip
+	# Otherwise:
 	PYTHON=python3
 	PIP=pip3
 	RM=rm -f
@@ -28,9 +30,10 @@ help:
 	@echo " * code-pylint  		- Check code pylint."
 	@echo " * code-mypy    		- Check code mypy"
 	@echo " * code-isort   		- Sort the import statements."
-	@echo " * code-autopep8 	- Auto format the code for pep8."
+	@echo " * code-pep8 		- Auto format the code for pep8."
 	@echo " * deps-install 		- Install dependencies (see requirements.txt)."
 	@echo " * deps-dev-install 	- Install dev. dependencies (see requirements-dev.txt)."
+	@echo " * deps-test-install - Install test dependencies (see requirements-test.txt)."
 
 install:
 	@$(PYTHON) setup.py install
@@ -69,3 +72,6 @@ deps-install:
 
 deps-dev-install:
 	@$(PIP) install -r requirements-dev.txt
+
+deps-test-install:
+	@$(PIP) install -r requirements-test.txt
