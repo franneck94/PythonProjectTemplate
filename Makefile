@@ -34,7 +34,6 @@ help:
 	@echo " * code-pep8 		- Auto format the code for pep8."
 	@echo " * deps-install 		- Install dependencies (see requirements.txt)."
 	@echo " * deps-dev-install 	- Install dev. dependencies (see requirements-dev.txt)."
-	@echo " * deps-test-install - Install test dependencies (see requirements-test.txt)."
 
 install:
 	@$(PYTHON) setup.py install
@@ -76,6 +75,3 @@ deps-install:
 
 deps-dev-install:
 	@$(PIP) install -r requirements-dev.txt
-
-deps-test-install:
-	@$(PIP) install -r requirements-test.txt
