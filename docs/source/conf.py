@@ -11,8 +11,6 @@
 import os
 import sys
 
-from fastvector import __version__
-
 
 sys.path.insert(0, os.path.abspath('../../fastvector/'))
 
@@ -24,7 +22,7 @@ copyright = '2020, Jan Schaffranek'  # pylint: disable=W0622
 author = 'Jan Schaffranek'
 
 # The full version, including alpha/beta/rc tags
-release = __version__
+release = '1.0.0'
 
 
 # -- General configuration ---------------------------------------------------

@@ -2,8 +2,6 @@ from Cython.Build import cythonize  # pylint: disable=E0401
 from setuptools import Extension
 from setuptools import setup
 
-from fastvector import __version__
-
 
 def get_readme() -> str:
     with open("README.md") as f:
@@ -32,7 +30,7 @@ DESCRIPTION = "This is a simple vector package."
 LICENSE = get_license()
 README = get_readme()
 
-VERSION = __version__
+VERSION = '1.0.0'
 ISRELEASED = True
 
 PYTHON_MIN_VERSION = "3.7"
