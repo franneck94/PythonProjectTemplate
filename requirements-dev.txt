@@ -10,7 +10,6 @@ pylint>=2.6.0
 mypy>=0.780
 autopep8>=1.5.3
 isort>=5.5.2
-pre-commit>=2.6.0
 
 # Documentation
 Sphinx>=3.1.2

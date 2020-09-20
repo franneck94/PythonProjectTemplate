@@ -6,6 +6,7 @@ settings.json
 launch.json
 tasks.json
 .benchmarks/
+reports/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

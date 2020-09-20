@@ -1,5 +1,8 @@
 from Cython.Build import cythonize  # pylint: disable=E0401
-from setuptools import Extension, setup
+from setuptools import Extension
+from setuptools import setup
+
+from fastvector import __version__
 
 
 def get_readme() -> str:
@@ -29,16 +32,13 @@ DESCRIPTION = "This is a simple vector package."
 LICENSE = get_license()
 README = get_readme()
 
-MAJOR = 1
-MINOR = 0
-MICRO = 0
-VERSION = "%d.%d.%d" % (MAJOR, MINOR, MICRO)
+VERSION = __version__
 ISRELEASED = True
 
 PYTHON_MIN_VERSION = "3.7"
 PYTHON_MAX_VERSION = "3.8"
-SCIPY_VERSION = "1.1.0"
-NUMPY_VERSION = "1.14.0"
+SCIPY_VERSION = "1.5.0"
+NUMPY_VERSION = "1.18.5"
 CYTHON_VERSION = "0.29.21"
 
 INSTALL_REQUIRES = [
@@ -60,7 +60,8 @@ metadata = dict(
     long_description=README,
     packages=["fastvector", "tests"],
     ext_modules=cythonize(CYTHON_EXTENSION, language_level="3"),
-    python_requires=">={}, <={}".format(PYTHON_MIN_VERSION, PYTHON_MAX_VERSION),
+    python_requires=">={}, <={}".format(
+        PYTHON_MIN_VERSION, PYTHON_MAX_VERSION),
     install_requires=INSTALL_REQUIRES,
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,

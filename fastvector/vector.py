@@ -6,9 +6,11 @@ import array
 import numbers
 from functools import total_ordering
 from math import sqrt
-from typing import Any, Union
+from typing import Any
+from typing import Union
 
-from .dtypes import Number, float64
+from .dtypes import float64
+from .dtypes import Number
 
 
 @total_ordering

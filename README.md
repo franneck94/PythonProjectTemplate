@@ -9,18 +9,19 @@
 
 This is a template for Python projects. What you get:
 
--   Source code and test code is seperated in different directories.
--   Different tasks seperated by [Make](https://www.gnu.org/software/make/) tasks.
--   External libraries installed and managed by [Pip](https://pypi.org/project/pip/).
--   Setup for tests using [Pytest](https://docs.pytest.org/en/stable/).
--   Bechmark tests using [Pytest-Benchmark](https://github.com/ionelmc/pytest-benchmark)
--   Continuous testing with [Travis-CI](https://travis-ci.org/).
--   Code coverage reports, including automatic upload to [Codecov](https://codecov.io).
--   Code documentation with [Sphinx](https://www.sphinx-doc.org/en/master/).
--   Example of own Python package with the use of [Cython](https://cython.org/)
--   Optional: Use of [VSCode](https://code.visualstudio.com/) with the Python and UnitTest extension.
+- Source code and test code is seperated in different directories.
+- Different tasks seperated by [Make](https://www.gnu.org/software/make/) tasks.
+- External libraries installed and managed by [Pip](https://pypi.org/project/pip/).
+- Setup for tests using [Pytest](https://docs.pytest.org/en/stable/).
+- Bechmark tests using [Pytest-Benchmark](https://github.com/ionelmc/pytest-benchmark)
+- Continuous testing with [Travis-CI](https://travis-ci.org/).
+- Code coverage reports, including automatic upload to [Codecov](https://codecov.io).
+- Code documentation with [Sphinx](https://www.sphinx-doc.org/en/master/).
+- Example of own Python package with the use of [Cython](https://cython.org/)
+- Optional: Use of [VSCode](https://code.visualstudio.com/) with the Python and UnitTest extension.
 
 ## Structure
+
 ``` text
 ├── Makefile
 ├── setup.py

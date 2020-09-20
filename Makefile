@@ -25,6 +25,7 @@ help:
 	@echo "Some available commands:"
 	@echo " * test         		- Run unit tests."
 	@echo " * test-coverage  	- Run unit tests and test coverage."
+	@echo " * test-coverage-html- Run unit tests and test coverage (html)."
 	@echo " * doc          		- Document code (pydoc)."
 	@echo " * clean        		- Cleanup (e.g. pyc files)."
 	@echo " * code-pylint  		- Check code pylint."
@@ -44,6 +45,9 @@ test:
 test-coverage:
 	@$(PYTHON) -m pytest --cov=$(SRC_CORE) $(SRC_TEST)
 	@$(PYTHON) -m codecov
+
+test-coverage-html:
+	@$(PYTHON) -m pytest --cov=$(SRC_CORE) $(SRC_TEST) --cov-report=html
 
 benchmark:
 	@$(PYTHON) -m py.test --benchmark-columns=mean,stddev,median,rounds,iterations --benchmark-sort=mean $(SRC_BENCH)
