@@ -1,8 +1,7 @@
-"""Own implementation of a vector computations.
+"""Vector computations.
 """
-# pylint: disable=E0611
-from .cython_computations import _cython_clip_vector
-from .cython_computations import _naive_cython_clip_vector
+from .cython_computations import _cython_clip_vector # pylint: disable=import-error, no-name-in-module
+from .cython_computations import _naive_cython_clip_vector # pylint: disable=import-error, no-name-in-module
 from .dtypes import Number
 from .vector import VectorND
 
