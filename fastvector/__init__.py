@@ -12,11 +12,9 @@ from .dtypes import uint16
 from .dtypes import uint32
 from .dtypes import uint64
 from .vector import VectorND
-from .version import __version__
 
 
 __all__ = [
-    '__version__',
     'cython_clip_vector',
     'naive_cython_clip_vector',
     'python_clip_vector',
