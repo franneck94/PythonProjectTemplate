@@ -6,19 +6,9 @@ SRC_BENCH=benchmarks
 ifeq ($(OS), Windows_NT)
 	PYTHON=python
 	PIP=pip
-	RM=del /Q
-	FixPath=$(subst /,\,$1)
-	BUILD_DOC=cd $(SRC_DOC) && build_docs.bat
 else
-	# If you use anaconda, you can set
-	# Python=python
-	# PIP=pip
-	# Otherwise:
 	PYTHON=python3
 	PIP=pip3
-	RM=rm -f
-	FixPath=$1
-	BUILD_DOC=cd $(SRC_DOC) && ./build_docs.sh
 endif
 
 help:

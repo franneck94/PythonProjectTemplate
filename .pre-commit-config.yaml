@@ -22,11 +22,6 @@ repos:
     hooks:
     -   id: mypy
 
--   repo: https://github.com/PyCQA/pylint
-    rev: 'pylint-2.6.0'
-    hooks:
-    -   id: pylint
-
 -   repo: https://github.com/PyCQA/isort
     rev: 5.6.4
     hooks:
