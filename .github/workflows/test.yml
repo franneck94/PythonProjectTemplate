@@ -43,7 +43,7 @@ jobs:
         python setup.py develop
     - name: Testing
       run: |
-        make test
+        make test-coverage
 
   build-macos:
     runs-on: macos-latest
