@@ -16,7 +16,7 @@ This is a template for Python projects. What you get:
 - Bechmark tests using [Pytest-Benchmark](https://github.com/ionelmc/pytest-benchmark)
 - Continuous testing with [Travis-CI](https://travis-ci.org/).
 - Code coverage reports, including automatic upload to [Codecov](https://codecov.io).
-- Code documentation with [Sphinx](https://www.sphinx-doc.org/en/master/).
+- Code documentation with [Mkdocs](https://www.mkdocs.org/).
 - Example of own Python package with the use of [Cython](https://cython.org/)
 - Optional: Use of [VSCode](https://code.visualstudio.com/) with the Python and UnitTest extension.
 

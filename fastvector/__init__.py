@@ -1,5 +1,3 @@
-__version__ = "1.0.0"
-
 from .computations import cython_clip_vector
 from .computations import naive_cython_clip_vector
 from .computations import python_clip_vector
@@ -14,6 +12,7 @@ from .dtypes import uint16
 from .dtypes import uint32
 from .dtypes import uint64
 from .vector import VectorND
+from .version import __version__
 
 
 __all__ = [

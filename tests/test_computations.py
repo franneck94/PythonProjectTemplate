@@ -9,11 +9,11 @@ from fastvector.computations import python_clip_vector
 
 
 class ComputationsTests(unittest.TestCase):
-    def setUp(self):
+    def setUp(self) -> None:
         self.v1 = VectorND(2.5, -2.5)
         self.v2 = VectorND(1, -1)
 
-    def test_python_clip_vector(self):
+    def test_python_clip_vector(self) -> None:
         result = VectorND(0, 0)
         python_clip_vector(self.v1, -1, 1, result)
         expected_result = self.v2
@@ -21,7 +21,7 @@ class ComputationsTests(unittest.TestCase):
         self.assertRaises(ValueError, python_clip_vector,
                           self.v1, 1, -1, result)
 
-    def test_naive_cython_clip_vector(self):
+    def test_naive_cython_clip_vector(self) -> None:
         result = VectorND(0, 0)
         naive_cython_clip_vector(self.v1, -1, 1, result)
         expected_result = self.v2
@@ -29,7 +29,7 @@ class ComputationsTests(unittest.TestCase):
         self.assertRaises(ValueError, naive_cython_clip_vector,
                           self.v1, 1, -1, result)
 
-    def test_cython_clip_vector(self):
+    def test_cython_clip_vector(self) -> None:
         result = VectorND(0, 0)
         cython_clip_vector(self.v1, -1, 1, result)
         expected_result = self.v2
