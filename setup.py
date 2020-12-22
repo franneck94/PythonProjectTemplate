@@ -1,6 +1,3 @@
-# pylint: disable=wrong-import-order
-from fastvector.version import __version__
-
 from Cython.Build import cythonize  # pylint: disable=E0401
 from setuptools import Extension
 from setuptools import setup
@@ -24,7 +21,7 @@ LICENSE = "MIT"
 README = ("FastVector Package. For more information see here: "
           "https://github.com/franneck94/Python-Project-Template")
 
-VERSION = __version__
+VERSION = "1.0.0"
 ISRELEASED = False
 
 PYTHON_MIN_VERSION = "3.7"
