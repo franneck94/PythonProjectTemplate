@@ -2,10 +2,9 @@
 
 ![Python](https://img.shields.io/badge/python-3.7%20%7C%203.8-blue)
 ![License](https://camo.githubusercontent.com/890acbdcb87868b382af9a4b1fac507b9659d9bf/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d626c75652e737667)
-[![Release](https://img.shields.io/github/v/release/franneck94/cpp-project-template)](https://travis-ci.org/github/franneck94/Cpp-Project-Template)
-[![Project Status: Active.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Travis CI](https://travis-ci.org/franneck94/Python-Project-Template.svg?branch=master)](https://travis-ci.org/github/franneck94/Python-Project-Template)
+[![Build](https://github.com/franneck94/Python-Project-Template/workflows/ci-test/badge.svg)](https://github.com/franneck94/Python-Project-Template/actions?query=workflow%3Aci-test)
 [![codecov](https://codecov.io/gh/franneck94/python-project-template/branch/master/graph/badge.svg)](https://codecov.io/gh/franneck94/python-project-template)
+[![Documentation](https://img.shields.io/badge/ref-Documentation-blue)](https://franneck94.github.io/Python-Project-Template/)
 
 ## Template For Python Projects
 
@@ -18,7 +17,7 @@ This is a template for Python projects. What you get:
 - Bechmark tests using [Pytest-Benchmark](https://github.com/ionelmc/pytest-benchmark)
 - Continuous testing with [Travis-CI](https://travis-ci.org/).
 - Code coverage reports, including automatic upload to [Codecov](https://codecov.io).
-- Code documentation with [Sphinx](https://www.sphinx-doc.org/en/master/).
+- Code documentation with [Mkdocs](https://www.mkdocs.org/).
 - Example of own Python package with the use of [Cython](https://cython.org/)
 - Optional: Use of [VSCode](https://code.visualstudio.com/) with the Python and UnitTest extension.
 
