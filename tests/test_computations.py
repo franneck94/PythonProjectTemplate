@@ -1,5 +1,5 @@
-"""Test vectorND computations code.
-"""
+'''Test vectorND computations code.
+'''
 import unittest
 
 from fastvector import VectorND

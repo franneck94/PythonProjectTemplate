@@ -1,5 +1,5 @@
-"""Test vectorND code.
-"""
+'''Test vectorND code.
+'''
 import math
 import unittest
 
@@ -15,9 +15,9 @@ class VectorTests(unittest.TestCase):
     def test_init(self) -> None:
         result = VectorND([-1, 1])
         self.assertEqual(result, self.v2)
-        self.assertRaises(TypeError, VectorND, 0, "a")
-        self.assertRaises(TypeError, VectorND, "B", 1)
-        self.assertRaises(TypeError, VectorND, "B", 1)
+        self.assertRaises(TypeError, VectorND, 0, 'a')
+        self.assertRaises(TypeError, VectorND, 'B', 1)
+        self.assertRaises(TypeError, VectorND, 'B', 1)
         self.assertRaises(TypeError, VectorND)
 
     def test_comparison(self) -> None:
@@ -86,7 +86,7 @@ class VectorTests(unittest.TestCase):
         expected_result2 = 0.0
         self.assertEqual(result2, expected_result2)
         # Invalid multiplication
-        self.assertRaises(TypeError, self.v1.__mul__, "a")
+        self.assertRaises(TypeError, self.v1.__mul__, 'a')
 
     def test_div(self) -> None:
         # Valid division
@@ -94,16 +94,16 @@ class VectorTests(unittest.TestCase):
         expected_result = VectorND(0.5, -0.5)
         self.assertEqual(result, expected_result)
         # Invalid division
-        self.assertRaises(TypeError, self.v1.__truediv__, "a")
+        self.assertRaises(TypeError, self.v1.__truediv__, 'a')
         self.assertRaises(ValueError, self.v1.__truediv__, 0)
 
     def test_check_numeric_argument(self) -> None:
-        self.assertRaises(TypeError, VectorND.check_numeric_argument, "1337")
+        self.assertRaises(TypeError, VectorND.check_numeric_argument, '1337')
 
     def test_check_vector_types(self) -> None:
         self.assertRaises(TypeError, VectorND.check_vector_types, 1337)
         self.assertRaises(TypeError, VectorND.check_vector_types, 13.73)
-        self.assertRaises(TypeError, VectorND.check_vector_types, "1337")
+        self.assertRaises(TypeError, VectorND.check_vector_types, '1337')
 
 
 if __name__ == '__main__':
