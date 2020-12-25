@@ -1,4 +1,4 @@
 # Runtime requirements
-numpy
+numpy>=1.18
 scipy
 Cython

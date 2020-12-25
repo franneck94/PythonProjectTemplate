@@ -1,17 +1,5 @@
-# Reference
-
-## Computations Functions
-
-::: fastvector.computations
-
-## Dtypes
-
-::: fastvector.dtypes
+# References
 
 ## Vector Class
 
 ::: fastvector.vector
-
-## Version
-
-::: fastvector.version

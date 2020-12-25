@@ -1,9 +1,5 @@
-# mkdocs.yml
 site_name: FastVector
-site_description: "This is a template for Python projects."
-site_url: "https://franneck94.github.io/Python-Project-Template"
-repo_url: "https://github.com/franneck94/Python-Project-Template"
-repo_name: "franneck94/Python-Project-Template"
+site_description: "This is a simple vector python package."
 
 theme:
   name: "material"
@@ -13,13 +9,7 @@ theme:
 
 plugins:
   - search
-  - mkdocstrings:
-      # handlers:
-      #   python:
-      #     selection:
-      #       filters:
-      #         - "!^__le__"
-      #         - "!^__lt__"
+  - mkdocstrings
 
 markdown_extensions:
   - pymdownx.highlight

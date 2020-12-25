@@ -5,7 +5,6 @@
 pytest
 codecov
 pytest-cov
-tox
 pre-commit
 pytest-benchmark
 

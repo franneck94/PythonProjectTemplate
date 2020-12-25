@@ -12,7 +12,6 @@ from .dtypes import uint16
 from .dtypes import uint32
 from .dtypes import uint64
 from .vector import VectorND
-from .version import __version__
 
 
 __all__ = [
@@ -29,6 +28,5 @@ __all__ = [
     'int32',
     'uint64',
     'int64',
-    'VectorND',
-    '__version__'
+    'VectorND'
 ]

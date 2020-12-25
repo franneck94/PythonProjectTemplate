@@ -30,6 +30,7 @@ class VectorTests(unittest.TestCase):
         self.assertLess(result, self.v3)
         # Test greater
         self.assertGreater(self.v3, result)
+        self.assertNotEqual(self.v3, "Jan")
 
     def test_call(self) -> None:
         result = self.v1()
@@ -43,7 +44,7 @@ class VectorTests(unittest.TestCase):
 
     def test_str(self) -> None:
         result = str(self.v1)
-        expected_result = '(array(\'d\', [0.0, 0.0]))'
+        expected_result = '(array(\'f\', [0.0, 0.0]))'
         self.assertEqual(result, expected_result)
 
     def test_len(self) -> None:
@@ -96,9 +97,6 @@ class VectorTests(unittest.TestCase):
         # Invalid division
         self.assertRaises(TypeError, self.v1.__truediv__, 'a')
         self.assertRaises(ValueError, self.v1.__truediv__, 0)
-
-    def test_check_numeric_argument(self) -> None:
-        self.assertRaises(TypeError, VectorND.check_numeric_argument, '1337')
 
     def test_check_vector_types(self) -> None:
         self.assertRaises(TypeError, VectorND.check_vector_types, 1337)

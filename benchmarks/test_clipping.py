@@ -9,8 +9,8 @@ import fastvector
 v = fastvector.VectorND([random.random() for _ in range(100_000)])
 a = np.array([random.random() for _ in range(100_000)])
 
-NUM_ROUNDS = 10
-NUM_ITERATIONS = 50
+NUM_ROUNDS = 100
+NUM_ITERATIONS = 10
 
 
 def test_python_clip_vector(benchmark: Any) -> None:

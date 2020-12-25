@@ -1,32 +1,26 @@
 SRC_CORE=fastvector
 SRC_TEST=tests
-SRC_DOC=docs
-SRC_BENCH=benchmarks
+SRC_BENCHMARK=benchmarks
 
-ifeq ($(OS), Windows_NT)
-	PYTHON=python
-	PIP=pip
-else
-	PYTHON=python3
-	PIP=pip3
-endif
+PYTHON=python
+PIP=pip
 
 help:
-	@echo "Some available commands:"
-	@echo " * tests              - Run unit tests."
-	@echo " * test-coverage      - Run unit tests and test coverage."
-	@echo " * test-coverage-html - Run unit tests and test coverage (html)."
-	@echo " * benchmark          - Run bechmark tests."
+	@echo "Available Commands:"
+	@echo " tests                  - Run unit tests."
+	@echo " tests-coverage         - Run unit tests and code coverage."
+	@echo " tests-coverage-html    - Run unit tests, code coverage and generate html."
+	@echo " benchmark              - Run benchmark tests."
 
 test:
-	@$(PYTHON) -m pytest $(SRC_TEST)
+	$(PYTHON) -m pytest $(SRC_TEST)
 
 test-coverage:
-	@$(PYTHON) -m pytest --cov=$(SRC_CORE) $(SRC_TEST)
-	@$(PYTHON) -m codecov
+	$(PYTHON) -m pytest --cov=$(SRC_CORE) $(SRC_TEST)
+	$(PYTHON) -m codecov
 
 test-coverage-html:
-	@$(PYTHON) -m pytest --cov=$(SRC_CORE) $(SRC_TEST) --cov-report=html
+	$(PYTHON) -m pytest --cov=$(SRC_CORE) $(SRC_TEST) --cov-report=html
 
 benchmark:
-	@$(PYTHON) -m py.test --benchmark-columns=mean,stddev,rounds,iterations --benchmark-sort=mean $(SRC_BENCH)
+	$(PYTHON) -m py.test --benchmark-columns=min,max,mean,stddev --benchmark-sort=mean $(SRC_BENCH)
