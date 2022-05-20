@@ -1,10 +1,8 @@
 name: "CodeQL"
 
 on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+  release:
+    types: [created]
 
 jobs:
   analyze:
@@ -14,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'python' ]
+        language: ['python']
 
     steps:
     - name: Checkout repository
