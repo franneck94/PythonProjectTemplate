@@ -128,7 +128,7 @@ class VectorND:
         """
         if isinstance(other, VectorND):
             return sum([v1 * v2 for v1, v2 in zip(self.values, other.values)])
-        if not isinstance(other, numbers.Real):
+        if not isinstance(other, int) and not isinstance(other, float):
             raise TypeError('You must pass in an int/float!')
         return VectorND([v * other for v in self.values])
 
@@ -145,7 +145,7 @@ class VectorND:
         Returns:
             The multiplication of self and the other vector/number.
         """
-        if not isinstance(other, numbers.Real):
+        if not isinstance(other, int) and not isinstance(other, float):
             raise TypeError('You must pass in an int/float!')
         return VectorND([v / other for v in self.values])
 

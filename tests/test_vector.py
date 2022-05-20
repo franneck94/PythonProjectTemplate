@@ -1,9 +1,9 @@
 from typing import Any
 
-import pytest
-
-from fastvector.vector import VectorND
 from fastvector.dtypes import Number
+from fastvector.vector import VectorND
+
+import pytest
 
 
 V1 = VectorND(0, 0)

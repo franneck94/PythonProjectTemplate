@@ -1,10 +1,10 @@
-import pytest
-
-from fastvector.vector import VectorND
-from fastvector.computations import python_clip_vector
 from fastvector.computations import cython_clip_vector
 from fastvector.computations import naive_cython_clip_vector
+from fastvector.computations import python_clip_vector
 from fastvector.dtypes import Number
+from fastvector.vector import VectorND
+
+import pytest
 
 
 @pytest.mark.parametrize(
