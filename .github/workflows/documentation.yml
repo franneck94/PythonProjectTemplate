@@ -8,17 +8,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install setuptools wheel
-        pip install -r requirements-dev.txt
-        pip install -e .
-    - name: Deploy to GitHub Pages
-      run: |
-        mkdocs gh-deploy
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - run: |
+         python -m pip install --upgrade pip
+         pip install -r requirements-dev.txt
+         pip install -e .
+      - run: mkdocs gh-deploy --force
