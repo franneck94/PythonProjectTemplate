@@ -27,7 +27,6 @@ theme:
 plugins:
   - search
   - mkdocstrings
-  - git-revision-date
 
 markdown_extensions:
   - pymdownx.highlight
