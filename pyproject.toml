@@ -1,0 +1,8 @@
+[tool.black]
+line-length = 120
+skip-string-normalization = false
+skip-magic-trailing-comma = false
+
+[build-system]
+requires = ["wheel", "setuptools", "Cython"]
+build-backend = "setuptools.build_meta"

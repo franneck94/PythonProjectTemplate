@@ -1,4 +1,0 @@
-# Runtime requirements
-numpy>=1.18
-scipy
-Cython

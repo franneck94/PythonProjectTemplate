@@ -1,19 +1,11 @@
-# Runtime requirements
---requirement requirements.txt
-
-# Testing
-pytest
-codecov
-pytest-cov
-pre-commit
-pytest-benchmark
-
-# Linting
-flake8
+# Linting/Tooling
 pylint
+flake8
 mypy
-autopep8
 isort
+black
+pre-commit
+autopep8
 
 # Documentation
 mkdocs
