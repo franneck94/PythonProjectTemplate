@@ -1,3 +1,13 @@
+# Runtime requirements
+--requirement requirements.txt
+
+# Testing
+pytest
+codecov
+pytest-cov
+pre-commit
+pytest-benchmark
+
 # Linting/Tooling
 pylint
 flake8

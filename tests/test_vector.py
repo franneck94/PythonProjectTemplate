@@ -1,108 +1,136 @@
-'''Test vectorND code.
-'''
-import math
-import unittest
+from typing import Any
+from typing import SupportsFloat
 
 from fastvector import VectorND
+from fastvector import int32
+from fastvector import uint32
+
+import pytest
 
 
-class VectorTests(unittest.TestCase):
-    def setUp(self) -> None:
-        self.v1 = VectorND(0, 0)
-        self.v2 = VectorND(-1, 1)
-        self.v3 = VectorND(2.5, -2.5)
-
-    def test_init(self) -> None:
-        result = VectorND([-1, 1])
-        self.assertEqual(result, self.v2)
-        self.assertRaises(TypeError, VectorND, 0, 'a')
-        self.assertRaises(TypeError, VectorND, 'B', 1)
-        self.assertRaises(TypeError, VectorND, 'B', 1)
-        self.assertRaises(TypeError, VectorND)
-
-    def test_comparison(self) -> None:
-        # Test equality
-        self.assertNotEqual(self.v1, self.v2)
-        expected_result = VectorND(-1, 1)
-        self.assertEqual(self.v2, expected_result)
-        # Test less
-        result = self.v1 + self.v2
-        self.assertLess(result, self.v3)
-        # Test greater
-        self.assertGreater(self.v3, result)
-        self.assertNotEqual(self.v3, "Jan")
-
-    def test_call(self) -> None:
-        result = self.v1()
-        expected_result = repr(self.v1)
-        self.assertEqual(result, expected_result)
-
-    def test_abs(self) -> None:
-        result = abs(self.v2)
-        expected_result = math.sqrt(2.0)
-        self.assertAlmostEqual(result, expected_result)
-
-    def test_str(self) -> None:
-        result = str(self.v1)
-        expected_result = '(array(\'f\', [0.0, 0.0]))'
-        self.assertEqual(result, expected_result)
-
-    def test_len(self) -> None:
-        result = VectorND([3, 4])
-        self.assertEqual(len(result), len(self.v1))
-
-    def test_item_get_set(self) -> None:
-        result = VectorND([1, 2, 3])
-        result[0] = -1
-        expected_result = VectorND([-1, 2, 3])
-        self.assertEqual(result, expected_result)
-        self.assertEqual(result[0], expected_result[0])
-        self.assertRaises(IndexError, VectorND.__getitem__, result, -1)
-        self.assertRaises(IndexError, VectorND.__setitem__, result, -1, 1337)
-
-    def test_bool(self) -> None:
-        result = bool(self.v1)
-        expected_result = False
-        self.assertEqual(result, expected_result)
-        result = bool(self.v2)
-        expected_result = True
-        self.assertEqual(result, expected_result)
-
-    def test_add(self) -> None:
-        result = self.v1 + self.v2
-        expected_result = VectorND(-1, 1)
-        self.assertEqual(result, expected_result)
-
-    def test_sub(self) -> None:
-        result = self.v2 - self.v3
-        expected_result = VectorND(-3.5, 3.5)
-        self.assertEqual(result, expected_result)
-
-    def test_mul(self) -> None:
-        # Valid multiplication
-        result1 = self.v1 * 5
-        expected_result1 = VectorND(0.0, 0.0)
-        self.assertEqual(result1, expected_result1)
-        result2 = self.v1 * self.v2
-        expected_result2 = 0.0
-        self.assertEqual(result2, expected_result2)
-        # Invalid multiplication
-        self.assertRaises(TypeError, self.v1.__mul__, 'a')
-
-    def test_div(self) -> None:
-        # Valid division
-        result = self.v3 / 5
-        expected_result = VectorND(0.5, -0.5)
-        self.assertEqual(result, expected_result)
-        # Invalid division
-        self.assertRaises(TypeError, self.v1.__truediv__, 'a')
-        self.assertRaises(ValueError, self.v1.__truediv__, 0)
-
-    def test_check_vector_types(self) -> None:
-        self.assertRaises(TypeError, VectorND.check_vector_types, 1337)
-        self.assertRaises(TypeError, VectorND.check_vector_types, 13.73)
-        self.assertRaises(TypeError, VectorND.check_vector_types, '1337')
+V1 = VectorND(0, 0)
+V2 = VectorND(-1, 1)
+V3 = VectorND(2.5, -2.5)
 
 
-if __name__ == '__main__':
-    unittest.main()
+@pytest.mark.parametrize(
+    ('lhs', 'rhs', 'exp_res'),
+    (
+        (V1, V2, VectorND(-1, 1)),
+        (V1, V3, VectorND(2.5, -2.5)),
+        (V3, V2, VectorND(1.5, -1.5)),
+    )
+)
+def test_add(lhs: VectorND, rhs: VectorND, exp_res: VectorND) -> None:
+    assert lhs + rhs == exp_res
+
+
+@pytest.mark.parametrize(
+    ('lhs', 'rhs', 'exp_res'),
+    (
+        (V1, V2, VectorND(1, -1)),
+        (V1, V3, VectorND(-2.5, 2.5)),
+        (V3, V2, VectorND(3.5, -3.5)),
+    )
+)
+def test_sub(lhs: VectorND, rhs: VectorND, exp_res: VectorND) -> None:
+    assert lhs - rhs == exp_res
+
+
+@pytest.mark.parametrize(
+    ('lhs', 'rhs', 'exp_res'),
+    (
+        (V1, V2, 0.0),
+        (V1, V3, 0.0),
+        (V3, V2, -5.0),
+    )
+)
+def test_mul_vec(lhs: VectorND, rhs: VectorND, exp_res: float) -> None:
+    assert lhs * rhs == exp_res
+
+
+@pytest.mark.parametrize(
+    ('lhs', 'rhs', 'exp_res'),
+    (
+        (V1, 2.0, VectorND(0.0, 0.0)),
+        (V2, 2.0, VectorND(-2.0, 2.0)),
+        (V3, 2.0, VectorND(5.0, -5.0)),
+    )
+)
+def test_mul_float(lhs: VectorND, rhs: float, exp_res: VectorND) -> None:
+    assert lhs * rhs == exp_res
+
+
+@pytest.mark.skip(reason="Not implemented")
+def test_abs() -> None:
+    pass
+
+
+@pytest.mark.parametrize(
+    ('x', 'y'),
+    (
+        (-1, None),
+        (None, -1),
+        (None, None),
+    )
+)
+def test_raises(x: Any, y: Any) -> None:
+    with pytest.raises(TypeError):
+        _ = VectorND(x, y)
+
+
+def test_repr(capture_stdout: dict) -> None:
+    print(repr(VectorND(1.0, 2.0)))
+    assert capture_stdout["stdout"] == "vector.VectorND(array('d', [1.0, 2.0]))\n"
+
+
+def test_str(capture_stdout: dict) -> None:
+    print(str(VectorND(1.0, 2.0)))
+    assert capture_stdout["stdout"] == "(array('d', [1.0, 2.0]))\n"
+
+
+@pytest.mark.parametrize(
+    ('v'),
+    (
+        VectorND(1, 1, 1),
+    )
+)
+def test_len(v: VectorND) -> None:
+    assert len(v) == 3
+    assert len(v) == len(v.values)
+
+
+@pytest.mark.parametrize(
+    ('v', 'idx', 'exp'),
+    (
+        (VectorND(1, 2, 3), 0, 1),
+        (VectorND(1, 2, 3), 1, 2),
+        (VectorND(1, 2, 3), 2, 3),
+    )
+)
+def test_get_item(v: VectorND, idx: int, exp: SupportsFloat) -> None:
+    assert v[idx] == exp
+
+
+@pytest.mark.parametrize(
+    ('v', 'idx', 'exp'),
+    (
+        (VectorND(1, 2, 3), 0, 1),
+        (VectorND(1, 2, 3), 1, 2),
+        (VectorND(1, 2, 3), 2, 3),
+    )
+)
+def test_set_item(v: VectorND, idx: int, exp: SupportsFloat) -> None:
+    v[idx] = exp
+    assert v[idx] == exp
+
+
+@pytest.mark.parametrize(
+    ('lhs', 'rhs', 'exp_res'),
+    (
+        (VectorND(1, 1, dtype=uint32), VectorND(2, 2, dtype=uint32), VectorND(3, 3, dtype=uint32)),
+        (VectorND(1, 1, dtype=int32), VectorND(-1, -2, dtype=int32), VectorND(0, -1, dtype=int32)),
+    )
+)
+def test_add_dtypes(lhs: VectorND, rhs: VectorND, exp_res: VectorND) -> None:
+    assert lhs + rhs == exp_res

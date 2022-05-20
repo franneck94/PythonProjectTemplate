@@ -1,36 +1,12 @@
-# Version 1: python setup.py install <=> pip install .
-# Version 2: python setup.py develop <=> pip install -e .
+# setup.py command | New command
+# setup.py sdist   | python - m build
+# setup.py test	   | pytest
+# setup.py install | pip install
+# setup.py develop | pip install - e
 from Cython.Build import cythonize
 from setuptools import Extension
 from setuptools import setup
 
-
-CLASSIFIERS = """\
-License :: OSI Approved
-Programming Language :: Python :: 3
-Topic :: Software Development
-Operating System :: Microsoft :: Windows
-Operating System :: POSIX
-Operating System :: Unix
-Operating System :: MacOS
-"""
-
-DISTNAME = "fastvector"
-AUTHOR = "Jan Schaffranek"
-AUTHOR_EMAIL = "jan.schaffranek@email.com"
-DESCRIPTION = "This is a simple vector python package."
-LICENSE = "MIT"
-README = "This is a simple vector python package."
-
-VERSION = "0.1.0"
-ISRELEASED = False
-
-PYTHON_MIN_VERSION = "3.7"
-PYTHON_REQUIRES = f">={PYTHON_MIN_VERSION}"
-
-INSTALL_REQUIRES = ["numpy", "scipy", "Cython"]
-
-PACKAGES = ["fastvector", "tests"]
 
 CYTHON_EXTENSIONS = [
     Extension(
@@ -41,18 +17,11 @@ CYTHON_EXTENSIONS = [
 
 EXT_MODULES = cythonize(CYTHON_EXTENSIONS, language_level="3")
 
+with open("requirements.txt") as fp:
+    install_requires = fp.read().strip().split("\n")
+
 metadata = dict(
-    name=DISTNAME,
-    version=VERSION,
-    long_description=README,
-    packages=PACKAGES,
-    python_requires=PYTHON_REQUIRES,
-    install_requires=INSTALL_REQUIRES,
-    author=AUTHOR,
-    author_email=AUTHOR_EMAIL,
-    description=DESCRIPTION,
-    classifiers=[CLASSIFIERS],
-    license=LICENSE,
+    install_requires=install_requires,
     ext_modules=EXT_MODULES,
 )
 

@@ -4,5 +4,11 @@ skip-string-normalization = false
 skip-magic-trailing-comma = false
 
 [build-system]
-requires = ["wheel", "setuptools", "Cython"]
+requires = ["setuptools>=45.0", "setuptools_scm[toml]>=6.3.1", "wheel", "Cython"]
 build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+addopts = "--cov=fastvector"
+testpaths = [
+    "tests"
+]
