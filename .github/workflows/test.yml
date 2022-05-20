@@ -23,7 +23,7 @@ jobs:
         pip install -e .
     - name: Testing
       run: |
-        python -m pytest fastvector
+        python -m pytest tests
 
   build-linux:
     runs-on: ubuntu-latest
@@ -59,4 +59,4 @@ jobs:
         pip install -e .
     - name: Testing
       run: |
-        python -m pytest fastvector
+        python -m pytest tests
