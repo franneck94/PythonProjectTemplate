@@ -10,9 +10,7 @@ def main() -> None:
     with open("requirements.txt") as fp:
         install_requires = fp.read().strip().split("\n")
 
-    metadata = dict(
-        install_requires=install_requires
-    )
+    metadata = dict(install_requires=install_requires)
     setup(**metadata)
 
 

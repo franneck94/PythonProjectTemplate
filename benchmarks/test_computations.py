@@ -18,7 +18,7 @@ def test_python_clip_vector(benchmark: Any) -> None:
         fastvector.python_clip_vector,
         args=(v, -1, 1, v),
         rounds=NUM_ROUNDS,
-        iterations=NUM_ITERATIONS
+        iterations=NUM_ITERATIONS,
     )
 
 
@@ -27,7 +27,7 @@ def test_naive_cython_clip_vector(benchmark: Any) -> None:
         fastvector.naive_cython_clip_vector,
         args=(v, -1, 1, v),
         rounds=NUM_ROUNDS,
-        iterations=NUM_ITERATIONS
+        iterations=NUM_ITERATIONS,
     )
 
 
@@ -36,7 +36,7 @@ def test_cython_clip_vector(benchmark: Any) -> None:
         fastvector.cython_clip_vector,
         args=(v, -1, 1, v),
         rounds=NUM_ROUNDS,
-        iterations=NUM_ITERATIONS
+        iterations=NUM_ITERATIONS,
     )
 
 
@@ -45,5 +45,5 @@ def test_np_clip(benchmark: Any) -> None:
         np.clip,
         args=(a, -1, 1, a),
         rounds=NUM_ROUNDS,
-        iterations=NUM_ITERATIONS
+        iterations=NUM_ITERATIONS,
     )
