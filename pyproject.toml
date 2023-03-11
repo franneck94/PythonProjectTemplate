@@ -1,10 +1,10 @@
 [tool.black]
-line-length = 120
+line-length = 80
 skip-string-normalization = false
 skip-magic-trailing-comma = false
 
 [build-system]
-requires = ["setuptools>=45.0", "setuptools_scm[toml]>=6.3.1", "wheel", "Cython"]
+requires = ["setuptools>=45.0", "setuptools_scm[toml]>=6.3.1", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]

@@ -6,7 +6,6 @@ pytest
 codecov
 pytest-cov
 pre-commit
-pytest-benchmark
 
 # Linting/Tooling
 pylint

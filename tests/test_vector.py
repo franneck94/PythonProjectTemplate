@@ -1,35 +1,44 @@
 from typing import Any
+from typing import SupportsFloat
 
-from fastvector.dtypes import Number
-from fastvector.vector import VectorND
+from fastvector.vector import Vector2D
 
 import pytest
 
 
-V1 = VectorND(0, 0)
-V2 = VectorND(-1, 1)
-V3 = VectorND(2.5, -2.5)
+V1 = Vector2D(0, 0)
+V2 = Vector2D(-1, 1)
+V3 = Vector2D(2.5, -2.5)
 
 
 ####################
 ###     INIT     ###
 ####################
 
-def test_init_raises() -> None:
+@pytest.mark.parametrize(
+    ('x', 'y'),
+    (
+        (-1, None),
+        (1, None),
+        (None, 1),
+        (None, -1),
+    )
+)
+def test_init_raises(x: SupportsFloat, y: SupportsFloat) -> None:
     with pytest.raises(TypeError):
-        _ = VectorND()
+        _ = Vector2D(x, y)
 
 
 @pytest.mark.parametrize(
     ('x', 'y', 'exp'),
     (
-        (-1, 1, VectorND(-1, 1)),
-        (1, -1, VectorND(1, -1)),
-        (1, 1, VectorND(1, 1)),
+        (-1, 1, Vector2D(-1, 1)),
+        (1, -1, Vector2D(1, -1)),
+        (1, 1, Vector2D(1, 1)),
     )
 )
-def test_from_values(x: Number, y: Number, exp: VectorND) -> None:
-    assert exp == VectorND(x, y)
+def test_from_values(x: SupportsFloat, y: SupportsFloat, exp: Vector2D) -> None:
+    assert exp == Vector2D(x, y)
 
 
 ####################
@@ -37,53 +46,13 @@ def test_from_values(x: Number, y: Number, exp: VectorND) -> None:
 ####################
 
 def test_repr(capture_stdout: dict) -> None:
-    print(repr(VectorND(1.0, 2.0)))
-    assert capture_stdout["stdout"] == "vector.VectorND(array('d', [1.0, 2.0]))\n"
+    print(repr(Vector2D(1.0, 2.0)))
+    assert capture_stdout["stdout"] == "vector.Vector2D(1.0, 2.0)\n"
 
 
 def test_str(capture_stdout: dict) -> None:
-    print(str(VectorND(1.0, 2.0)))
-    assert capture_stdout["stdout"] == "(array('d', [1.0, 2.0]))\n"
-
-
-####################
-###  CONTAINER   ###
-####################
-
-@pytest.mark.parametrize(
-    ('v'),
-    (
-        VectorND(1, 1, 1),
-    )
-)
-def test_len(v: VectorND) -> None:
-    assert len(v) == 3
-    assert len(v) == len(v.values)
-
-
-@pytest.mark.parametrize(
-    ('v', 'idx', 'exp'),
-    (
-        (VectorND(1, 2, 3), 0, 1),
-        (VectorND(1, 2, 3), 1, 2),
-        (VectorND(1, 2, 3), 2, 3),
-    )
-)
-def test_get_item(v: VectorND, idx: int, exp: Number) -> None:
-    assert v[idx] == exp
-
-
-@pytest.mark.parametrize(
-    ('v', 'idx', 'exp'),
-    (
-        (VectorND(1, 2, 3), 0, 1),
-        (VectorND(1, 2, 3), 1, 2),
-        (VectorND(1, 2, 3), 2, 3),
-    )
-)
-def test_set_item(v: VectorND, idx: int, exp: Number) -> None:
-    v[idx] = exp
-    assert v[idx] == exp
+    print(str(Vector2D(1.0, 2.0)))
+    assert capture_stdout["stdout"] == "(1.0, 2.0)\n"
 
 
 ####################
@@ -93,24 +62,24 @@ def test_set_item(v: VectorND, idx: int, exp: Number) -> None:
 @pytest.mark.parametrize(
     ('lhs', 'rhs', 'exp_res'),
     (
-        (V1, V2, VectorND(-1, 1)),
-        (V1, V3, VectorND(2.5, -2.5)),
-        (V3, V2, VectorND(1.5, -1.5)),
+        (V1, V2, Vector2D(-1, 1)),
+        (V1, V3, Vector2D(2.5, -2.5)),
+        (V3, V2, Vector2D(1.5, -1.5)),
     )
 )
-def test_add(lhs: VectorND, rhs: VectorND, exp_res: VectorND) -> None:
+def test_add(lhs: Vector2D, rhs: Vector2D, exp_res: Vector2D) -> None:
     assert lhs + rhs == exp_res
 
 
 @pytest.mark.parametrize(
     ('lhs', 'rhs', 'exp_res'),
     (
-        (V1, V2, VectorND(1, -1)),
-        (V1, V3, VectorND(-2.5, 2.5)),
-        (V3, V2, VectorND(3.5, -3.5)),
+        (V1, V2, Vector2D(1, -1)),
+        (V1, V3, Vector2D(-2.5, 2.5)),
+        (V3, V2, Vector2D(3.5, -3.5)),
     )
 )
-def test_sub(lhs: VectorND, rhs: VectorND, exp_res: VectorND) -> None:
+def test_sub(lhs: Vector2D, rhs: Vector2D, exp_res: Vector2D) -> None:
     assert lhs - rhs == exp_res
 
 
@@ -122,30 +91,30 @@ def test_sub(lhs: VectorND, rhs: VectorND, exp_res: VectorND) -> None:
         (V3, V2, -5.0),
     )
 )
-def test_mul_vec(lhs: VectorND, rhs: VectorND, exp_res: float) -> None:
+def test_mul_vec(lhs: Vector2D, rhs: Vector2D, exp_res: float) -> None:
     assert lhs * rhs == exp_res
 
 
 @pytest.mark.parametrize(
     ('lhs', 'rhs', 'exp_res'),
     (
-        (V1, 2.0, VectorND(0.0, 0.0)),
-        (V2, 2.0, VectorND(-2.0, 2.0)),
-        (V3, 2.0, VectorND(5.0, -5.0)),
+        (V1, 2.0, Vector2D(0.0, 0.0)),
+        (V2, 2.0, Vector2D(-2.0, 2.0)),
+        (V3, 2.0, Vector2D(5.0, -5.0)),
     )
 )
-def test_mul_float(lhs: VectorND, rhs: float, exp_res: VectorND) -> None:
+def test_mul_float(lhs: Vector2D, rhs: float, exp_res: Vector2D) -> None:
     assert lhs * rhs == exp_res
 
 
 @pytest.mark.parametrize(
     ('rhs', 'lhs'),
     (
-        (VectorND(1, 1), None),
-        (VectorND(1, 1), "1"),
+        (Vector2D(1, 1), None),
+        (Vector2D(1, 1), "1"),
     )
 )
-def test_mul_raises(rhs: VectorND, lhs: Any) -> None:
+def test_mul_raises(rhs: Vector2D, lhs: Any) -> None:
     with pytest.raises(TypeError):
         rhs * lhs
 
@@ -153,22 +122,22 @@ def test_mul_raises(rhs: VectorND, lhs: Any) -> None:
 @pytest.mark.parametrize(
     ('lhs', 'rhs', 'exp_res'),
     (
-        (V1, 2.0, VectorND(0.0, 0.0)),
-        (V2, 2.0, VectorND(-0.5, 0.5)),
-        (V3, 2.0, VectorND(1.25, -1.25)),
+        (V1, 2.0, Vector2D(0.0, 0.0)),
+        (V2, 2.0, Vector2D(-0.5, 0.5)),
+        (V3, 2.0, Vector2D(1.25, -1.25)),
     )
 )
-def test_div(lhs: VectorND, rhs: float, exp_res: VectorND) -> None:
+def test_div(lhs: Vector2D, rhs: float, exp_res: Vector2D) -> None:
     assert lhs / rhs == exp_res
 
 
 @pytest.mark.parametrize(
     ('lhs', 'rhs'),
     (
-        (VectorND(0.0, 0.0), VectorND(0.0, 0.0)),
+        (Vector2D(0.0, 0.0), Vector2D(0.0, 0.0)),
     )
 )
-def test_div_raises(lhs: VectorND, rhs: float) -> None:
+def test_div_raises(lhs: Vector2D, rhs: float) -> None:
     with pytest.raises(TypeError):
         lhs / rhs
 
@@ -176,11 +145,11 @@ def test_div_raises(lhs: VectorND, rhs: float) -> None:
 @pytest.mark.parametrize(
     ('rhs', 'lhs'),
     (
-        (VectorND(1, 1), (0, 1)),
-        (VectorND(1, 1), [1, 0]),
+        (Vector2D(1, 1), (0, 1)),
+        (Vector2D(1, 1), [1, 0]),
     )
 )
-def test_operators_raises(rhs: VectorND, lhs: VectorND) -> None:
+def test_operators_raises(rhs: Vector2D, lhs: Vector2D) -> None:
     with pytest.raises(TypeError):
         rhs < lhs
     with pytest.raises(TypeError):
@@ -192,12 +161,12 @@ def test_operators_raises(rhs: VectorND, lhs: VectorND) -> None:
 @pytest.mark.parametrize(
     ('rhs', 'lhs'),
     (
-        (VectorND(0, 0), 0),
-        (VectorND(0, 1), 1),
-        (VectorND(1, 0), 1),
+        (Vector2D(0, 0), 0),
+        (Vector2D(0, 1), 1),
+        (Vector2D(1, 0), 1),
     )
 )
-def test_abs(rhs: VectorND, lhs: Number) -> None:
+def test_abs(rhs: Vector2D, lhs: SupportsFloat) -> None:
     assert abs(rhs) == lhs
 
 
@@ -208,20 +177,20 @@ def test_abs(rhs: VectorND, lhs: Number) -> None:
 @pytest.mark.parametrize(
     ('lhs', 'rhs'),
     (
-        (VectorND(1, 1), (1, 1)),
-        (VectorND(1, 1), [1, 1]),
+        (Vector2D(1, 1), (1, 1)),
+        (Vector2D(1, 1), [1, 1]),
     )
 )
-def test_equality_other_class(lhs: VectorND, rhs: object) -> None:
+def test_equality_other_class(lhs: Vector2D, rhs: object) -> None:
     assert not (lhs == rhs)
 
 
 @pytest.mark.parametrize(
     ('lhs', 'rhs'),
     (
-        (VectorND(1, 1), VectorND(0, 1)),
-        (VectorND(1, 1), VectorND(1, 0)),
+        (Vector2D(1, 1), Vector2D(0, 1)),
+        (Vector2D(1, 1), Vector2D(1, 0)),
     )
 )
-def test_less_than(lhs: VectorND, rhs: VectorND) -> None:
+def test_less_than(lhs: Vector2D, rhs: Vector2D) -> None:
     assert rhs < lhs

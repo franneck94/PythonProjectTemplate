@@ -11,6 +11,7 @@ html/
 .benchmarks/
 reports/
 lectures/
+.mypy_cache/
 
 ################################
 ########### PYTHON #############

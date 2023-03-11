@@ -1,4 +1,2 @@
 # Runtime requirements
 numpy
-scipy
-Cython
