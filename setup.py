@@ -1,8 +1,5 @@
-# setup.py command | New command
-# setup.py sdist   | python - m build
-# setup.py test	   | pytest
-# setup.py install | pip install
-# setup.py develop | pip install - e
+# setup.py install | pip install .
+# setup.py develop | pip install -e .
 from setuptools import setup
 
 
