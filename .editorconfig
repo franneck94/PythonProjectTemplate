@@ -12,9 +12,6 @@ end_of_line = lf
 [*.md]
 trim_trailing_whitespace = false
 
-[mkdocs.yml]
-indent_size = 2
-
 [Makefile]
 indent_style = tab
 trim_trailing_whitespace = false
