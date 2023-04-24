@@ -1,9 +1,8 @@
 from typing import Any
 from typing import SupportsFloat
 
-from fastvector.vector import Vector2D
-
 import pytest
+from fastvector.vector import Vector2D
 
 
 V1 = Vector2D(0, 0)
@@ -12,7 +11,7 @@ V3 = Vector2D(2.5, -2.5)
 
 
 ####################
-###     INIT     ###
+#       INIT       #
 ####################
 
 
@@ -43,7 +42,7 @@ def test_from_values(x: SupportsFloat, y: SupportsFloat, exp: Vector2D) -> None:
 
 
 ####################
-###   STRINGS    ###
+#     STRINGS      #
 ####################
 
 
@@ -58,7 +57,7 @@ def test_str(capture_stdout: dict) -> None:
 
 
 ####################
-### COMPUTATIONS ###
+#   COMPUTATIONS   #
 ####################
 
 
@@ -171,7 +170,7 @@ def test_abs(rhs: Vector2D, lhs: SupportsFloat) -> None:
 
 
 ####################
-### COMPARISONS  ###
+#   COMPARISONS    #
 ####################
 
 

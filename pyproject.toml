@@ -1,11 +1,121 @@
 [build-system]
-requires = ["setuptools>=45.0", "setuptools_scm[toml]>=6.3.1", "wheel"]
+requires = [
+    "setuptools",
+    "setuptools-scm",
+    # wheel,  # wheel only needed if you explicitly access it during build time
+]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "fastvector"
+authors = [
+    {name = "Jan Schaffranek", email = "email@email.com"},
+]
+description = "This is a simple vector python package."
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+]
+dependencies = [
+    "requests",
+    "importlib-metadata; python_version<'3.8'",
+    "numpy>=1.21.6; python_version<'3.11'",
+    "numpy>=1.23.2; python_version>='3.11'",
+]
+dynamic = ["version", "readme"]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+    "codecov",
+    "pre-commit",
+]
+doc = [
+    "mkdocs",
+    "mkdocstrings",
+    "mkdocstrings[python]",
+    "mkdocs-material",
+    "Pygments",
+]
+dev = [
+    "black",
+    "isort",
+    "mypy",
+    "pre-commit",
+    "ruff",
+]
+all = ["fastvector[test,doc,dev]"]
+
+[tool.setuptools]
+platforms = ["unix", "linux", "osx", "cygwin", "win32"]
+packages = ["fastvector"]  # optional
+
+[tool.setuptools.dynamic]
+version = {attr = "fastvector.__version__"}
+readme = {file = ["README.md"]}
+
+[tool.pytest.ini_options]
+minversion = "7.3"
+testpaths = "tests"
+
+[tool.coverage.run]
+branch = true
+parallel = true
+omit = [
+    "setup.py",
+    "fastvector/__init__.py",
+    "fastvector/version.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "raise AssertionError",
+    "raise NotImplementedError",
+]
+
+[tool.coverage.paths]
+source = [
+    "fastvector/*",
+]
+
+[tool.coverage.html]
+directory = "reports"
+
+######## Tools
 
 [tool.black]
 line-length = 80
 skip-string-normalization = false
 skip-magic-trailing-comma = false
+exclude = '''
+(
+    asv_bench/env
+  | \.egg
+  | \.git
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | setup.py
+)
+'''
 
 [tool.isort]
 sections = [
@@ -52,6 +162,11 @@ strict_optional = true
 no_implicit_optional = true
 warn_no_return = true
 warn_unreachable = true
+allow_untyped_globals = false
+allow_redefinition = false
+local_partial_types = false
+implicit_reexport = true
+strict_equality = true
 
 [tool.ruff]
 select = ["F", "E"]

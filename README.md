@@ -11,18 +11,15 @@
 This is a template for Python projects. What you get:
 
 - Source code and test code is seperated in different directories.
-- External libraries installed and managed by [Pip](https://pypi.org/project/pip/).
-- Setup for tests using [Pytest](https://docs.pytest.org/en/stable/).
-- Continuous testing with [Github-Actions](https://github.com/features/actions/).
+- External libraries installed and managed by [Pip](https://pypi.org/project/pip/) and [setuptools](https://setuptools.pypa.io/en/latest/) in a pyproject.toml.
+- Setup for tests using [Pytest](https://docs.pytest.org/en/stable/) and coverage with [Pytest-Cov](https://github.com/pytest-dev/pytest-cov).
+- Continuous testing with [Github-Actions](https://github.com/features/actions/) including [pre-commit](https://github.com/pre-commit/pre-commit).
 - Code coverage reports, including automatic upload to [Codecov](https://codecov.io).
 - Code documentation with [Mkdocs](https://www.mkdocs.org/).
-- Optional: Use of [VSCode](https://code.visualstudio.com/) with the Python and UnitTest extension.
 
 ## Structure
 
 ``` text
-├── setup.py
-├── setup.cfg
 ├── pyproject.toml
 ├── ... other config files ...
 ├── tests
@@ -44,12 +41,16 @@ This is a template for Python projects. What you get:
 
 ```bash
 # Build and Install (local)
-pip install -e .
+pip install -e .  # OR
+pip install -e ../Python-Project-Template  # OR
+pip install -e ../Python-Project-Template[all]
 ```
 
 ```bash
 # Test
-pytest tests
+pytest tests  # OR
+pytest .  # OR
+pytest
 ```
 
 ```bash

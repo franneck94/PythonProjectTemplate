@@ -9,7 +9,7 @@ import pytest
 def capture_stdout(monkeypatch: pytest.MonkeyPatch) -> Dict[str, Any]:
     buffer: Dict[str, Any] = {"stdout": "", "writecalls": 0}
 
-    def fake_writer(s):
+    def fake_writer(s: str) -> None:
         buffer["stdout"] += s
         buffer["writecalls"] += 1
 
