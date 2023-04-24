@@ -1,7 +1,7 @@
 ################################
 ###########  FILES  ############
 ################################
-cython_computations.c
+*.exe
 
 ################################
 ########### FOLDERS ############
@@ -11,7 +11,13 @@ html/
 .benchmarks/
 reports/
 lectures/
-.mypy_cache/
+logs/
+models/
+ressources/
+.ruff_cache
+data/*.h5
+venv/
+.venv/
 
 ################################
 ########### PYTHON #############
