@@ -2,6 +2,8 @@
 --requirement requirements.txt
 
 setuptools>=67.7.1
+build>=0.10.0
+twine>=4.0.0
 
 # Testing
 pytest
