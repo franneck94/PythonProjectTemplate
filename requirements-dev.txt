@@ -1,7 +1,6 @@
 # Runtime requirements
 --requirement requirements.txt
 
-build
 setuptools>=67.7.1
 
 # Testing

@@ -27,8 +27,6 @@ classifiers = [
     "Operating System :: MacOS",
 ]
 dependencies = [
-    "requests",
-    "importlib-metadata; python_version<'3.8'",
     "numpy>=1.21.6; python_version<'3.11'",
     "numpy>=1.23.2; python_version>='3.11'",
 ]
