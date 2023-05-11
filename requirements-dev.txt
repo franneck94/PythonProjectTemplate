@@ -1,0 +1,26 @@
+# Runtime requirements
+--requirement requirements.txt
+
+setuptools>=67.7.1
+build>=0.10.0
+twine>=4.0.0
+
+# Testing
+pytest
+codecov
+pytest-cov
+pre-commit
+
+# Linting/Tooling
+black>=23.3.0
+isort>=5.12.0
+mypy>=1.2.0
+pre-commit>=3.2.2
+ruff>=0.0.262
+
+# Documentation
+mkdocs
+mkdocstrings
+mkdocstrings[python]
+mkdocs-material
+Pygments

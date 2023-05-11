@@ -1,0 +1,196 @@
+[build-system]
+requires = [
+    "setuptools",
+    "setuptools-scm",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fastvector"
+authors = [
+    {name = "Jan Schaffranek", email = "email@email.com"},
+]
+description = "This is a simple vector python package."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+]
+dependencies = [
+    "numpy>=1.21.6; python_version<'3.11'",
+    "numpy>=1.23.2; python_version>='3.11'",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+    "codecov",
+    "pre-commit",
+]
+doc = [
+    "mkdocs",
+    "mkdocstrings",
+    "mkdocstrings[python]",
+    "mkdocs-material",
+    "Pygments",
+]
+dev = [
+    "black",
+    "isort",
+    "mypy",
+    "pre-commit",
+    "ruff",
+]
+all = ["fastvector[test,doc,dev]"]
+
+[tool.setuptools]
+platforms = ["unix", "linux", "osx", "cygwin", "win32"]
+packages = ["fastvector"]  # optional
+
+[tool.setuptools.dynamic]
+version = {attr = "fastvector.__version__"}
+
+[tool.pytest.ini_options]
+minversion = "7.3"
+testpaths = "tests"
+
+[tool.coverage.run]
+branch = true
+parallel = true
+omit = [
+    "setup.py",
+    "fastvector/__init__.py",
+    "fastvector/version.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "raise AssertionError",
+    "raise NotImplementedError",
+]
+
+[tool.coverage.paths]
+source = [
+    "fastvector/*",
+]
+
+[tool.coverage.html]
+directory = "reports"
+
+######## Tools
+
+[tool.black]
+line-length = 80
+skip-string-normalization = false
+skip-magic-trailing-comma = false
+exclude = '''
+(
+    asv_bench/env
+  | \.egg
+  | \.git
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | setup.py
+)
+'''
+
+[tool.isort]
+sections = [
+    "FUTURE",
+    "STDLIB",
+    "THIRDPARTY",
+    "FIRSTPARTY",
+    "LOCALFOLDER"
+]
+default_section = "FIRSTPARTY"
+known_third_party = [
+    "numpy",
+    "pandas",
+    "keras",
+    "tensorflow",
+    "sklearn",
+    "matplotlib",
+    "scipy",
+    "h5py",
+    "seaborn",
+    "numba",
+    "gym",
+    "PyQt6",
+    "PyQt5",
+    "pyqtgraph"
+]
+multi_line_output = 3
+lines_after_imports = 2
+force_single_line = true
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 80
+
+[tool.mypy]
+warn_return_any = true
+warn_unused_configs = true
+ignore = []
+follow_imports = "silent"
+check_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+disallow_subclassing_any = true
+strict_optional = true
+no_implicit_optional = true
+warn_no_return = true
+warn_unreachable = true
+allow_untyped_globals = false
+allow_redefinition = false
+local_partial_types = false
+implicit_reexport = true
+strict_equality = true
+
+[tool.ruff]
+select = ["F", "E"]
+extend-select = ["W", "I002", "B", "UP", "PLE", "PLW", "NPY", "RUF", "PD", "SIM", "PT"]
+unfixable = ["NPY002"]
+ignore = []
+fixable = ["E", "F", "W", "I", "B", "UP", "PLE", "PLW", "NPY", "RUF", "PD", "SIM", "PT"]
+target-version = "py39"
+
+line-length = 80
+extend-exclude = ["tests", "test"]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.isort]
+force-single-line = true
+force-sort-within-sections = false
+lines-after-imports = 2
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.ruff.pycodestyle]
+ignore-overlong-task-comments = true
+
+[tool.ruff.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.flake8-annotations]
+allow-star-arg-any = false
+ignore-fully-untyped = false
