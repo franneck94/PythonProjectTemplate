@@ -10,6 +10,18 @@ repos:
       - id: check-yaml
       - id: check-toml
 
+-   repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.7.0
+    hooks:
+    -   id: nbqa-black
+        exclude: ^docs/
+    -   id: nbqa-isort
+        exclude: ^docs/
+    -   id: nbqa-ruff
+        exclude: ^docs/
+    -   id: nbqa-mypy
+        exclude: ^docs/
+
 -   repo: https://github.com/MarcoGorelli/cython-lint
     rev: v0.15.0
     hooks:
@@ -29,12 +41,13 @@ repos:
         exclude: ^docs/
 
 -   repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: 'v0.0.261'
+    rev: 'v0.0.270'
     hooks:
     -   id: ruff
+        args: [ --fix, --exit-non-zero-on-fix ]
 
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.2.0
+    rev: v1.3.0
     hooks:
     -   id: mypy
         exclude: ^docs/

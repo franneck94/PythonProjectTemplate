@@ -1,7 +1,7 @@
 # Runtime requirements
 --requirement requirements.txt
 
-setuptools>=67.7.1
+setuptools>=67.8.0
 build>=0.10.0
 twine>=4.0.0
 
@@ -14,9 +14,10 @@ pre-commit
 # Linting/Tooling
 black>=23.3.0
 isort>=5.12.0
-mypy>=1.2.0
-pre-commit>=3.2.2
-ruff>=0.0.262
+mypy>=1.3.0
+pre-commit>=3.3.2
+ruff>=0.0.270
+pyright>=1.1.309
 
 # Documentation
 mkdocs
