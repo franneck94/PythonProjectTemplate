@@ -23,6 +23,16 @@ jobs:
     - name: Testing
       run: |
         python -m pytest tests
+    - name: Check test status
+      run: |
+        if [ ${{ steps.build.outcome }} == 'failure' ]; then
+          echo "Unit tests failed. Push is not allowed."
+          exit 1
+        fi
+    - name: Push code to repository (if tests pass)
+      run: git push
+      if: success()  # This step will only run if previous steps succeed
+  
 
   build-linux:
     runs-on: ubuntu-latest
@@ -41,7 +51,16 @@ jobs:
       run: |
         python -m pytest --cov=fastvector tests
         python -m codecov
-
+    - name: Check test status
+      run: |
+        if [ ${{ steps.build.outcome }} == 'failure' ]; then
+          echo "Unit tests failed. Push is not allowed."
+          exit 1
+        fi
+    - name: Push code to repository (if tests pass)
+      run: git push
+      if: success()  # This step will only run if previous steps succeed
+  
   build-macos:
     runs-on: macos-latest
     steps:
@@ -58,3 +77,12 @@ jobs:
     - name: Testing
       run: |
         python -m pytest tests
+    - name: Check test status
+      run: |
+        if [ ${{ steps.build.outcome }} == 'failure' ]; then
+          echo "Unit tests failed. Push is not allowed."
+          exit 1
+        fi
+    - name: Push code to repository (if tests pass)
+      run: git push
+      if: success()  # This step will only run if previous steps succeed
