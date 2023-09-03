@@ -51,3 +51,11 @@ repos:
     hooks:
     -   id: mypy
         exclude: ^docs/
+
+-   repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v3.0.0a5  # Use the latest version of pylint from the mirror
+    hooks:
+    -   id: pylint
+        args: ['--rcfile=.pylintrc']  # Customize pylint arguments if needed
+
+
