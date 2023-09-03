@@ -30,7 +30,7 @@ class Vector2D:
         Returns:
             The representation of the vector.
         """
-        return f"vector.Vector2D({self.x}, {self.y+2})"
+        return f"vector.Vector2D({self.x}, {self.y})"
 
     def __str__(self) -> str:
         """The vector as a string.
