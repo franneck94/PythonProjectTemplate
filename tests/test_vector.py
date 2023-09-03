@@ -19,7 +19,7 @@ V3 = Vector2D(2.5, -2.5)
 
 
 @pytest.mark.parametrize(
-    ("x", "y"),
+    ("x_axis", "y_axis"),
     (
         (-1, None),
         (1, None),
@@ -34,7 +34,7 @@ def test_init_raises(x_axis: SupportsFloat, y_axis: SupportsFloat) -> None:
 
 
 @pytest.mark.parametrize(
-    ("x", "y", "exp"),
+    ("x_axis", "y_axis", "exp"),
     (
         (-1, 1, Vector2D(-1, 1)),
         (1, -1, Vector2D(1, -1)),
