@@ -23,7 +23,7 @@ jobs:
     - name: Testing
       run: |
         python -m pytest tests
-
+  
   build-linux:
     runs-on: ubuntu-latest
     steps:
@@ -41,7 +41,7 @@ jobs:
       run: |
         python -m pytest --cov=fastvector tests
         python -m codecov
-
+  
   build-macos:
     runs-on: macos-latest
     steps:
