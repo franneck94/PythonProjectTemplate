@@ -1,5 +1,3 @@
-# pylint: disable=import-error
-
 """ Unit Test Cases """
 from typing import Any
 from typing import SupportsFloat
@@ -130,7 +128,7 @@ def test_mul_float(lhs: Vector2D, rhs: float, exp_res: Vector2D) -> None:
 def test_mul_raises(rhs: Vector2D, lhs: Any) -> None:
     """Test mul raises."""
     with pytest.raises(TypeError):
-        rhs * lhs  # pylint: disable=pointless-statement
+        rhs * lhs  # pyright: ignore reportUnusedExpression
 
 
 @pytest.mark.parametrize(
@@ -152,7 +150,7 @@ def test_div(lhs: Vector2D, rhs: float, exp_res: Vector2D) -> None:
 def test_div_raises(lhs: Vector2D, rhs: float) -> None:
     """Test div raises."""
     with pytest.raises(TypeError):
-        lhs / rhs  # pylint: disable=pointless-statement
+        lhs / rhs  # pyright: ignore reportUnusedExpression
 
 
 @pytest.mark.parametrize(
@@ -165,11 +163,11 @@ def test_div_raises(lhs: Vector2D, rhs: float) -> None:
 def test_operators_raises(rhs: Vector2D, lhs: Vector2D) -> None:
     """Test operators raises."""
     with pytest.raises(TypeError):
-        rhs < lhs  # pylint: disable=pointless-statement
+        rhs < lhs  # pyright: ignore reportUnusedExpression
     with pytest.raises(TypeError):
-        rhs + lhs  # pylint: disable=pointless-statement
+        rhs + lhs  # pyright: ignore reportUnusedExpression
     with pytest.raises(TypeError):
-        rhs - lhs  # pylint: disable=pointless-statement
+        rhs - lhs  # pyright: ignore reportUnusedExpression
 
 
 @pytest.mark.parametrize(
