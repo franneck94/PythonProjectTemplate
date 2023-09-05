@@ -19,7 +19,7 @@ V3 = Vector2D(2.5, -2.5)
 
 
 @pytest.mark.parametrize(
-    ("x_axis", "y_axis"),
+    ("x", "y"),
     (
         (-1, None),
         (1, None),
@@ -27,25 +27,23 @@ V3 = Vector2D(2.5, -2.5)
         (None, -1),
     ),
 )
-def test_init_raises(x_axis: SupportsFloat, y_axis: SupportsFloat) -> None:
+def test_init_raises(x: SupportsFloat, y: SupportsFloat) -> None:
     """Test init raises."""
     with pytest.raises(TypeError):
-        _ = Vector2D(x_axis, y_axis)
+        _ = Vector2D(x, y)
 
 
 @pytest.mark.parametrize(
-    ("x_axis", "y_axis", "exp"),
+    ("x", "y", "exp"),
     (
         (-1, 1, Vector2D(-1, 1)),
         (1, -1, Vector2D(1, -1)),
         (1, 1, Vector2D(1, 1)),
     ),
 )
-def test_from_values(
-    x_axis: SupportsFloat, y_axis: SupportsFloat, exp: Vector2D
-) -> None:
+def test_from_values(x: SupportsFloat, y: SupportsFloat, exp: Vector2D) -> None:
     """Test from values."""
-    assert exp == Vector2D(x_axis, y_axis)
+    assert exp == Vector2D(x, y)
 
 
 ####################
