@@ -32,9 +32,6 @@ This is a template for Python projects. What you get:
 │   ├── __init__.py
 │   ├── vector.py
 │   └── version.py
-└── tests
-    ├── __init__.py
-    └── test_vector.py
 ```
 
 ### Commands
