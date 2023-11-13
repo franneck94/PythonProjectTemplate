@@ -1,27 +1,27 @@
 # Runtime requirements
 --requirement requirements.txt
 
-setuptools>=67.8.0
-build>=0.10.0
-twine>=4.0.0
+setuptools>=68.2.2
+build>=1.0.3
+twine>=4.0.2
+
+# Linting/Tooling
+black>=23.11.0
+isort>=5.12.0
+mypy>=1.6.1
+pre-commit>=3.5.0
+ruff>=0.1.5
+pyright>=1.1.335
 
 # Testing
-pytest>=7.3.1
+pytest>=7.4.3
 codecov>=2.1.13
 pytest-cov>=4.1.0
 pytest-benchmark>=4.0.0
 
-# Linting/Tooling
-black>=23.3.0
-isort>=5.12.0
-mypy>=1.3.0
-pre-commit>=3.3.2
-ruff>=0.0.270
-pyright>=1.1.309
-
 # Documentation
-mkdocs>=1.4.3
-mkdocstrings>=0.21.2
-mkdocstrings[python]>=0.9.0
-mkdocs-material>=9.1.14
-Pygments>=2.15.1
+mkdocs>=1.5.3
+mkdocstrings>=0.23.0
+mkdocstrings-python>=1.7.3
+mkdocs-material>=9.4.8
+Pygments>=2.16.1

@@ -1,9 +1,8 @@
 default_language_version:
   python: python3
 repos:
-
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.5.0
     hooks:
       - id: check-ast
       - id: check-builtin-literals
@@ -15,13 +14,8 @@ repos:
     rev: 1.7.0
     hooks:
     -   id: nbqa-black
-        exclude: ^docs/
     -   id: nbqa-isort
-        exclude: ^docs/
-    -   id: nbqa-ruff
-        exclude: ^docs/
     -   id: nbqa-mypy
-        exclude: ^docs/
 
 -   repo: https://github.com/MarcoGorelli/cython-lint
     rev: v0.15.0
@@ -33,22 +27,21 @@ repos:
     rev: 5.12.0
     hooks:
     -   id: isort
-        exclude: ^docs/
 
 -   repo: https://github.com/psf/black
-    rev: 23.3.0
+    rev: 23.11.0
     hooks:
     -   id: black
-        exclude: ^docs/
 
--   repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: 'v0.0.270'
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: 'v0.1.5'
     hooks:
     -   id: ruff
+        types_or: [python, pyi, jupyter]
         args: [ --fix, --exit-non-zero-on-fix ]
 
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.3.0
+    rev: v1.6.1
     hooks:
     -   id: mypy
-        exclude: ^docs/
+        args: [--strict, --ignore-missing-imports]
