@@ -10,19 +10,6 @@ repos:
       - id: check-yaml
       - id: check-toml
 
--   repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.7.0
-    hooks:
-    -   id: nbqa-black
-    -   id: nbqa-isort
-    -   id: nbqa-mypy
-
--   repo: https://github.com/MarcoGorelli/cython-lint
-    rev: v0.15.0
-    hooks:
-    -   id: cython-lint
-    -   id: double-quote-cython-strings
-
 -   repo: https://github.com/PyCQA/isort
     rev: 5.12.0
     hooks:
@@ -44,4 +31,4 @@ repos:
     rev: v1.6.1
     hooks:
     -   id: mypy
-        args: [--strict, --ignore-missing-imports]
+        args: [--ignore-missing-imports]

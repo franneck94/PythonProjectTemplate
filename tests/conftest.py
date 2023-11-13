@@ -10,7 +10,9 @@ import pytest
 
 
 @pytest.fixture
-def capture_stdout(monkeypatch: pytest.MonkeyPatch) -> Dict[str, Any]:
+def capture_stdout(
+    monkeypatch: pytest.MonkeyPatch,
+) -> Dict[str, Any]:
     """Capture stdout."""
     buffer: Dict[str, Any] = {"stdout": "", "writecalls": 0}
 

@@ -206,7 +206,7 @@ warn_return_any = false
 # Untyped definitions and calls
 check_untyped_defs = true
 disallow_untyped_calls = false
-disallow_untyped_defs = true
+disallow_untyped_defs = false
 disallow_incomplete_defs = true
 disallow_untyped_decorators = false
 # Disallow dynamic typing
@@ -226,7 +226,7 @@ strict_equality = true
 show_error_context = false
 show_column_numbers = false
 show_error_codes = true
-exclude = ["docs", "test", "tests"]
+exclude = ["docs"]
 
 [tool.pyright]
 pythonVersion = "3.10"
