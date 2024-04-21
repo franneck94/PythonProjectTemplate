@@ -22,9 +22,6 @@ This is a template for Python projects. What you get:
 ``` text
 ├── pyproject.toml
 ├── ... other config files ...
-├── tests
-│   ├── __init__.py
-│   └── test_vector.py
 ├── docs
 │   ├── api.md
 │   └── index.md
