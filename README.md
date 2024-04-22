@@ -25,6 +25,8 @@ This is a template for Python projects. What you get:
 ├── docs
 │   ├── api.md
 │   └── index.md
+├── examples
+│   └── ...
 ├── fastvector
 │   ├── __init__.py
 │   ├── vector.py
